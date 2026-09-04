@@ -37,7 +37,7 @@ projectForm?.addEventListener('submit',event=>{
   event.preventDefault();
   const data=new FormData(projectForm);
   const name=[data.get('first-name'),data.get('last-name')].filter(Boolean).join(' ');
-  const subject=`Project inquiry${data.get('project-location')?` — ${data.get('project-location')}`:''}`;
+  const subject=`Project inquiry${data.get('project-location')?` - ${data.get('project-location')}`:''}`;
   const body=[
     `Name: ${name}`,
     `Company: ${data.get('company')||'Not provided'}`,
