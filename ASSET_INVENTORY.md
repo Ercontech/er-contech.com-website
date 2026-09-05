@@ -23,6 +23,11 @@ River Bends alternate under review:
 - `source-assets/home-applications/river-bend-alternate-user-provided.png`: user-supplied photograph of an engineered bend during a dewatered construction stage. It shows the treatment clearly but does not immediately read as an active river at home-page card size.
 - `source-assets/home-applications/river-bend-alternate-plan-user-provided.png`: supporting plan view confirming the bend geometry; retain for technical context rather than use as the home-page photograph.
 
+## Careers photography
+
+- `dist/assets/careers-field-survey.png`: user-supplied photograph of a field professional surveying site conditions, used as a mirrored and heavily blue-tinted Careers hero background.
+- `source-assets/careers/careers-field-survey-user-provided.png`: preserved original supplied image. Its embedded timestamp is excluded from the displayed hero crop rather than removed from the source.
+
 ## Recovered legacy Solutions assets
 
 Thirty-four unique image files were recovered from the existing Er-Con Solutions page on September 5, 2026 and archived in `source-assets/legacy-solutions/`. These are working source assets, not final approvals.

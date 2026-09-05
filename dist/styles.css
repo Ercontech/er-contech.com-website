@@ -49,3 +49,6 @@ footer{background:white;border-top:1px solid #dce5ee}.footer-inner{max-width:var
 .product-engineering-figure-compact{max-width:420px;margin-left:0;margin-right:auto}.product-engineering-figure-compact img{display:block;width:100%;height:auto}
 @media (max-width:900px){.fcr-comparison-heading{grid-template-columns:1fr;gap:14px}.fcr-comparison-grid{grid-template-columns:1fr 1fr}.fcr-comparison-grid img,.field-photo-placeholder{height:310px}}
 @media (max-width:600px){.fcr-comparison-heading{padding:26px 22px}.fcr-comparison-grid{grid-template-columns:1fr}.fcr-comparison-grid img,.field-photo-placeholder{height:260px}.palisade-five-year-photo img{height:320px}.palisade-five-year-photo figcaption{left:16px;bottom:16px}}
+
+/* Careers field-work hero */
+.careers-hero{position:relative;overflow:hidden;background:#001f43}.careers-hero:before{content:"";position:absolute;inset:0;z-index:0;background:url('assets/careers-field-survey.png') center 46%/cover no-repeat;transform:scaleX(-1) scale(1.16)}.careers-hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(120deg,rgba(0,31,67,.97),rgba(6,67,127,.88))}.careers-hero-inner{position:relative;z-index:2}

@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.22 - Careers field-work hero
+
+- Added a real Er-Con field-survey photograph behind the Careers hero to align its visual treatment with Contact while keeping the page focused on people doing technical field work.
+- Mirrored and tightly framed the image through the page presentation so the field professional remains visible beside the headline and the embedded timestamp stays outside the displayed crop.
+- Applied the established deep-blue overlay to preserve headline contrast and keep the photograph intentionally understated.
+
 ## v0.21 - Hero hierarchy refinement
 
 - Connected the Home-page eyebrow more clearly to the primary headline with brand-blue color and tighter spacing.
