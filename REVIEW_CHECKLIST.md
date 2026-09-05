@@ -77,8 +77,10 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Prefer a better first conversation over an online diagnosis.
 - [ ] Ask for useful field context: current conditions, concerns, relevant assets, changes observed and available drawings or photos.
 - [ ] Confirm the Contact form excludes photo upload until a supported workflow is selected.
-- [ ] Confirm form submissions preserve and deliver the visitor's entered text.
-- [ ] Confirm all phone numbers, email addresses and mailto links are accurate.
+- [ ] Replace the Contact page mailto submission with on-page form capture that preserves every entered field, confirms successful submission and reliably delivers the inquiry to the designated Er-Con recipient.
+- [ ] Replace Careers mailto application and interest actions with on-page form capture that preserves applicant information, confirms successful submission and reliably delivers it to the designated hiring recipient.
+- [ ] Define and validate required and optional fields, error handling, spam protection and recipient ownership for both Contact and Careers forms before public launch.
+- [ ] Confirm all phone numbers, email addresses and intentional mailto links are accurate.
 - [ ] Confirm each page ends with an appropriate next step.
 
 ## 8. About and leadership
