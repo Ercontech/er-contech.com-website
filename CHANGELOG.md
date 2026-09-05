@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.17 - Palisade schematic alignment
+
+- Aligned the Palisade engineering schematic with the left edge of its supporting copy to match the other solution pages.
+
 ## v0.16 - Palisade schematic clarity
 
 - Replaced the low-resolution Palisade schematic with a clearer user-supplied version sized for near-native display in the engineering frame.
