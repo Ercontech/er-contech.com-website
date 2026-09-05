@@ -4,6 +4,13 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+## v0.7 - FCR field-proof template
+
+- Rebuilt the Flexible Concrete Revetment detail page around two before-and-after project comparisons covering channel reconstruction and head-cut stabilization.
+- Enhanced the supplied field photographs for cleaner exposure, stronger natural color and consistent presentation while preserving the documented sites and installed systems.
+- Replaced the FCR hero and Solutions teaser with completed-project imagery.
+- Strengthened the page language around reconstructing the failed geometry and engineering the protective application around actual field conditions.
+
 ## v0.6 - Number-free process treatment
 
 - Removed decorative numbering from the Home capability cards, Solution Framework, all six solution-process sections and the Palisade field sequence.

@@ -108,6 +108,7 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Palisade: review every word and validate all technical and application claims.
 - [ ] Palisade field sequence: confirm project number, location, dates, customer-use permission and that the three photographs document the same reach.
 - [ ] Flexible Concrete Revetment: review every word and validate all technical and application claims.
+- [ ] FCR comparison sets: confirm the project numbers, locations, dates, customer-use permissions and pairing of each before-and-after photograph.
 - [ ] Ercoform: review every word and validate all technical and application claims.
 - [ ] Eco-Flex: review every word and validate all technical and application claims.
 - [ ] System 21: review every word and validate all technical and application claims.
