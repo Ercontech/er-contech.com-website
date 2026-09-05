@@ -2,8 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
-## Unreleased
+## v0.9 - Ercoform field-proof template
 
+- Rebuilt the Ercoform detail page around two field-condition and completed-application comparisons, with provisional technical framing pending expert-team verification.
+- Replaced the generic Ercoform hero with a completed field application and preserved the supplied originals alongside restrained, documentary-style enhancements.
 - Moved each Solutions-page action into a dedicated footer below the completed-project image.
 - Restored the translucent, blurred sticky-header treatment and introduced an exact transparent-background master of the existing logo so the mark remains visually seamless while scrolling.
 

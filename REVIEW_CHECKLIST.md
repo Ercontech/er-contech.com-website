@@ -110,6 +110,8 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Flexible Concrete Revetment: review every word and validate all technical and application claims.
 - [ ] FCR comparison sets: confirm the project numbers, locations, dates, customer-use permissions and pairing of each before-and-after photograph.
 - [ ] Ercoform: review every word and validate all technical and application claims.
+- [ ] Ercoform comparison sets: confirm the project numbers, locations, dates, customer-use permissions and pairing of each field-condition and completed-application photograph.
+- [ ] Ercoform comparison framing: confirm the "channel and crossing protection" and "localized channel stabilization" interpretations with the technical team.
 - [ ] Eco-Flex: review every word and validate all technical and application claims.
 - [ ] System 21: review every word and validate all technical and application claims.
 - [ ] Pipeline Supports: review every word and validate all technical and application claims.
