@@ -4,20 +4,18 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
-- Replaced the shaped Solution Review gate with a larger white rectangular decision step, emphasized through scale, blue edging and elevation.
-- Replaced the Solutions opening headline with "Treat the whole problem" and restored light-blue emphasis within the headline.
-- Removed the redundant framework label and tightened the opening spacing so readers reach the process faster.
-- Removed the Solutions-page hero that repeated the Home-page positioning.
-- Moved the Er-Con Solution Framework ahead of the solution cards so the page presents the selection methodology before the available system options.
 - Continue page-by-page review against `REVIEW_CHECKLIST.md`.
 - Reserve `v.Base` for the first fully reviewed and approved baseline.
 
-## v0.2 - Solutions hierarchy redesign
+## v0.2 - Solutions hierarchy and visual framework
 
-- Reduced the height and repetition of the Solutions-page introduction.
-- Moved the six core solution cards directly beneath the page introduction so readers encounter the actual solutions sooner.
-- Combined the root-cause message and the solution-selection methodology into one Er-Con Solution Framework section.
-- Reframed the methodology around identifying the root cause, comparing available systems and reviewing the recommended approach with the customer before execution.
+- Removed the Solutions-page hero that repeated the Home-page positioning.
+- Led the page with the Er-Con Solution Framework and positioned the six core solution cards directly beneath it.
+- Replaced the opening headline with "Treat the whole problem" and restored light-blue emphasis within the headline.
+- Reframed the methodology around evaluating both the visible damage and its root cause, comparing available systems and reviewing the recommended approach with the customer before execution.
+- Removed the redundant framework label and tightened the opening spacing so readers reach the process faster.
+- Replaced the shaped Solution Review gate with a larger white rectangular decision step emphasized through scale, blue edging and elevation.
+- Gave the framework steps and Home-page capability tiles stronger solid-blue surfaces, clearer borders, higher text contrast and subtle elevation against their dark-blue bands.
 - Preserved additional capabilities and the project-conversation call to action after the primary solutions and framework.
 
 ## v0.1 - First recoverable working site
