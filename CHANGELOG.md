@@ -2,6 +2,11 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.20 - Cleaner application cards
+
+- Removed the circular application icons from the Home-page cards after authentic project photography made them redundant.
+- Tightened the card hierarchy so each application now leads directly with its title, explanation and field image.
+
 ## v0.19 - Projects held for current field proof
 
 - Removed Projects from the primary navigation and Home while preserving the working page for future development.
