@@ -4,6 +4,7 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+- Broadened the Home-page applications language to include creeks, streams, rivers, bayous, lakes, ponds, stormwater systems and coastlines.
 - Refined the Careers invitation around roles that may not be written yet, centered the email action and replaced the left accent rule with a dark-navy top border.
 - Added a standing Careers invitation for exceptional candidates who do not see a matching open role, including a direct email introduction and resume path.
 - Removed the circular 50-year badge from the Home hero while retaining the experience proof in the page content.
