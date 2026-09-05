@@ -4,6 +4,10 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+- Build a dedicated Projects page and clarify the Home-page progression from applications to capabilities to project proof.
+
+## v0.3 - Pre-projects-page checkpoint
+
 - Broadened the Home-page applications language to include creeks, streams, rivers, bayous, lakes, ponds, stormwater systems and coastlines.
 - Refined the Careers invitation around roles Er-Con may be ready to write, centered the email action and replaced the left accent rule with a dark-navy top border.
 - Added a standing Careers invitation for exceptional candidates who do not see a matching open role, including a direct email introduction and resume path.
