@@ -5,7 +5,7 @@ This log records meaningful design, content and experience checkpoints. Routine 
 ## Unreleased
 
 - Moved each Solutions-page action into a dedicated footer below the completed-project image.
-- Made the sticky site header fully opaque so the logo's white field remains visually seamless while scrolling.
+- Restored the translucent, blurred sticky-header treatment and introduced an exact transparent-background master of the existing logo so the mark remains visually seamless while scrolling.
 
 ## v0.8 - Solution-card hierarchy
 

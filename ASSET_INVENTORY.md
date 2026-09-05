@@ -1,5 +1,12 @@
 # Er-Con Website Asset Inventory
 
+## Brand assets
+
+| Asset | Use | Notes |
+| --- | --- | --- |
+| `dist/assets/header-logo-transparent.png` | Site header | Transparent-background master derived from the existing logo without altering its geometry or brand colors |
+| `dist/assets/header-logo.png` | Preserved source | Original RGB logo with its white background retained as a fallback |
+
 ## Recovered legacy Solutions assets
 
 Thirty-four unique image files were recovered from the existing Er-Con Solutions page on September 5, 2026 and archived in `source-assets/legacy-solutions/`. These are working source assets, not final approvals.
