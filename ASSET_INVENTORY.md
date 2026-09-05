@@ -7,6 +7,17 @@
 | `dist/assets/header-logo-transparent.png` | Site header | Transparent-background master derived from the existing logo without altering its geometry or brand colors |
 | `dist/assets/header-logo.png` | Preserved source | Original RGB logo with its white background retained as a fallback |
 
+## Home-page application photography
+
+The four application cards now use real Er-Con project imagery rather than illustrative placeholders.
+
+| Application | Published asset | Source |
+| --- | --- | --- |
+| River Bends | `dist/assets/home-river-bends.jpg` | Five-year Palisade recovery photograph already used on the Palisade detail page |
+| Pipeline Free Spans | `dist/assets/home-pipeline-free-span.jpg` | Completed pipeline-support crossing photograph already used on the Pipeline Supports detail page |
+| Critical Infrastructure | `dist/assets/home-critical-infrastructure.png` | Faithful exposure, color and clarity restoration of legacy `bridge.JPG`; restored master preserved as `source-assets/home-applications/bridge-restored-v2.png` |
+| Installed Solutions | `dist/assets/home-installed-solutions.jpg` | Legacy Er-Con photograph `FCR%20Roadside%202.JPG` |
+
 ## Recovered legacy Solutions assets
 
 Thirty-four unique image files were recovered from the existing Er-Con Solutions page on September 5, 2026 and archived in `source-assets/legacy-solutions/`. These are working source assets, not final approvals.

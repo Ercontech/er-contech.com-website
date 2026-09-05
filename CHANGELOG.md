@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.18 - Authentic home-page applications
+
+- Replaced all four illustrative application-card images with real Er-Con project photography.
+- Used the five-year Palisade result for River Bends, the completed support crossing for Pipeline Free Spans and the FCR roadside installation for Installed Solutions.
+- Restored the legacy bridge-protection photograph for a brighter, clearer Critical Infrastructure image while preserving the project itself.
+
 ## v0.17 - Palisade schematic alignment
 
 - Aligned the Palisade engineering schematic with the left edge of its supporting copy to match the other solution pages.
