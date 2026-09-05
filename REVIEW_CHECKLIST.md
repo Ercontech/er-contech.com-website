@@ -124,6 +124,11 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 
 ## 11. Visual system and imagery
 
+- [ ] Replace recovered web-resolution thumbnails with approved original-resolution project photography where available.
+- [ ] Confirm the project number, product assignment, location and permission status for every recovered legacy image.
+- [ ] Build each product page around a curated proof sequence: field condition, root cause, engineered drawing, installation and performance today.
+- [ ] Confirm public drawings omit customer identifiers, precise coordinates and sensitive infrastructure details.
+- [ ] Confirm Articulating Block Mat language describes Er-Con's custom-fabricated form grouted in place and does not imply a precast product.
 - [ ] Confirm the logo treatment is consistent and legible at desktop and mobile sizes.
 - [ ] Replace generic or inaccurate engineering imagery with approved Er-Con imagery where needed.
 - [ ] Confirm every image supports the nearby message and is not merely decorative filler.

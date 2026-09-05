@@ -4,6 +4,12 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+## v0.4 - Project and solution proof structure
+
+- Added recovered Er-Con project imagery to all six core solution cards, shifting the Solutions page from text-only tiles to visual product teasers.
+- Archived the recoverable legacy Solutions-page image set as source material for individual product pages and future project galleries.
+- Replaced "selects and configures" with language that presents each solution as an engineered application of the right system.
+- Split the Project Environments positioning into two sentences for faster reading.
 - Removed the redundant "Selected work" eyebrow from the Projects introduction so the section opens directly with its headline.
 - Strengthened the Project Environments message around protecting asset integrity and preventing further erosion and damage to the surrounding area.
 - Built a dedicated Projects page that separates solution selection from proof of application in the field.
