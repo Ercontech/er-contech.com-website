@@ -123,6 +123,7 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] System 21: review every word and validate all technical and application claims.
 - [ ] System 21: replace the proof-section placeholders with a verified Field Condition / Completed Application project pair.
 - [ ] System 21: confirm that the legacy second image is a representative completed System 21 application before final public launch.
+- [ ] System 21 schematic: obtain a current technical plan or cross section showing how Ercoform bed protection transitions to and is anchored with Eco-Flex bank protection at the bed-bank margin; confirm the connection, anchoring and transition details are technically accurate and approved for public use.
 - [ ] Pipeline Supports: review every word and validate all technical and application claims.
 - [ ] Pipeline Supports: confirm that the selected Field Condition and Completed Application photographs are the same project and approved for public use.
 - [ ] Pipeline Supports: validate the soil-analysis, piling-suitability and required-depth language with the technical team.
