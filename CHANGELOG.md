@@ -4,6 +4,9 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+- Replaced the six Solutions-card collages with single completed-condition photographs for a cleaner and more confident overview.
+- Standardized the completed-work crops and applied restrained brightness, contrast and saturation adjustments across the grid.
+
 ## v0.4 - Project and solution proof structure
 
 - Added recovered Er-Con project imagery to all six core solution cards, shifting the Solutions page from text-only tiles to visual product teasers.

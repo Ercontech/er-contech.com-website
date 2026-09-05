@@ -4,16 +4,16 @@
 
 Thirty-four unique image files were recovered from the existing Er-Con Solutions page on September 5, 2026 and archived in `source-assets/legacy-solutions/`. These are working source assets, not final approvals.
 
-The first Solutions-card pass uses the six existing composite teasers:
+The current Solutions-card pass uses one completed-condition photograph per solution. The earlier composite teasers remain archived for possible use within the product-detail stories.
 
 | Solution | Published working asset | Source asset |
 | --- | --- | --- |
-| Palisade | `dist/assets/solutions/palisade-overview.png` | `Palisade-River-Training-System.png` |
-| Flexible Concrete Revetment | `dist/assets/solutions/fcr-overview.png` | `Flexible-Concrete-Revetment.png` |
-| Ercoform | `dist/assets/solutions/ercoform-overview.png` | `Ercoform.png` |
-| Eco-Flex | `dist/assets/solutions/eco-flex-overview.png` | `Ecoflex.png` |
-| System 21 | `dist/assets/solutions/system-21-overview.png` | `System-21.png` |
-| Pipeline Supports | `dist/assets/solutions/pipeline-supports-overview.png` | `pipeline-projects.png` |
+| Palisade | `dist/assets/solutions/palisade-completed.jpg` | `7413%20SSCGP%20005.jpg` |
+| Flexible Concrete Revetment | `dist/assets/solutions/fcr-completed.jpg` | `FCR%20Roadside%202.JPG` |
+| Ercoform | `dist/assets/solutions/ercoform-completed.jpg` | `Ercoform%202.jpg` |
+| Eco-Flex | `dist/assets/solutions/eco-flex-completed.jpg` | `Contra%20Luma%20Creek%20-%20after.JPG` |
+| System 21 | `dist/assets/solutions/system-21-completed.jpg` | `Image11.jpg` |
+| Pipeline Supports | `dist/assets/solutions/pipeline-supports-completed.jpg` | `Cotton%20Creek%20-%20After.jpg` |
 
 ## Selection guidance
 
