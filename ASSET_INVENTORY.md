@@ -19,7 +19,7 @@ The current Solutions-card pass uses one completed-condition photograph per solu
 | Flexible Concrete Revetment | `dist/assets/solutions/fcr-completed-v2.jpg` | Enhanced completed-channel photograph supplied during FCR page review |
 | Ercoform | `dist/assets/solutions/ercoform-completed.jpg` | `Ercoform%202.jpg` |
 | Eco-Flex | `dist/assets/solutions/eco-flex-overview-v2.jpg` | `1628-2.JPG` |
-| System 21 | `dist/assets/solutions/system-21-completed.jpg` | `Image11.jpg` |
+| System 21 | `dist/assets/solutions/system-21-completed-v2.jpg` | `job site 320.JPG` (second System 21 image on the legacy Solutions page; cropped and color corrected) |
 | Pipeline Supports | `dist/assets/solutions/pipeline-supports-completed.jpg` | `Cotton%20Creek%20-%20After.jpg` |
 
 ## Selection guidance

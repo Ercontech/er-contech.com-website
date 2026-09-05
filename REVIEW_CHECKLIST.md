@@ -116,6 +116,8 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Eco-Flex imagery: obtain and verify a paired field-condition and completed-application project sequence, including project number, location, date and customer-use permission.
 - [ ] Eco-Flex drawing: confirm the recovered mat detail and typical cross section remain technically current and appropriate for public use.
 - [ ] System 21: review every word and validate all technical and application claims.
+- [ ] System 21: replace the proof-section placeholders with a verified Field Condition / Completed Application project pair.
+- [ ] System 21: confirm that the legacy second image is a representative completed System 21 application before final public launch.
 - [ ] Pipeline Supports: review every word and validate all technical and application claims.
 - [ ] About: review every word, date, proof point, leadership name and title.
 - [ ] Contact: review every instruction, field label, required indicator, button and contact detail.

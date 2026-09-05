@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.11 - System 21 page foundation
+
+- Rebuilt the System 21 detail page around the shared Field Condition / Completed Application proof pattern.
+- Added honest project-image placeholders pending a verified System 21 before-and-after pair.
+- Replaced the darker Solutions tile image with a brighter, tighter treatment of the second System 21 image from the legacy site.
+- Added System 21 image and technical verification items to the review checklist.
+
 ## v0.10 - Eco-Flex page foundation
 
 - Replaced the visually busy Eco-Flex Solutions-card photograph with a cleaner recovered field image that makes the open-cell mat and developing vegetation immediately legible.
