@@ -4,6 +4,8 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+- Replaced the Solutions opening headline with "Treat the whole problem" and restored light-blue emphasis within the headline.
+- Removed the redundant framework label and tightened the opening spacing so readers reach the process faster.
 - Removed the Solutions-page hero that repeated the Home-page positioning.
 - Moved the Er-Con Solution Framework ahead of the solution cards so the page presents the selection methodology before the available system options.
 - Continue page-by-page review against `REVIEW_CHECKLIST.md`.
