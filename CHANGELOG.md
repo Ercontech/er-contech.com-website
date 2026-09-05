@@ -4,6 +4,7 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+- Replaced the shaped Solution Review gate with a larger white rectangular decision step, emphasized through scale, blue edging and elevation.
 - Replaced the Solutions opening headline with "Treat the whole problem" and restored light-blue emphasis within the headline.
 - Removed the redundant framework label and tightened the opening spacing so readers reach the process faster.
 - Removed the Solutions-page hero that repeated the Home-page positioning.
