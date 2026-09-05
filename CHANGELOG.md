@@ -2,6 +2,11 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.16 - Palisade schematic clarity
+
+- Replaced the low-resolution Palisade schematic with a clearer user-supplied version sized for near-native display in the engineering frame.
+- Preserved the earlier source for history while keeping technical labels and permeability values subject to expert-team confirmation.
+
 ## v0.15 - Palisade proof hierarchy
 
 - Recast the Palisade field story as a clean Field Condition / Completed Application comparison followed by a separate full-width Five-Year Update.
