@@ -50,6 +50,9 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 
 ## 6. Projects and proof
 
+- [x] Create a dedicated Projects page and route site-wide Projects navigation to it.
+- [x] Keep a concise selected-project preview on Home with a clear path to the full Projects page.
+- [x] Distinguish Solutions as what Er-Con can configure from Projects as where those solutions have been applied.
 - [ ] Confirm project examples help readers see situations similar to their own.
 - [ ] Confirm project imagery, titles and categories match the actual work shown.
 - [ ] Confirm project selectors work with mouse, keyboard and touch.
