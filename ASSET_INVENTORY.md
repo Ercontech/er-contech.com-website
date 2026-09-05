@@ -26,7 +26,12 @@ Pipeline Supports detail-page proof assets:
 
 - `dist/assets/pipeline-supports/pipeline-supports-field-condition.jpg`: user-supplied field-condition photograph.
 - `dist/assets/pipeline-supports/pipeline-supports-completed-application.jpg`: user-supplied completed-application photograph; also used for the Solutions tile and product hero.
-- `dist/assets/pipeline-supports/pipeline-support-installation-detail.jpg`: user-supplied installation detail used once in the process section.
+- `dist/assets/pipeline-supports/pipeline-support-system-schematic.png`: technical assembly schematic cropped from `source-assets/pipeline-supports/Pipe-Supports-2014.pdf` and used in the process section pending confirmation that all labels and dimensions remain current.
+- `dist/assets/pipeline-supports/pipeline-support-installation-detail.jpg`: user-supplied installation detail retained as a source option but no longer used on the page.
+
+Ercoform engineering asset:
+
+- `dist/assets/ercoform/ercoform-standard-drawing.jpg`: web-ready derivative of `source-assets/legacy-solutions/z-Ercoform%20Standard.jpg`, showing the mat layout, cable reinforcement, grout tubes and typical cross section pending technical approval.
 
 ## Selection guidance
 
@@ -35,6 +40,7 @@ Pipeline Supports detail-page proof assets:
 - The FCR detail page uses two before-and-after field comparisons. Original supplied images are preserved in `source-assets/fcr-comparisons/`, enhanced masters in `source-assets/fcr-comparisons/enhanced/` and web-ready derivatives in `dist/assets/fcr/`.
 - The Ercoform detail page uses two provisional field-condition and completed-application comparisons. Original supplied images are preserved in `source-assets/ercoform-comparisons/`, enhanced masters in `source-assets/ercoform-comparisons/enhanced/` and web-ready derivatives in `dist/assets/ercoform/`.
 - The second Ercoform completed-application image has a brighter approved presentation derivative ending in `-v2`; retain the original and first restrained correction for expert-team comparison.
+- The Ercoform standard drawing is recovered legacy material. Confirm its terminology, dimensions and publication approval before the site becomes public.
 - The Eco-Flex overview uses recovered field image `1628-2.JPG`; its recovered mat-detail and typical-cross-section drawing is published from `z-Ecoflex%20Standard.jpg` pending technical review.
 - Use composite before-and-after imagery as a teaser only when both states remain legible at card size.
 - Product pages should favor the strongest field photographs, relevant engineering drawings and long-term performance images.

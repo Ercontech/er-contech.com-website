@@ -112,6 +112,7 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Ercoform: review every word and validate all technical and application claims.
 - [ ] Ercoform comparison sets: confirm the project numbers, locations, dates, customer-use permissions and pairing of each field-condition and completed-application photograph.
 - [ ] Ercoform comparison framing: confirm the "channel and crossing protection" and "localized channel stabilization" interpretations with the technical team.
+- [ ] Ercoform drawing: confirm that the standard mat detail, dimensions, terminology and grout-tube configuration remain current and approved for public use.
 - [ ] Eco-Flex: review every word and validate all technical and application claims.
 - [ ] Eco-Flex imagery: obtain and verify a paired field-condition and completed-application project sequence, including project number, location, date and customer-use permission.
 - [ ] Eco-Flex drawing: confirm the recovered mat detail and typical cross section remain technically current and appropriate for public use.
@@ -120,7 +121,9 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] System 21: confirm that the legacy second image is a representative completed System 21 application before final public launch.
 - [ ] Pipeline Supports: review every word and validate all technical and application claims.
 - [ ] Pipeline Supports: confirm that the selected Field Condition and Completed Application photographs are the same project and approved for public use.
-- [ ] Pipeline Supports: validate that the support-and-clamp installation detail represents the current product configuration.
+- [ ] Pipeline Supports: validate the soil-analysis, piling-suitability and required-depth language with the technical team.
+- [ ] Pipeline Supports schematic: confirm that the clamp, insulator, cross-beam, barrel-sleeve and pipe-pile labels still represent the current product configuration.
+- [ ] Pipeline Supports schematic: specifically confirm or remove the legacy note stating pipe-pile depth may extend to 25 feet as required.
 - [ ] About: review every word, date, proof point, leadership name and title.
 - [ ] Contact: review every instruction, field label, required indicator, button and contact detail.
 - [ ] Careers: review every headline, introduction, opening summary, label and button.

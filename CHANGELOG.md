@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.13 - Engineering detail pass
+
+- Added the recovered Ercoform standard mat detail to the product-process section, extending the engineering-drawing treatment established on the Eco-Flex page.
+- Replaced the Pipeline Supports construction-detail photograph in the process section with a clean crop of the technical assembly schematic from the 2014 product brochure.
+- Strengthened the Pipeline Supports story around root cause, foundation conditions, project-specific engineering and coordination with the broader erosion response.
+- Flagged both legacy drawings and the brochure-derived technical language for expert-team verification before public launch.
+
 ## v0.12 - Pipeline Supports proof page
 
 - Rebuilt the Pipeline Supports page around a Field Condition / Completed Application proof pair supplied for team confirmation.
