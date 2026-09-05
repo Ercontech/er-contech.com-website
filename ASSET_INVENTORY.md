@@ -33,10 +33,15 @@ Ercoform engineering asset:
 
 - `dist/assets/ercoform/ercoform-standard-drawing.jpg`: web-ready derivative of `source-assets/legacy-solutions/z-Ercoform%20Standard.jpg`, showing the mat layout, cable reinforcement, grout tubes and typical cross section pending technical approval.
 
+Palisade engineering asset:
+
+- `dist/assets/palisade/palisade-permeability-schematic.png`: web-ready crop from `source-assets/palisade-brochure/Palisade-Brochure-2014.pdf`, showing the legacy variable-permeability arrangement from riverbank to midstream pending technical approval.
+
 ## Selection guidance
 
 - Prefer original-resolution photographs once the corresponding project numbers are identified.
 - The Palisade detail page uses a three-stage field sequence. Original supplied images are preserved in `source-assets/palisade-sequence/`, enhanced masters in `source-assets/palisade-sequence/enhanced/` and web-ready derivatives in `dist/assets/palisade/`.
+- The Palisade permeability schematic and brochure-derived component language are recovered legacy material. Confirm the panel types, percentage values, attachment-assembly terminology and pipe-piling description before the site becomes public.
 - The FCR detail page uses two before-and-after field comparisons. Original supplied images are preserved in `source-assets/fcr-comparisons/`, enhanced masters in `source-assets/fcr-comparisons/enhanced/` and web-ready derivatives in `dist/assets/fcr/`.
 - The Ercoform detail page uses two provisional field-condition and completed-application comparisons. Original supplied images are preserved in `source-assets/ercoform-comparisons/`, enhanced masters in `source-assets/ercoform-comparisons/enhanced/` and web-ready derivatives in `dist/assets/ercoform/`.
 - The second Ercoform completed-application image has a brighter approved presentation derivative ending in `-v2`; retain the original and first restrained correction for expert-team comparison.

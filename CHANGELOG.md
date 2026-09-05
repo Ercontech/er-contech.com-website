@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.14 - Palisade pattern and engineering pass
+
+- Brought the Palisade field story into the shared Field Condition / Completed Application pattern while retaining the documented five-year result that is distinctive to the system.
+- Added the variable-permeability schematic recovered from the 2014 Palisade brochure to the product-process section.
+- Expanded the process explanation to connect synthetic panels, fabricated attachment assemblies, pipe pilings and varying permeability as one coordinated river-training system.
+- Flagged the legacy schematic, component terminology and technical statements for expert-team confirmation before public launch.
+
 ## v0.13 - Engineering detail pass
 
 - Added the recovered Ercoform standard mat detail to the product-process section, extending the engineering-drawing treatment established on the Eco-Flex page.

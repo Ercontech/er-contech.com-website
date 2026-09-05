@@ -107,6 +107,9 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Solutions: review every headline, framework step, solution-card description, link label and supporting capability.
 - [ ] Palisade: review every word and validate all technical and application claims.
 - [ ] Palisade field sequence: confirm project number, location, dates, customer-use permission and that the three photographs document the same reach.
+- [ ] Palisade field sequence: confirm the documented five-year interval and approve the Field Condition / Completed Application / Five Years After Installation labels.
+- [ ] Palisade schematic: confirm the Erconet Type A, B and C panel designations and all displayed permeability percentages remain current and appropriate for public use.
+- [ ] Palisade system description: validate the synthetic-panel, fabricated attachment-assembly and pipe-piling terminology against the current product design.
 - [ ] Flexible Concrete Revetment: review every word and validate all technical and application claims.
 - [ ] FCR comparison sets: confirm the project numbers, locations, dates, customer-use permissions and pairing of each before-and-after photograph.
 - [ ] Ercoform: review every word and validate all technical and application claims.
