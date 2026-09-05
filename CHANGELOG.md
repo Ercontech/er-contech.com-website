@@ -4,6 +4,8 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+- Refined the Solutions-page conversation prompt to sound more consultative and clarify that the discussion begins with the assets the customer is trying to protect.
+
 ## v0.7 - FCR field-proof template
 
 - Rebuilt the Flexible Concrete Revetment detail page around two before-and-after project comparisons covering channel reconstruction and head-cut stabilization.
