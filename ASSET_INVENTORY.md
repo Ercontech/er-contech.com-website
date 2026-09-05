@@ -25,7 +25,7 @@ River Bends alternate under review:
 
 ## Careers photography
 
-- `dist/assets/careers-field-survey.png`: user-supplied photograph of a field professional surveying site conditions, used as a mirrored and heavily blue-tinted Careers hero background.
+- `dist/assets/careers-field-survey.png`: user-supplied photograph of a field professional surveying site conditions, used as a mirrored, right-side Careers hero image beneath a graduated blue overlay.
 - `source-assets/careers/careers-field-survey-user-provided.png`: preserved original supplied image. Its embedded timestamp is excluded from the displayed hero crop rather than removed from the source.
 
 ## Recovered legacy Solutions assets

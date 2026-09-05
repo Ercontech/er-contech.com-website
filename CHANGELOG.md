@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.23 - Careers hero framing correction
+
+- Reframed the Careers photograph as a contained right-side field image instead of a full-width cover crop.
+- Reduced the apparent scale and repositioned the field professional so the person and surveying activity remain recognizable beside the headline.
+- Refined the overlay to keep the left-side copy highly legible while allowing more photographic detail to remain visible on the right.
+
 ## v0.22 - Careers field-work hero
 
 - Added a real Er-Con field-survey photograph behind the Careers hero to align its visual treatment with Contact while keeping the page focused on people doing technical field work.
