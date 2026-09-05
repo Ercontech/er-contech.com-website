@@ -4,6 +4,11 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+## v0.6 - Number-free process treatment
+
+- Removed decorative numbering from the Home capability cards, Solution Framework, all six solution-process sections and the Palisade field sequence.
+- Retained meaningful Palisade stage labels and directional arrows while reclaiming the visual space previously reserved for numbers.
+
 ## v0.5 - Palisade product-story template
 
 - Rebuilt the Palisade detail page around an authentic three-stage field sequence: active bank loss, engineered application and developing recovery.
