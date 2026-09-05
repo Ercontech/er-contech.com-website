@@ -58,9 +58,9 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 
 ## 6A. Local impact and site stewardship
 
-- [ ] Add a concise Home-page message explaining that Er-Con brings its dedicated teams, systems and project leadership while working with local contractors, equipment providers, material suppliers and additional labor where practical.
-- [ ] Communicate that local sourcing supports the communities where Er-Con works without suggesting that project control or accountability is outsourced.
-- [ ] Communicate Er-Con's commitment to minimizing its footprint and leaving each site better than it was found.
+- [x] Add a concise Home-page message explaining that Er-Con brings its dedicated teams, systems and project leadership while working with local contractors, equipment providers, material suppliers and additional labor where practical.
+- [x] Communicate that local sourcing supports the communities where Er-Con works without suggesting that ownership of the project is outsourced.
+- [x] Communicate Er-Con's commitment to minimizing its footprint and leaving each site better than it was found.
 - [ ] Support the stewardship message with customer recognition, project examples or testimonials when approved evidence is available.
 - [ ] Consider a shorter supporting version on the About page after the primary Home-page treatment is established.
 

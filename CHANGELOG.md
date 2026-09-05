@@ -4,6 +4,10 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+- Shortened Solution Framework Step 02 to "Find the Root Cause" so the four blue process steps remain visually balanced.
+- Added a Home-page section explaining how Er-Con combines traveling expertise with local knowledge, resources and community participation while retaining ownership of the work.
+- Added the site-stewardship message around minimizing the project footprint and leaving the site better than it was found.
+- Replaced the remaining "accountable team" language on the Home page with ownership from first look through installation.
 - Continue page-by-page review against `REVIEW_CHECKLIST.md`.
 - Reserve `v.Base` for the first fully reviewed and approved baseline.
 
