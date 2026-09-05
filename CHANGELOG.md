@@ -4,6 +4,7 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+- Removed the redundant "Selected work" eyebrow from the Projects introduction so the section opens directly with its headline.
 - Built a dedicated Projects page that separates solution selection from proof of application in the field.
 - Reframed the Home-page progression around applications, in-house capabilities and selected project proof.
 - Updated Projects navigation across the site to open the dedicated page.
