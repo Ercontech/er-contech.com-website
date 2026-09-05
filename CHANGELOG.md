@@ -2,6 +2,11 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.21 - Hero hierarchy refinement
+
+- Connected the Home-page eyebrow more clearly to the primary headline with brand-blue color and tighter spacing.
+- Strengthened the translucent white fill behind Discover Solutions while preserving its secondary relationship to the primary call to action.
+
 ## v0.20 - Cleaner application cards
 
 - Removed the circular application icons from the Home-page cards after authentic project photography made them redundant.
