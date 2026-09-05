@@ -51,15 +51,15 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Confirm additional capabilities are valid Er-Con offerings and do not dilute the core solutions.
 - [ ] Confirm no precast articulating block mat offering is presented as an Er-Con service or product.
 
-## 6. Projects and proof
+## 6. Recent projects and proof
 
-- [x] Create a dedicated Projects page and route site-wide Projects navigation to it.
-- [x] Keep a concise selected-project preview on Home with a clear path to the full Projects page.
-- [x] Distinguish Solutions as what Er-Con can configure from Projects as where those solutions have been applied.
-- [ ] Confirm project examples help readers see situations similar to their own.
-- [ ] Confirm project imagery, titles and categories match the actual work shown.
-- [ ] Confirm project selectors work with mouse, keyboard and touch.
-- [ ] Determine whether additional project context or results are needed without turning the page into technical case studies.
+- [x] Temporarily remove Projects from the primary navigation and Home until a sustainable flow of current project photography is established.
+- [ ] Reintroduce the page and Home preview as Recent Projects once approved field content is available.
+- [ ] Add before, completed-application and wider finished-site photography to the field-superintendent job-closeout requirements.
+- [ ] Require original full-resolution files with project number, date, work type and location.
+- [ ] Create a brief field-photo guide covering consistent viewpoints, useful wide shots, lighting and items that should not appear in public images.
+- [ ] Organize Recent Projects by type of work while keeping Solutions focused on the systems and approaches Er-Con provides.
+- [ ] Determine the initial relaunch threshold and confirm every published project has accurate labeling and customer-use permission.
 - [ ] Confirm all project counts and geographic claims are supportable.
 - [ ] Determine where landowners should be represented as project stakeholders or decision influencers, especially when property damage prompts pipeline owners to act.
 

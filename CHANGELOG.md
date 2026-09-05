@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.19 - Projects held for current field proof
+
+- Removed Projects from the primary navigation and Home while preserving the working page for future development.
+- Removed the selected-project preview and project links from Home so the launch does not promise an underdeveloped gallery.
+- Defined the checklist for rebuilding the section as Recent Projects from consistent field-superintendent closeout photography organized by type of work.
+
 ## v0.18 - Authentic home-page applications
 
 - Replaced all four illustrative application-card images with real Er-Con project photography.
