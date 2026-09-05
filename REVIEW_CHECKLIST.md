@@ -141,6 +141,8 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 
 ## 11. Visual system and imagery
 
+- [ ] Home application cards: validate what each card should communicate and approve the final image for River Bends, Pipeline Free Spans, Critical Infrastructure and Installed Solutions.
+- [ ] River Bends card: decide whether to emphasize long-term natural recovery with the current five-year Palisade image or engineered bend geometry with the dewatered construction-stage alternate; obtain a higher-resolution alternate if selected.
 - [ ] Replace recovered web-resolution thumbnails with approved original-resolution project photography where available.
 - [ ] Confirm the project number, product assignment, location and permission status for every recovered legacy image.
 - [ ] Build each product page around a curated proof sequence: field condition, root cause, engineered drawing, installation and performance today.

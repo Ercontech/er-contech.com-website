@@ -18,6 +18,11 @@ The four application cards now use real Er-Con project imagery rather than illus
 | Critical Infrastructure | `dist/assets/home-critical-infrastructure.png` | Faithful exposure, color and clarity restoration of legacy `bridge.JPG`; restored master preserved as `source-assets/home-applications/bridge-restored-v2.png` |
 | Installed Solutions | `dist/assets/home-installed-solutions.jpg` | Legacy Er-Con photograph `FCR%20Roadside%202.JPG` |
 
+River Bends alternate under review:
+
+- `source-assets/home-applications/river-bend-alternate-user-provided.png`: user-supplied photograph of an engineered bend during a dewatered construction stage. It shows the treatment clearly but does not immediately read as an active river at home-page card size.
+- `source-assets/home-applications/river-bend-alternate-plan-user-provided.png`: supporting plan view confirming the bend geometry; retain for technical context rather than use as the home-page photograph.
+
 ## Recovered legacy Solutions assets
 
 Thirty-four unique image files were recovered from the existing Er-Con Solutions page on September 5, 2026 and archived in `source-assets/legacy-solutions/`. These are working source assets, not final approvals.
