@@ -20,7 +20,13 @@ The current Solutions-card pass uses one completed-condition photograph per solu
 | Ercoform | `dist/assets/solutions/ercoform-completed.jpg` | `Ercoform%202.jpg` |
 | Eco-Flex | `dist/assets/solutions/eco-flex-overview-v2.jpg` | `1628-2.JPG` |
 | System 21 | `dist/assets/solutions/system-21-completed-v2.jpg` | `job site 320.JPG` (second System 21 image on the legacy Solutions page; cropped and color corrected) |
-| Pipeline Supports | `dist/assets/solutions/pipeline-supports-completed.jpg` | `Cotton%20Creek%20-%20After.jpg` |
+| Pipeline Supports | `dist/assets/pipeline-supports/pipeline-supports-completed-application.jpg` | User-supplied completed application photograph, cropped and color corrected |
+
+Pipeline Supports detail-page proof assets:
+
+- `dist/assets/pipeline-supports/pipeline-supports-field-condition.jpg`: user-supplied field-condition photograph.
+- `dist/assets/pipeline-supports/pipeline-supports-completed-application.jpg`: user-supplied completed-application photograph; also used for the Solutions tile and product hero.
+- `dist/assets/pipeline-supports/pipeline-support-installation-detail.jpg`: user-supplied installation detail used once in the process section.
 
 ## Selection guidance
 

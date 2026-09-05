@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.12 - Pipeline Supports proof page
+
+- Rebuilt the Pipeline Supports page around a Field Condition / Completed Application proof pair supplied for team confirmation.
+- Replaced the legacy Solutions tile and hero imagery with the brighter completed crossing photograph.
+- Added one close installation detail to the process section without interrupting the main before-and-after pattern.
+- Added Pipeline Supports image and configuration checks to the review checklist.
+
 ## v0.11 - System 21 page foundation
 
 - Rebuilt the System 21 detail page around the shared Field Condition / Completed Application proof pattern.

@@ -119,6 +119,8 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] System 21: replace the proof-section placeholders with a verified Field Condition / Completed Application project pair.
 - [ ] System 21: confirm that the legacy second image is a representative completed System 21 application before final public launch.
 - [ ] Pipeline Supports: review every word and validate all technical and application claims.
+- [ ] Pipeline Supports: confirm that the selected Field Condition and Completed Application photographs are the same project and approved for public use.
+- [ ] Pipeline Supports: validate that the support-and-clamp installation detail represents the current product configuration.
 - [ ] About: review every word, date, proof point, leadership name and title.
 - [ ] Contact: review every instruction, field label, required indicator, button and contact detail.
 - [ ] Careers: review every headline, introduction, opening summary, label and button.
