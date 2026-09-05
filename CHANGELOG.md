@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.15 - Palisade proof hierarchy
+
+- Recast the Palisade field story as a clean Field Condition / Completed Application comparison followed by a separate full-width Five-Year Update.
+- Replaced the cropped brochure illustration with the more complete user-supplied Palisade system and permeability schematic.
+- Preserved the five-year result as a distinct proof point rather than presenting all three images as equal milestones.
+
 ## v0.14 - Palisade pattern and engineering pass
 
 - Brought the Palisade field story into the shared Field Condition / Completed Application pattern while retaining the documented five-year result that is distinctive to the system.

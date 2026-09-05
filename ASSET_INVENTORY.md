@@ -35,7 +35,7 @@ Ercoform engineering asset:
 
 Palisade engineering asset:
 
-- `dist/assets/palisade/palisade-permeability-schematic.png`: web-ready crop from `source-assets/palisade-brochure/Palisade-Brochure-2014.pdf`, showing the legacy variable-permeability arrangement from riverbank to midstream pending technical approval.
+- `dist/assets/palisade/palisade-permeability-schematic.png`: user-supplied schematic showing the control zone, panel arrangement and variable permeability from riverbank to midstream. The exact supplied source is preserved as `source-assets/palisade-brochure/palisade-system-schematic-user-provided.png`; obtain a higher-resolution master before public launch.
 
 ## Selection guidance
 
