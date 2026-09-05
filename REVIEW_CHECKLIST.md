@@ -56,6 +56,14 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Determine whether additional project context or results are needed without turning the page into technical case studies.
 - [ ] Confirm all project counts and geographic claims are supportable.
 
+## 6A. Local impact and site stewardship
+
+- [ ] Add a concise Home-page message explaining that Er-Con brings its dedicated teams, systems and project leadership while working with local contractors, equipment providers, material suppliers and additional labor where practical.
+- [ ] Communicate that local sourcing supports the communities where Er-Con works without suggesting that project control or accountability is outsourced.
+- [ ] Communicate Er-Con's commitment to minimizing its footprint and leaving each site better than it was found.
+- [ ] Support the stewardship message with customer recognition, project examples or testimonials when approved evidence is available.
+- [ ] Consider a shorter supporting version on the About page after the primary Home-page treatment is established.
+
 ## 7. Calls to action and contact
 
 - [ ] Confirm repeated calls to action are intentionally placed and not duplicative within the same page.
