@@ -4,6 +4,10 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+## v0.8 - Solution-card hierarchy
+
+- Reordered all six Solutions-page tiles to follow a consistent border, text and completed-project image hierarchy.
+- Moved the image divider below the copy so the blue card border reads cleanly and consistently instead of competing with the photographs.
 - Refined the Solutions-page conversation prompt to sound more consultative and clarify that the discussion begins with the assets the customer is trying to protect.
 
 ## v0.7 - FCR field-proof template
