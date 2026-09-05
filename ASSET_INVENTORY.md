@@ -18,7 +18,7 @@ The current Solutions-card pass uses one completed-condition photograph per solu
 | Palisade | `dist/assets/solutions/palisade-completed-v2.jpg` | Enhanced recovery photograph supplied during Palisade page review |
 | Flexible Concrete Revetment | `dist/assets/solutions/fcr-completed-v2.jpg` | Enhanced completed-channel photograph supplied during FCR page review |
 | Ercoform | `dist/assets/solutions/ercoform-completed.jpg` | `Ercoform%202.jpg` |
-| Eco-Flex | `dist/assets/solutions/eco-flex-completed.jpg` | `Contra%20Luma%20Creek%20-%20after.JPG` |
+| Eco-Flex | `dist/assets/solutions/eco-flex-overview-v2.jpg` | `1628-2.JPG` |
 | System 21 | `dist/assets/solutions/system-21-completed.jpg` | `Image11.jpg` |
 | Pipeline Supports | `dist/assets/solutions/pipeline-supports-completed.jpg` | `Cotton%20Creek%20-%20After.jpg` |
 
@@ -29,6 +29,7 @@ The current Solutions-card pass uses one completed-condition photograph per solu
 - The FCR detail page uses two before-and-after field comparisons. Original supplied images are preserved in `source-assets/fcr-comparisons/`, enhanced masters in `source-assets/fcr-comparisons/enhanced/` and web-ready derivatives in `dist/assets/fcr/`.
 - The Ercoform detail page uses two provisional field-condition and completed-application comparisons. Original supplied images are preserved in `source-assets/ercoform-comparisons/`, enhanced masters in `source-assets/ercoform-comparisons/enhanced/` and web-ready derivatives in `dist/assets/ercoform/`.
 - The second Ercoform completed-application image has a brighter approved presentation derivative ending in `-v2`; retain the original and first restrained correction for expert-team comparison.
+- The Eco-Flex overview uses recovered field image `1628-2.JPG`; its recovered mat-detail and typical-cross-section drawing is published from `z-Ecoflex%20Standard.jpg` pending technical review.
 - Use composite before-and-after imagery as a teaser only when both states remain legible at card size.
 - Product pages should favor the strongest field photographs, relevant engineering drawings and long-term performance images.
 - The Projects page can use a looser gallery structure with light project metadata and links back to the relevant solution.

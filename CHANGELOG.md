@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.10 - Eco-Flex page foundation
+
+- Replaced the visually busy Eco-Flex Solutions-card photograph with a cleaner recovered field image that makes the open-cell mat and developing vegetation immediately legible.
+- Rebuilt the Eco-Flex detail page around the field-proof structure and reserved a clearly labeled field-condition and completed-application pair for verified project imagery.
+- Added the recovered Eco-Flex mat-detail and typical-cross-section drawing to reinforce the engineering behind the revegetated application.
+
 ## v0.9 - Ercoform field-proof template
 
 - Rebuilt the Ercoform detail page around two field-condition and completed-application comparisons, with provisional technical framing pending expert-team verification.

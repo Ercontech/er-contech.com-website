@@ -113,6 +113,8 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Ercoform comparison sets: confirm the project numbers, locations, dates, customer-use permissions and pairing of each field-condition and completed-application photograph.
 - [ ] Ercoform comparison framing: confirm the "channel and crossing protection" and "localized channel stabilization" interpretations with the technical team.
 - [ ] Eco-Flex: review every word and validate all technical and application claims.
+- [ ] Eco-Flex imagery: obtain and verify a paired field-condition and completed-application project sequence, including project number, location, date and customer-use permission.
+- [ ] Eco-Flex drawing: confirm the recovered mat detail and typical cross section remain technically current and appropriate for public use.
 - [ ] System 21: review every word and validate all technical and application claims.
 - [ ] Pipeline Supports: review every word and validate all technical and application claims.
 - [ ] About: review every word, date, proof point, leadership name and title.
