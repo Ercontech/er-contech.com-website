@@ -7,6 +7,10 @@ This log records meaningful design, content and experience checkpoints. Routine 
 - Built a dedicated Projects page that separates solution selection from proof of application in the field.
 - Reframed the Home-page progression around applications, in-house capabilities and selected project proof.
 - Updated Projects navigation across the site to open the dedicated page.
+- Established a deliberate naming pattern: "Er-Con Technologies" for formal identification and "Er-Con" for conversational and repeated references.
+- Tightened the Home-page applications language to move cleanly from creeks and rivers through stormwater systems and coastlines.
+- Added landowner inclusion and representation as an explicit content-review question.
+- Replaced the Home CTA's remaining services language with the established solutions positioning.
 
 ## v0.3 - Pre-projects-page checkpoint
 

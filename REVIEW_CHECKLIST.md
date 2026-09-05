@@ -29,6 +29,9 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 ## 4. Messaging architecture
 
 - [ ] Confirm the core promise centers on erosion mitigation, prevention, bank stabilization and protecting critical assets.
+- [ ] Use "Er-Con Technologies" for formal identification, including page titles, metadata, the first company introduction on Home and About, job-description business-unit references, equal-employment statements, email subject lines and the legal footer.
+- [ ] Use "Er-Con" for headlines, normal narrative after the company is established, calls to action, solution and project descriptions and other conversational references.
+- [ ] Treat the logo as establishing the full company name on secondary pages rather than forcing "Er-Con Technologies" into every hero.
 - [ ] Confirm "Experience. Innovation. Results." is used with appropriate prominence and restraint.
 - [ ] Confirm more than 50 years, 3,000+ global projects and 35+ U.S. states are presented consistently.
 - [ ] Use global or international reach without unnecessarily limiting the reader's imagination to a short country list.
@@ -58,6 +61,7 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Confirm project selectors work with mouse, keyboard and touch.
 - [ ] Determine whether additional project context or results are needed without turning the page into technical case studies.
 - [ ] Confirm all project counts and geographic claims are supportable.
+- [ ] Determine where landowners should be represented as project stakeholders or decision influencers, especially when property damage prompts pipeline owners to act.
 
 ## 6A. Local impact and site stewardship
 
