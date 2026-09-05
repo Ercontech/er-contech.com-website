@@ -6,6 +6,7 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 - Rebuilt the Ercoform detail page around two field-condition and completed-application comparisons, with provisional technical framing pending expert-team verification.
 - Replaced the generic Ercoform hero with a completed field application and preserved the supplied originals alongside restrained, documentary-style enhancements.
+- Brightened the second Ercoform completed-application image to open the shaded installation area, recover foreground detail and improve visual clarity.
 - Moved each Solutions-page action into a dedicated footer below the completed-project image.
 - Restored the translucent, blurred sticky-header treatment and introduced an exact transparent-background master of the existing logo so the mark remains visually seamless while scrolling.
 

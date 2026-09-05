@@ -28,6 +28,7 @@ The current Solutions-card pass uses one completed-condition photograph per solu
 - The Palisade detail page uses a three-stage field sequence. Original supplied images are preserved in `source-assets/palisade-sequence/`, enhanced masters in `source-assets/palisade-sequence/enhanced/` and web-ready derivatives in `dist/assets/palisade/`.
 - The FCR detail page uses two before-and-after field comparisons. Original supplied images are preserved in `source-assets/fcr-comparisons/`, enhanced masters in `source-assets/fcr-comparisons/enhanced/` and web-ready derivatives in `dist/assets/fcr/`.
 - The Ercoform detail page uses two provisional field-condition and completed-application comparisons. Original supplied images are preserved in `source-assets/ercoform-comparisons/`, enhanced masters in `source-assets/ercoform-comparisons/enhanced/` and web-ready derivatives in `dist/assets/ercoform/`.
+- The second Ercoform completed-application image has a brighter approved presentation derivative ending in `-v2`; retain the original and first restrained correction for expert-team comparison.
 - Use composite before-and-after imagery as a teaser only when both states remain legible at card size.
 - Product pages should favor the strongest field photographs, relevant engineering drawings and long-term performance images.
 - The Projects page can use a looser gallery structure with light project metadata and links back to the relevant solution.
