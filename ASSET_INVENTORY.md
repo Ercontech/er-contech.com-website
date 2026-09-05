@@ -8,7 +8,7 @@ The current Solutions-card pass uses one completed-condition photograph per solu
 
 | Solution | Published working asset | Source asset |
 | --- | --- | --- |
-| Palisade | `dist/assets/solutions/palisade-completed.jpg` | `7413%20SSCGP%20005.jpg` |
+| Palisade | `dist/assets/solutions/palisade-completed-v2.jpg` | Enhanced recovery photograph supplied during Palisade page review |
 | Flexible Concrete Revetment | `dist/assets/solutions/fcr-completed.jpg` | `FCR%20Roadside%202.JPG` |
 | Ercoform | `dist/assets/solutions/ercoform-completed.jpg` | `Ercoform%202.jpg` |
 | Eco-Flex | `dist/assets/solutions/eco-flex-completed.jpg` | `Contra%20Luma%20Creek%20-%20after.JPG` |
@@ -18,6 +18,7 @@ The current Solutions-card pass uses one completed-condition photograph per solu
 ## Selection guidance
 
 - Prefer original-resolution photographs once the corresponding project numbers are identified.
+- The Palisade detail page uses a three-stage field sequence. Original supplied images are preserved in `source-assets/palisade-sequence/`, enhanced masters in `source-assets/palisade-sequence/enhanced/` and web-ready derivatives in `dist/assets/palisade/`.
 - Use composite before-and-after imagery as a teaser only when both states remain legible at card size.
 - Product pages should favor the strongest field photographs, relevant engineering drawings and long-term performance images.
 - The Projects page can use a looser gallery structure with light project metadata and links back to the relevant solution.

@@ -106,6 +106,7 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Home: review every headline, paragraph, label, statistic, project caption, button and footer line.
 - [ ] Solutions: review every headline, framework step, solution-card description, link label and supporting capability.
 - [ ] Palisade: review every word and validate all technical and application claims.
+- [ ] Palisade field sequence: confirm project number, location, dates, customer-use permission and that the three photographs document the same reach.
 - [ ] Flexible Concrete Revetment: review every word and validate all technical and application claims.
 - [ ] Ercoform: review every word and validate all technical and application claims.
 - [ ] Eco-Flex: review every word and validate all technical and application claims.

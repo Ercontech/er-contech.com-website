@@ -4,6 +4,13 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+## v0.5 - Palisade product-story template
+
+- Rebuilt the Palisade detail page around an authentic three-stage field sequence: active bank loss, engineered application and developing recovery.
+- Enhanced the supplied project photographs for cleaner exposure, stronger natural color and more consistent presentation while preserving the documented site and installed system.
+- Replaced the Palisade hero and Solutions teaser with the recovered-bank photograph.
+- Reframed the Palisade facts and process around an engineered site-specific layout rather than a configured product.
+- Preserved the supplied originals, enhanced masters and web-ready derivatives with documented source notes.
 - Replaced the six Solutions-card collages with single completed-condition photographs for a cleaner and more confident overview.
 - Standardized the completed-work crops and applied restrained brightness, contrast and saturation adjustments across the grid.
 
