@@ -4,6 +4,8 @@ This log records meaningful design, content and experience checkpoints. Routine 
 
 ## Unreleased
 
+- Added a standing Careers invitation for exceptional candidates who do not see a matching open role, including a direct email introduction and resume path.
+- Removed the circular 50-year badge from the Home hero while retaining the experience proof in the page content.
 - Shortened Solution Framework Step 02 to "Find the Root Cause" so the four blue process steps remain visually balanced.
 - Added a Home-page section explaining how Er-Con combines traveling expertise with local knowledge, resources and community participation while retaining ownership of the work.
 - Added the site-stewardship message around minimizing the project footprint and leaving the site better than it was found.

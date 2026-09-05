@@ -84,6 +84,7 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 
 ## 9. Careers
 
+- [x] Provide an open-door resume path for exceptional candidates who do not see a matching posted role.
 - [ ] Confirm the Careers overview reflects the type of organization and field work candidates are joining.
 - [ ] Confirm every open position appears on the Careers page and links to the correct detail page.
 - [ ] Confirm role titles are market-appropriate, including Field Construction Technician rather than Laborer.
