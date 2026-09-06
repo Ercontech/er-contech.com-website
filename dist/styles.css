@@ -58,3 +58,6 @@ footer{background:white;border-top:1px solid #dce5ee}.footer-inner{max-width:var
 /* Pipeline Supports Cotton Creek hero */
 .product-hero-supports{background-image:url('assets/pipeline-supports/pipeline-supports-cotton-creek-hero.png');background-position:center 50%}
 @media (max-width:600px){.product-hero-supports{background-position:66% center}}
+
+/* Text-based proof point */
+.stat-num-text{font-size:clamp(27px,2.25vw,36px);line-height:1.05}
