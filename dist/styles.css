@@ -54,3 +54,7 @@ footer{background:white;border-top:1px solid #dce5ee}.footer-inner{max-width:var
 
 /* Careers field-work hero */
 .careers-hero{position:relative;overflow:hidden;background:#001f43}.careers-hero-photo{position:absolute;z-index:0;right:0;top:50%;height:118%;width:auto;max-width:none;transform:translateY(-50%) scaleX(-1)}.careers-hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,31,67,.99) 0%,rgba(0,31,67,.96) 48%,rgba(6,67,127,.78) 73%,rgba(6,67,127,.64) 100%)}.careers-hero-inner{position:relative;z-index:2}@media (max-width:900px){.careers-hero-photo{right:-24vw}}@media (max-width:600px){.careers-hero-photo{right:-50vw}}
+
+/* Pipeline Supports Cotton Creek hero */
+.product-hero-supports{background-image:url('assets/pipeline-supports/pipeline-supports-cotton-creek-hero.png');background-position:center 50%}
+@media (max-width:600px){.product-hero-supports{background-position:66% center}}
