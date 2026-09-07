@@ -63,4 +63,4 @@ footer{background:white;border-top:1px solid #dce5ee}.footer-inner{max-width:var
 .stat-num-text{font-size:clamp(27px,2.25vw,36px);line-height:1.05}
 
 /* Keep the bridge deck visible in the Critical Infrastructure card */
-.application-photo-bridge img{height:210px;object-position:center 42%}
+.application-photo-bridge img{object-position:center 18%}
