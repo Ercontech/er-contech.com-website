@@ -73,3 +73,11 @@ footer{background:#f7faff;border-top:0}
 .footer-signature span:nth-child(1){color:#001c4d}
 .footer-signature span:nth-child(2){color:#0b79fc}
 .footer-signature span:nth-child(3){color:#757778}
+
+/* Provisional leadership portraits for the eight-person layout */
+.portrait-ian,.portrait-james,.portrait-derek,.portrait-danny,.portrait-george{background-image:url('assets/leadership-project-managers.png');background-size:300% 200%}
+.portrait-ian{background-position:0 0}
+.portrait-james{background-position:50% 0}
+.portrait-derek{background-position:100% 0}
+.portrait-danny{background-position:0 100%}
+.portrait-george{background-position:50% 100%}
