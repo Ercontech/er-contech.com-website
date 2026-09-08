@@ -2,6 +2,17 @@
 
 This is the living review checklist for reaching `v.Base`. It focuses first on experience, structure and messaging approach, then on detailed wording and execution.
 
+## Current product-page review queue
+
+- [ ] Finish [Palisade technical validation](https://ercon-technologies.ronsora.chatgpt.site/palisade.html), photo provenance and schematic review.
+- [ ] Obtain Eco-Flex before-and-after photography.
+- [ ] Validate [Eco-Flex technical claims and drawing](https://ercon-technologies.ronsora.chatgpt.site/eco-flex.html).
+- [ ] Review the [Flexible Concrete Revetment page](https://ercon-technologies.ronsora.chatgpt.site/fcr.html).
+- [ ] Review the [Ercoform page](https://ercon-technologies.ronsora.chatgpt.site/ercoform.html).
+- [ ] Review System 21 and replace its proof-section placeholders.
+- [ ] Review the [Pipeline Supports page](https://ercon-technologies.ronsora.chatgpt.site/pipeline-supports.html).
+- [ ] Review and confirm Turf Reinforcement Matting and Grid-Reinforced Stabilization as valid Additional Capabilities; remove either capability if it cannot be supported.
+
 ## 1. Audience and purpose
 
 - [ ] Confirm the primary reader is an asset owner or company trying to solve an erosion, stabilization or asset-protection problem.
@@ -48,7 +59,7 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Confirm the framework shows root-cause evaluation, comparison of available systems and customer review before execution.
 - [ ] Confirm the framework communicates that Er-Con can tailor or combine multiple products based on site conditions.
 - [ ] Confirm fabrication language accurately reflects site-specific factory fabrication rather than fabrication at the project site.
-- [ ] Confirm additional capabilities are valid Er-Con offerings and do not dilute the core solutions.
+- [ ] Review and confirm Turf Reinforcement Matting and Grid-Reinforced Stabilization as valid Er-Con offerings that do not dilute the core solutions; remove either capability if it cannot be supported.
 - [ ] Confirm no precast articulating block mat offering is presented as an Er-Con service or product.
 
 ## 6. Recent projects and proof
@@ -113,9 +124,9 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Palisade schematic: confirm the Erconet Type A, B and C panel designations and all displayed permeability percentages remain current and appropriate for public use.
 - [ ] Palisade schematic: request the original vector or print master from the technical team if one is available for future high-density display.
 - [ ] Palisade system description: validate the synthetic-panel, fabricated attachment-assembly and pipe-piling terminology against the current product design.
-- [ ] Flexible Concrete Revetment: review every word and validate all technical and application claims.
+- [ ] [Flexible Concrete Revetment](https://ercon-technologies.ronsora.chatgpt.site/fcr.html): review every word and validate all technical and application claims.
 - [ ] FCR comparison sets: confirm the project numbers, locations, dates, customer-use permissions and pairing of each before-and-after photograph.
-- [ ] Ercoform: review every word and validate all technical and application claims.
+- [ ] [Ercoform](https://ercon-technologies.ronsora.chatgpt.site/ercoform.html): review every word and validate all technical and application claims.
 - [ ] Ercoform comparison sets: confirm the project numbers, locations, dates, customer-use permissions and pairing of each field-condition and completed-application photograph.
 - [ ] Ercoform comparison framing: confirm the "channel and crossing protection" and "localized channel stabilization" interpretations with the technical team.
 - [ ] Ercoform drawing: confirm that the standard mat detail, dimensions, terminology and grout-tube configuration remain current and approved for public use.
@@ -126,7 +137,7 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] System 21: replace the proof-section placeholders with a verified Field Condition / Completed Application project pair.
 - [ ] System 21: confirm that the legacy second image is a representative completed System 21 application before final public launch.
 - [ ] System 21 schematic: obtain a current technical plan or cross section showing how Ercoform bed protection transitions to and is anchored with Eco-Flex bank protection at the bed-bank margin; confirm the connection, anchoring and transition details are technically accurate and approved for public use.
-- [ ] Pipeline Supports: review every word and validate all technical and application claims.
+- [ ] [Pipeline Supports](https://ercon-technologies.ronsora.chatgpt.site/pipeline-supports.html): review every word and validate all technical and application claims.
 - [ ] Pipeline Supports: confirm that the selected Field Condition and Completed Application photographs are the same project and approved for public use.
 - [ ] Pipeline Supports: validate the soil-analysis, piling-suitability and required-depth language with the technical team.
 - [ ] Pipeline Supports schematic: confirm that the clamp, insulator, cross-beam, barrel-sleeve and pipe-pile labels still represent the current product configuration.
@@ -139,8 +150,9 @@ This is the living review checklist for reaching `v.Base`. It focuses first on e
 - [ ] Civil Designer: compare every displayed word with the approved job description.
 - [ ] Regional Account Manager: compare every displayed word with the approved job description.
 - [ ] Review navigation, footer, browser titles, metadata descriptions, image alternative text and form-generated email text across all pages.
-- [ ] Confirm no visible copy contains an em dash.
-- [ ] Confirm punctuation, capitalization, trademark symbols, hyphenation and terminology are consistent site-wide.
+- [x] Complete the site-wide punctuation, capitalization and terminology pass.
+- [x] Confirm no visible copy contains an em dash.
+- [x] Confirm punctuation, capitalization, trademark symbols, hyphenation and terminology are consistent site-wide.
 
 ## 11. Visual system and imagery
 
