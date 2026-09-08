@@ -78,6 +78,6 @@ footer{background:#f7faff;border-top:0}
 .portrait-ian,.portrait-james,.portrait-derek,.portrait-danny,.portrait-george{background-image:url('assets/leadership-project-managers.png');background-size:300% 200%}
 .portrait-ian{background-position:0 0}
 .portrait-james{background-position:50% 0}
-.portrait-derek{background-position:100% 0}
+.portrait-derek{background-image:url('assets/leadership-derek-v2.png');background-size:cover;background-position:center}
 .portrait-danny{background-position:0 100%}
 .portrait-george{background-position:50% 100%}
