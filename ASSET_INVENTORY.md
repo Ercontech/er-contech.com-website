@@ -53,6 +53,7 @@ Pipeline Supports detail-page proof assets:
 Ercoform engineering asset:
 
 - `dist/assets/ercoform/ercoform-standard-drawing.jpg`: web-ready derivative of `source-assets/legacy-solutions/z-Ercoform%20Standard.jpg`, showing the mat layout, cable reinforcement, grout tubes and typical cross section pending technical approval.
+- `dist/assets/ercoform/ercoform-system-detail.jpg`: user-provided Ercoform physical system detail used beside the standard drawing. Original preserved as `source-assets/ercoform/ErcoForm_09-17.jpg`.
 
 Palisade engineering asset:
 
