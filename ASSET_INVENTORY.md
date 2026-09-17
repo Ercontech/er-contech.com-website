@@ -58,6 +58,7 @@ Ercoform engineering asset:
 Palisade engineering asset:
 
 - `dist/assets/palisade/palisade-permeability-schematic.png`: clearer 442 x 360 user-supplied schematic showing the control zone, panel arrangement and variable permeability from riverbank to midstream. The exact supplied source is preserved as `source-assets/palisade-brochure/palisade-system-schematic-user-provided-v2.png`; the earlier 151 x 197 source remains archived for history.
+- `dist/assets/palisade/palisade-panel-configurations.png`: cleaned web derivative of the user-supplied Type I, Type II and Type III Palisade configuration drawing. The original is preserved as `source-assets/palisade-brochure/palisade-system-types-2026-09-17.png`.
 
 ## Selection guidance
 

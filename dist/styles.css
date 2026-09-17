@@ -91,3 +91,9 @@ footer{background:#f7faff;border-top:0}
 .product-process-ercoform .product-engineering-pair .product-engineering-figure-detail img{object-position:center 52%}
 .product-process-ercoform .product-engineering-pair .product-engineering-figure figcaption{min-height:48px;display:flex;align-items:center}
 @media (max-width:600px){.product-engineering-pair{grid-template-columns:1fr}.product-process-ercoform .product-engineering-pair .product-engineering-figure img{height:300px}}
+
+/* Palisade technical drawings use the shared paired-image row */
+.product-process-palisade .product-engineering-pair .product-engineering-figure{margin:0;max-width:none;border-top:0;overflow:hidden}
+.product-process-palisade .product-engineering-pair .product-engineering-figure img{width:100%;height:410px;object-fit:contain;background:#fff}
+.product-process-palisade .product-engineering-pair .product-engineering-figure figcaption{min-height:48px;display:flex;align-items:center}
+@media (max-width:600px){.product-process-palisade .product-engineering-pair .product-engineering-figure img{height:300px}}
