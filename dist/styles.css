@@ -97,3 +97,9 @@ footer{background:#f7faff;border-top:0}
 .product-process-palisade .product-engineering-pair .product-engineering-figure img{width:100%;height:410px;object-fit:contain;background:#fff}
 .product-process-palisade .product-engineering-pair .product-engineering-figure figcaption{min-height:48px;display:flex;align-items:center}
 @media (max-width:600px){.product-process-palisade .product-engineering-pair .product-engineering-figure img{height:300px}}
+
+/* Eco-Flex technical drawings use the shared paired-image row without the legacy blue bar */
+.product-process-ecoflex .product-engineering-pair .product-engineering-figure{margin:0;max-width:none;border-top:0;overflow:hidden}
+.product-process-ecoflex .product-engineering-pair .product-engineering-figure img{width:100%;height:410px;object-fit:contain;background:#fff}
+.product-process-ecoflex .product-engineering-pair .product-engineering-figure figcaption{min-height:48px;display:flex;align-items:center}
+@media (max-width:600px){.product-process-ecoflex .product-engineering-pair .product-engineering-figure img{height:300px}}
