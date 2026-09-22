@@ -2,6 +2,36 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.34 - Superseded accent values swept from live rules
+
+Seven rules were still painting the old Steel Blue and Steel Light. They were
+written as rgba() so the earlier hex sweep missed them:
+
+- the form focus ring (`.form-field input:focus`)
+- the "Completed application" figcaptions on six product pages
+- the Palisade five-year figcaption
+- borders on `.project-environments li`, `.framework-step` and `.dark .service-card`
+- the ghost numeral on `.dark .service-card span`
+
+The two dead tokens carrying those values are removed from `:root` entirely rather than
+recoloured. They were unused, and leaving tokens that resolve to superseded
+values invites someone to pick them up later.
+
+## v0.33 - Small-size optical variant of the icon
+
+At 16 and 32px the concrete form sat too close to navy to register and the mark
+carried more tile padding than it needed. A dedicated small-size variant tightens
+the crop and lifts the concrete to #D8D7D6. Master set unchanged at 180px and up.
+Adds favicon-16 and references it from all 15 pages.
+
+## v0.32 - Master logo set regenerated against the settled palette
+
+Ten PNGs re-rendered from the updated SVGs at their original dimensions with
+transparent backgrounds. Concrete grey moves to a true neutral (#8C8B8A, #ABAAA9
+reverse) and the accent to Signal (#03778E, #08BBDE), resolving the dE 13.4
+collision between the shield and the accent. Site favicon and apple-touch-icon
+re-synced from the new app tile.
+
 ## v0.31 - The mark rejoins the system
 
 - The lower shield represents concrete. It was Field Slate #5F7085, a blue-tinted grey at chroma 13.7, against measured concrete at 0.4 to 0.9. It is now Concrete #8C8B8A and reads as the material it depicts.
