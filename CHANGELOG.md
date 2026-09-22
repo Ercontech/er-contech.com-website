@@ -2,6 +2,16 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.24 - Brand system applied
+
+- Replaced the legacy header mark with the v3 Er-Con logo, and added the shield-and-E icon as favicon, SVG icon and app tile. Retired the three older PNG variants of the legacy mark.
+- Reserved the logo's box at its exact aspect ratio so the header no longer reflows while the page loads, keeping it identical in position and size across every page.
+- Rebuilt the stylesheet's color layer on the brand palette. The palette had never been tokenized: six variables sat alongside roughly ninety hard-coded color literals. All of them now resolve to named brand tokens.
+- Shifted the accent from the previous bright blue to Steel Blue, with Steel Light carrying accents on dark backgrounds. Neutrals now run on the brand ramp of Ink, Graphite, Fog, Haze, Frost and Mist.
+- Set the brand type pairing: Barlow for headings and display figures, Source Sans 3 for body copy, with Arial Narrow and Arial as fallbacks.
+- Removed the entity type from the site footer on every page, per the brand name rule. The legal name is reserved for contracts, legal notices and filings.
+- Retired the Projects page, which was unlinked and awaiting case-study material. It remains recoverable in source history.
+
 ## v0.23 - Careers hero framing correction
 
 - Reframed the Careers photograph as a contained right-side field image instead of a full-width cover crop.
