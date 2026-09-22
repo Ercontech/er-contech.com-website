@@ -2,6 +2,11 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.26 - Hero image cleanup
+
+- Removed the black "AFTER" label burned into the top-left corner of the homepage hero photograph. It came from a before-and-after presentation slide and was visible on wide screens.
+- Patched rather than cropped, by mirroring the adjacent treeline over the label, so the full frame and composition are preserved. No clean original exists; the source was AI-enhanced.
+
 ## v0.25 - Web type diverges from the Office pairing
 
 - Dropped Barlow. Grandview descends from DIN, the squared lettering used for German engineering and signage; Barlow is a rounded grotesque, and at display weights in uppercase it read as cartoonish rather than engineered.

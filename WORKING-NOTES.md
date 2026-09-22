@@ -33,6 +33,16 @@ step and no dependencies.
 All 33 live-site assets and 3 independently captured HTML pages were compared
 byte-for-byte against this archive. Everything matched. The archive is sound.
 
+## Open decision: type
+
+**The Office type pairing needs revisiting.** Grandview was chosen for PowerPoint and
+Word on 2026-09-22. It descends from DIN — squared engineering and signage lettering.
+On the web, the rounded-grotesque matches for it (Barlow) read as cartoonish at display
+weights, so the site now runs on Source Sans 3 alone. The same loudness problem may well
+show up in Office at large title sizes. Revisit before the templates go into wide use:
+either soften the Grandview treatment (lighter weights, less uppercase) or reconsider the
+heading face so that Office and web can converge again.
+
 ## Rebrand deltas to apply
 
 Against the brand standards set 2026-09-22:
