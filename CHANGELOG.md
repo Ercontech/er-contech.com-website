@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.28 - Contrast and section rhythm
+
+- Darkened the accent half of the "Expertise that travels" headline from Steel Blue to Navy Lift. Steel Blue sits at 5.06:1 on Mist against Navy's 12.46:1, so the sentence visibly faded out halfway through. Navy Lift holds at 9.58:1 and still reads as a distinct second colour.
+- Established the rule that Steel Blue is an accent, not a display-text colour on light grounds. It stays on rules, eyebrows and small labels, where it passes AA comfortably.
+- Moved the local-partnerships section to white. It and the closing call to action were both Mist, so the CTA had no edge above it and stopped reading as its own band. The CTA is now the only light-grey band at the foot of the page.
+- Removed the hard 43% vertical seam that the old split background created across that section.
+
 ## v0.27 - Type reverted to the original Arial stack
 
 - Removed the Source Sans 3 webfont and returned the site to Arial / Helvetica, which is what it ran on before the rebrand began.

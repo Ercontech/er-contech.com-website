@@ -114,3 +114,18 @@ footer{background:var(--mist);border-top:0}
 /* Logo box reserved at the v3 aspect ratio so the header never shifts on load */
 .brand img{width:205px;height:auto;aspect-ratio:1370/496}
 @media (max-width:600px){.brand img{width:170px}}
+
+/* --- Contrast and section rhythm ------------------------------------------
+   Steel Blue #2F6F8F is an ACCENT, not a display-text colour. On Mist it is
+   only 5.06:1, against 12.46:1 for Navy, so a heading that mixes the two fades
+   out mid-sentence. Going white barely helps (5.54:1) — the fix is a darker
+   ink. Navy Lift holds at 9.58:1 and still reads as a distinct second colour.
+   Keep Steel Blue for rules, eyebrows and small labels, where it passes AA. */
+.local-partnerships h2 span{color:var(--navy-lift)}
+
+/* The last two sections were both Mist, so the closing CTA had no edge above
+   it and stopped reading as its own band. Local partnerships goes to white —
+   which also removes the hard 43% vertical seam — leaving the CTA as the only
+   light-grey band at the foot of the page. */
+.local-partnerships{background:#fff}
+@media (max-width:900px){.local-partnerships{background:#fff}}
