@@ -2,6 +2,14 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.29 - Two-tone headings retired on light grounds
+
+- The "Expertise that travels. Local knowledge that matters." headline now runs in a single navy. The two-colour treatment was reading as a mistake rather than a choice.
+- Reason, measured: a second colour has to pass two tests — be clearly different from navy, and stay legible. Against Navy on white, Navy Lift is 10.48:1 but only dE 8.9 apart, which is below the threshold where a difference registers as deliberate. Everything that is genuinely distinct — Steel Blue, Field Slate, Regrowth Green — lands between 5.07:1 and 5.54:1 and reads weak at display size.
+- This is a property of the palette rather than bad luck. It is built around navy, so every accent is mid-tone, and no colour in it is both distinct and strong on a light ground.
+- The device is kept on dark grounds, where it works: Steel Light against white on navy is a genuine, high-contrast distinction. The hero, careers, contact, about and solutions headings are unchanged.
+- Emphasis on light grounds now comes from structure — the accent rule and the line break — rather than hue.
+
 ## v0.28 - Contrast and section rhythm
 
 - Darkened the accent half of the "Expertise that travels" headline from Steel Blue to Navy Lift. Steel Blue sits at 5.06:1 on Mist against Navy's 12.46:1, so the sentence visibly faded out halfway through. Navy Lift holds at 9.58:1 and still reads as a distinct second colour.

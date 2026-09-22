@@ -116,12 +116,24 @@ footer{background:var(--mist);border-top:0}
 @media (max-width:600px){.brand img{width:170px}}
 
 /* --- Contrast and section rhythm ------------------------------------------
-   Steel Blue #2F6F8F is an ACCENT, not a display-text colour. On Mist it is
-   only 5.06:1, against 12.46:1 for Navy, so a heading that mixes the two fades
-   out mid-sentence. Going white barely helps (5.54:1) — the fix is a darker
-   ink. Navy Lift holds at 9.58:1 and still reads as a distinct second colour.
-   Keep Steel Blue for rules, eyebrows and small labels, where it passes AA. */
-.local-partnerships h2 span{color:var(--navy-lift)}
+   TWO-TONE HEADINGS DO NOT WORK ON LIGHT GROUNDS WITH THIS PALETTE.
+   Measured against Navy #0B2D5B on white, every option fails one of the two
+   tests a second colour has to pass — be clearly different, and stay legible:
+
+     Navy Lift   #173F75   10.48:1   dE  8.9   invisible as a difference
+     Navy Edge   #2F527F    7.97:1   dE 16.4   marginal
+     Steel Blue  #2F6F8F    5.54:1   dE 31.5   distinct but weak
+     Field Slate #5F7085    5.07:1   dE 33.8   distinct but weak
+     Regrowth    #3F7A3A    5.18:1   dE 77.3   distinct but weak
+
+   The palette is built around navy, so every accent is mid-tone. Nothing is
+   both distinct and strong. The heading therefore runs in a single navy, and
+   emphasis comes from structure — the accent rule, the line break — not hue.
+
+   On DARK grounds the device works and is kept: Steel Light #7DB3CC against
+   white on navy is a genuine, high-contrast distinction. See the hero,
+   careers and contact headings. */
+.local-partnerships h2 span{color:inherit}
 
 /* The last two sections were both Mist, so the closing CTA had no edge above
    it and stopped reading as its own band. Local partnerships goes to white —

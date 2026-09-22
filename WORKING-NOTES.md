@@ -33,6 +33,25 @@ step and no dependencies.
 All 33 live-site assets and 3 independently captured HTML pages were compared
 byte-for-byte against this archive. Everything matched. The archive is sound.
 
+## Palette finding: no usable second colour on light grounds
+
+The palette is built around navy, so every accent is mid-tone. Measured against
+Navy #0B2D5B on white, nothing is both clearly distinct and strongly legible:
+
+    Navy Lift   #173F75   10.48:1   dE  8.9
+    Navy Edge   #2F527F    7.97:1   dE 16.4
+    Steel Blue  #2F6F8F    5.54:1   dE 31.5
+    Field Slate #5F7085    5.07:1   dE 33.8
+    Regrowth    #3F7A3A    5.18:1   dE 77.3
+
+A second colour needs roughly dE 25+ to register as deliberate and 7:1+ to hold
+at display size. Nothing clears both. So on light grounds, headings run in one
+navy and emphasis comes from structure. On dark grounds the device works — Steel
+Light #7DB3CC against white on navy — and is used throughout.
+
+This is worth knowing for the Office templates too: the same limitation applies
+to a two-tone title on a white slide.
+
 ## Type: settled for web, open for Office
 
 **Web runs on Arial / Helvetica. Do not reintroduce a rounded face.**
