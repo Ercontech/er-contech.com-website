@@ -2,6 +2,31 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.36 - The accent joins the navy
+
+Er-Con Navy sits at hue -77. It is a blue. The accent was a teal at hue -133,
+56 degrees away, in a different colour family - which is why it never read as
+belonging to the mark it sat beside.
+
+The teal came from a brief about water. Water was what was asked for; teal was
+an interpretation of it, and it drifted twice: the hue was placed two thirds of
+the way toward the tropical end of the described range rather than the middle,
+and the whole family was wrong to begin with. A cyan for dark grounds had also
+been recorded in the working notes as approved. It never was - what had been
+approved was the effect of a bright accent on navy, not that specific value,
+and the inference was then cited back as a constraint.
+
+Both accents now sit on the navy's own hue:
+
+  Signal        #0067D0   hue -75   chroma 63   5.45:1 on white
+  Signal Light  #4794FF   hue -77   chroma 61   4.51:1 on navy
+
+Chroma 63 against the 25.5 that was called washed out, and close to the legacy
+site blue (#0878DD, chroma 60) whose energy was liked from the start.
+
+Logo SVGs and all twelve PNG exports, the site header marks, favicons and app
+tile, and three rationale comment blocks regenerated against the new values.
+
 ## v0.35 - The signature line lands on Results
 
 "Experience. Innovation. Results." ran Navy / Signal / Slate. Two problems:
