@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.25 - Web type diverges from the Office pairing
+
+- Dropped Barlow. Grandview descends from DIN, the squared lettering used for German engineering and signage; Barlow is a rounded grotesque, and at display weights in uppercase it read as cartoonish rather than engineered.
+- Set Source Sans 3 across the whole site, with Arial as the fallback. It was already the brand body face, so the web now runs on a single face and degrades to what the site used before.
+- Accepted that the website and the PowerPoint template no longer share letterforms. The logo, the palette and the flush-line discipline carry the brand across both.
+- Returned the statistics figures to white. They had been mapped to Steel Light, a reverse-partner tint intended for small accents on navy, which read washed out at 42px.
+
 ## v0.24 - Brand system applied
 
 - Replaced the legacy header mark with the v3 Er-Con logo, and added the shield-and-E icon as favicon, SVG icon and app tile. Retired the three older PNG variants of the legacy mark.
