@@ -33,7 +33,19 @@ step and no dependencies.
 All 33 live-site assets and 3 independently captured HTML pages were compared
 byte-for-byte against this archive. Everything matched. The archive is sound.
 
-## Open decision: type
+## Type: settled for web, open for Office
+
+**Web runs on Arial / Helvetica. Do not reintroduce a rounded face.**
+Two were tried against Grandview and both were rejected as cartoonish: Barlow
+(v0.24) and Source Sans 3 (v0.25-26). The failure is the same in each case —
+humanist, rounded letterforms with open curves and large bowls. At display
+weights the counters close up and the figures read as blobs. What the brand
+wants is a neutral grotesque: closed apertures, flat terminals, no warmth.
+Arial is exactly that and needs no webfont. If a webfont is ever wanted here,
+audition only neutral grotesques, and judge them at 42px weight 900 on navy
+and at 54px bold white on navy, which is where the previous two fell apart.
+
+## Open decision: Office type
 
 **The Office type pairing needs revisiting.** Grandview was chosen for PowerPoint and
 Word on 2026-09-22. It descends from DIN — squared engineering and signage lettering.

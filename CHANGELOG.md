@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.27 - Type reverted to the original Arial stack
+
+- Removed the Source Sans 3 webfont and returned the site to Arial / Helvetica, which is what it ran on before the rebrand began.
+- Reason: both faces tried against Grandview are rounded, humanist designs. At display weights their bowls close up and the figures read as blobs — friendly rather than engineered. A neutral grotesque with closed apertures and flat terminals is the correct register for the brand.
+- Removes two webfont requests per page, so the site also loads faster and no longer depends on an external font host.
+
 ## v0.26 - Hero image cleanup
 
 - Removed the black "AFTER" label burned into the top-left corner of the homepage hero photograph. It came from a before-and-after presentation slide and was visible on wide screens.

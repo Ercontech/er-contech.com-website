@@ -104,10 +104,12 @@ footer{background:var(--mist);border-top:0}
 .product-process-ecoflex .product-engineering-pair .product-engineering-figure figcaption{min-height:48px;display:flex;align-items:center}
 @media (max-width:600px){.product-process-ecoflex .product-engineering-pair .product-engineering-figure img{height:300px}}
 
-/* Brand type: Source Sans 3 throughout, Arial fallback.
-   Web diverges from the Office pairing (Grandview): Grandview descends from DIN,
-   and the rounded-grotesque web matches for it read as cartoonish at display sizes. */
-body{font-family:'Source Sans 3','Source Sans Pro',Arial,Helvetica,sans-serif}
+/* Type: the original Arial / Helvetica stack, restored.
+   Grandview descends from DIN. Both web faces tried against it — Barlow and
+   Source Sans 3 — are rounded, humanist designs: friendly bowls, open curves.
+   At display weights they read cartoonish rather than engineered. A neutral
+   grotesque with closed apertures and flat terminals is the right register,
+   and it needs no webfont. See WORKING-NOTES.md before changing this again. */
 
 /* Logo box reserved at the v3 aspect ratio so the header never shifts on load */
 .brand img{width:205px;height:auto;aspect-ratio:1370/496}
