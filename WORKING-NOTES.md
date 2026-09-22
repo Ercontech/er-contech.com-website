@@ -33,24 +33,26 @@ step and no dependencies.
 All 33 live-site assets and 3 independently captured HTML pages were compared
 byte-for-byte against this archive. Everything matched. The archive is sound.
 
-## PROTECTED — approved by Ron, do not change without asking
+## PROTECTED - approved by Ron, in his words
 
-Reviewed 2026-09-22 against v0.30.
+Only verbatim statements belong in this list. An earlier version recorded
+"Signal Light #08BBDE on navy" here as approved. It was not: what Ron approved
+was the effect of a bright accent on navy, which he called "the blue". The
+specific cyan was an inference written down as a decision, and it was then
+cited back to him as a constraint for the rest of the session while he was
+objecting to teal. That value is gone.
 
-- **Signal Light #08BBDE on navy.** The accent word in dark-ground headings —
-  "Innovation." on About, "matter." on Careers, "your project" on Contact.
-  Chroma 39, deliberately loud. This is the pop the site was missing.
-- **The talent-invite card** on Careers ("Maybe your role is the one we are
-  ready to write."): Frost #EAE9E8 panel, navy top rule, navy heading, Channel
-  #03778E eyebrow and button. The whole composition is approved.
-- **The dark hero sections as whole compositions** — About, Careers, Contact.
+- "the first 4 i like as a whole section the blue in 'Innovation' and 'Matter'
+  and 'your project'" - the dark hero compositions, as compositions.
+- "that card about 'maybe your role is the one we are ready to write'" - the
+  talent-invite card on Careers.
+- "I don't need to be coca cola co" - no proprietary typeface. Arial.
+- "I have never asked for anything teal."
 
-**The rule this establishes, which I had backwards:**
+The rule this establishes, which I had backwards:
 dark grounds take the LOUD accent, light grounds take the QUIET one.
-Signal Light at chroma 39 on navy; Channel at chroma 28 on white. Earlier
-rounds kept trying to raise the light-ground accent, which was the wrong
-end of the system. Do not brighten the light-ground accent to compensate
-for anything.
+Both are now Er-Con Navy's own hue: Signal #0067D0 and Signal Light #4794FF.
+
 
 ## Palette finding: no usable second colour on light grounds
 
