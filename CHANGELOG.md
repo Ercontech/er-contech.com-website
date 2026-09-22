@@ -2,6 +2,28 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.35 - The signature line lands on Results
+
+"Experience. Innovation. Results." ran Navy / Signal / Slate. Two problems:
+
+- Slate was used exactly once on the whole site - that word. It read as
+  arbitrary because it was arbitrary: no system behind it, no echo anywhere
+  else. Its chroma is 13 against Navy at 32 and Signal at 28, so it also
+  looked faded rather than chosen.
+- The accent sat on "Innovation." and the payoff faded out. The line is a
+  progression, and the colour was arguing against the sentence.
+
+Now Navy / Navy / Signal. Two words set the premise in one voice and the
+accent arrives on the word a client actually buys. Signal already carries 38
+uses across the site, so "Results." joins a system instead of standing alone.
+
+Red Clay was considered and rejected for the same reason Slate failed: it is
+at zero uses, so it would have swapped one orphan colour for another. The
+brand standards also reserve the earth accents for charts rather than page
+furniture - the site's photography is already dirt, clay and water.
+
+`--slate` now has no uses. Left declared as a documented reserve.
+
 ## v0.34 - Superseded accent values swept from live rules
 
 Seven rules were still painting the old Steel Blue and Steel Light. They were
