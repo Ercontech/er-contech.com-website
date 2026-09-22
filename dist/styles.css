@@ -184,3 +184,8 @@ footer{background:var(--mist);border-top:0}
 
 /* The figures carry the water accent's light partner on navy. */
 .stat-num{color:var(--signal-light)}
+
+/* Dark grounds take the loud accent, light grounds the quiet one. The service
+   card's top rule sits on navy and was using the light-ground accent, so it
+   disappeared. Audited: this was the only instance site-wide. */
+.dark .service-card:before{background:var(--signal-light)}

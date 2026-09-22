@@ -2,6 +2,15 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.31 - The mark rejoins the system
+
+- The lower shield represents concrete. It was Field Slate #5F7085, a blue-tinted grey at chroma 13.7, against measured concrete at 0.4 to 0.9. It is now Concrete #8C8B8A and reads as the material it depicts.
+- That tint was also why the mark looked muddy. Field Slate and Steel Blue sat 2.4 lightness apart at dE 13.4 — below the threshold at which two colours read as different things — so the two non-navy elements blurred into one smudge against 80% navy.
+- The dot and TECHNOLOGIES move from Steel Blue to Channel #03778E, matching the site. Leaving them at Steel Blue would have put two blues on the page at dE 10.1, which is the worst of both worlds: too close to read as a choice, too far to read as the same colour.
+- The reverse mark takes the loud on-navy pair: Signal Light #08BBDE and a light neutral concrete.
+- The icon carries the same concrete correction.
+- The mark's proportions are unchanged: 80% navy, 16% carrying colour. The gain is separation, not saturation — three legible registers where there were two.
+
 ## v0.30 - Field palette applied (trial)
 
 - Replaced the navy-tinted neutrals with measured concrete greys. Sampling 307,000 pixels across 40 project photographs put real concrete at a chroma of 0.4 to 0.9, against 4.8 to 11.7 for the neutrals being used. This is the largest single correction and the main reason the site read corporate rather than like the work.

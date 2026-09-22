@@ -33,6 +33,25 @@ step and no dependencies.
 All 33 live-site assets and 3 independently captured HTML pages were compared
 byte-for-byte against this archive. Everything matched. The archive is sound.
 
+## PROTECTED — approved by Ron, do not change without asking
+
+Reviewed 2026-09-22 against v0.30.
+
+- **Signal Light #08BBDE on navy.** The accent word in dark-ground headings —
+  "Innovation." on About, "matter." on Careers, "your project" on Contact.
+  Chroma 39, deliberately loud. This is the pop the site was missing.
+- **The talent-invite card** on Careers ("Maybe your role is the one we are
+  ready to write."): Frost #EAE9E8 panel, navy top rule, navy heading, Channel
+  #03778E eyebrow and button. The whole composition is approved.
+- **The dark hero sections as whole compositions** — About, Careers, Contact.
+
+**The rule this establishes, which I had backwards:**
+dark grounds take the LOUD accent, light grounds take the QUIET one.
+Signal Light at chroma 39 on navy; Channel at chroma 28 on white. Earlier
+rounds kept trying to raise the light-ground accent, which was the wrong
+end of the system. Do not brighten the light-ground accent to compensate
+for anything.
+
 ## Palette finding: no usable second colour on light grounds
 
 The palette is built around navy, so every accent is mid-tone. Measured against
