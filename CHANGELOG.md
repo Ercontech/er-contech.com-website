@@ -2,6 +2,15 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.30 - Field palette applied (trial)
+
+- Replaced the navy-tinted neutrals with measured concrete greys. Sampling 307,000 pixels across 40 project photographs put real concrete at a chroma of 0.4 to 0.9, against 4.8 to 11.7 for the neutrals being used. This is the largest single correction and the main reason the site read corporate rather than like the work.
+- Set the accent to Channel #03778E — water between Caribbean and deep Pacific, at the most chroma that hue allows on screen. Water in the photography is quiet, so the accent is quiet by design.
+- Put Signal Amber to work for the first time, on the hiring status pills and the hero accent rule. Yellow iron is the one loud thing on a job site, so it is the one loud thing here.
+- Moved the footer signature's third word to Dark Earth, a measured value.
+- Every foreground and background pair was checked: nothing falls below 4.5:1.
+- Applied to the stylesheet only. The brand standards are unchanged pending review of how this reads in use.
+
 ## v0.29 - Two-tone headings retired on light grounds
 
 - The "Expertise that travels. Local knowledge that matters." headline now runs in a single navy. The two-colour treatment was reading as a mistake rather than a choice.
