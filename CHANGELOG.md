@@ -2,6 +2,24 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.37 - The signature is one rule everywhere
+
+"Experience. Innovation. Results." appears in three places and was being
+treated three different ways:
+
+- the footer, on all 15 pages - accent on "Results."
+- the Careers CTA - no accent at all, plain navy
+- the About hero, on navy - accent on "Innovation."
+
+The Careers CTA had simply been missed: same three words, same light ground,
+same role as the footer, but no markup to hang the accent on. It now carries
+the same spans and the rule was generalised to cover both light-ground
+instances rather than just the footer.
+
+The About hero is a different composition on a dark ground and still
+emphasises "Innovation." - left as it is pending a decision on whether the
+signature should always stress the same word.
+
 ## v0.36 - The accent joins the navy
 
 Er-Con Navy sits at hue -77. It is a blue. The accent was a teal at hue -133,
