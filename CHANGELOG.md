@@ -2,6 +2,22 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.39 - Three more burned-in "AFTER" labels removed
+
+The same defect fixed on the home hero in v0.26 was present on three other
+images, never checked at the time:
+
+- assets/project_pipeline.jpg   - the Contact page hero
+- assets/project_channel.jpg    - a project card
+- assets/project_restoration.jpg - the FCR product hero
+
+Each carried a black rounded label with "AFTER" burned into the top-left
+corner, left over from before/after deck slides. On Contact it sat directly
+above the headline and was plainly visible through the navy overlay.
+
+Repaired the same way as the hero: adjacent content mirrored over the label
+with a feathered mask, preserving the full frame. No clean originals exist.
+
 ## v0.38 - Eyebrow removed from the Careers signature block
 
 "Work with purpose" sat above "Experience. Innovation. Results." and added
