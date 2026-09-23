@@ -2,6 +2,15 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.40 - The signature stresses Results everywhere
+
+The About hero was the last instance still stressing "Innovation." It now
+stresses "Results.", matching the footer and the Careers CTA. The signature
+is a progression, and the accent lands on the payoff in all three places.
+
+On the dark ground the accent is Signal Light #4794FF; on light grounds it is
+Signal #0067D0. Same word, same role, correct partner for the ground.
+
 ## v0.39 - Three more burned-in "AFTER" labels removed
 
 The same defect fixed on the home hero in v0.26 was present on three other
