@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.38 - Eyebrow removed from the Careers signature block
+
+"Work with purpose" sat above "Experience. Innovation. Results." and added
+nothing - the signature is the statement, and a label above it explained what
+the reader could already see. The headline now opens the band.
+
 ## v0.37 - The signature is one rule everywhere
 
 "Experience. Innovation. Results." appears in three places and was being
