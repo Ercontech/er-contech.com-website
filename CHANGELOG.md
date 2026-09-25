@@ -2,6 +2,27 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.42 - Two defects the heavy overlay had been hiding
+
+Opening the overlay in v0.41 exposed two problems that were always there.
+
+Signal Light #4794FF cannot be read over a photograph. The product hero
+statement line was set in it, and measured against the brightest patch behind
+the text it failed on all six product pages - 1.47:1 on Ercoform, 2.08:1 at
+best on FCR, against a standard of 3:1. This is structural, not a bad crop:
+Signal Light is too light to separate from sunlit concrete at any overlay
+setting that still lets the photograph show. The statement line is now white,
+which measures 3.95:1 on the worst of the six.
+
+The rule this establishes: Signal Light is an accent for solid grounds. On a
+photograph the ground is variable and no fixed accent survives it. Signal Light
+is retained on the careers hero, where it sits on flat Navy Deep, and
+everywhere else the ground is solid.
+
+The careers hero photograph met the navy panel at a hard vertical seam. The
+.99 overlay had concealed it. The photograph's leading edge is now feathered so
+it dissolves into the panel.
+
 ## v0.41 - The photography is allowed to show
 
 The brand standards say a near-opaque wash "removes the one thing on the page
