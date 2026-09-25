@@ -2,6 +2,32 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.55 - Site Investigation: we are water experts
+
+Site Investigation is now the named foundation of every Er-Con service.
+
+**New section, home and Services.** "Site Investigation / We are water experts."
+states that every service starts with a site investigation, then sets out the
+five disciplines in a ruled row: Hydrology, Hydraulics, Geomorphology,
+Sedimentology and Soil Mechanics, each with one line on what it establishes. On
+the home page it sits between the industry tiles and the services; on Services
+it follows the framework.
+
+**Services.** "Site Surveys" becomes "Site Investigation" (anchor
+`#investigation`) and names the five disciplines. The home-page services intro
+now reads "site investigation, engineering, permitting and field execution".
+
+**Industry pages.** The service band says every project starts with a site
+investigation and names the disciplines. Three problem rows now say "We
+investigate" where they said survey, document or assess.
+
+**Alignment, site-wide.** At wide screens, some text sat 24px left of the
+logo's edge: the navy services band, every contact block, the Services framework,
+and the inner containers on About, Careers, Contact, job pages and product
+"How it works" sections. All now start on the logo's 124px edge (at 1440 wide),
+checked by measuring every text line on all 20 pages. Below 1288px wide nothing
+changes.
+
 ## v0.54 - Hero buttons removed
 
 "Choose Your Industry" and "Tell Us About Your Project" are gone from the home
