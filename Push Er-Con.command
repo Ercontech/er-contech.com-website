@@ -5,8 +5,10 @@
 #   Website   ~/Downloads/Claude - WebDev/ercon-site   -> RoloDev2026/Er-Con-website
 #   Branding  ~/Downloads/Claude - Branding            -> RoloDev2026/Er-Con-Brand
 #
-# Double-click it in Finder, or run it in Terminal.
-# Pass --check to inspect without pushing anything.
+#   (no flag)  double-click in Finder, or run in Terminal. Reports and waits.
+#   --check    inspect without pushing anything.
+#   --auto     unattended: commits anything uncommitted, pushes, never prompts.
+#              This is what the daily scheduled job runs.
 #
 # This script never forces, never rewrites history and never deletes.
 # The worst it can do is upload commits you already made.
@@ -18,11 +20,18 @@ REPOS=(
   "Branding:$HOME/Downloads/Claude - Branding"
 )
 
-CHECK_ONLY=0
-[ "${1:-}" = "--check" ] && CHECK_ONLY=1
+MODE="${1:-}"
+CHECK_ONLY=0; AUTO=0
+[ "$MODE" = "--check" ] && CHECK_ONLY=1
+[ "$MODE" = "--auto" ]  && AUTO=1
 
-b=$(tput bold 2>/dev/null); n=$(tput sgr0 2>/dev/null)
-red=$(tput setaf 1 2>/dev/null); grn=$(tput setaf 2 2>/dev/null); yel=$(tput setaf 3 2>/dev/null)
+if [ $AUTO -eq 1 ]; then
+  b=""; n=""; red=""; grn=""; yel=""
+  echo "════ $(date '+%Y-%m-%d %H:%M') ════"
+else
+  b=$(tput bold 2>/dev/null); n=$(tput sgr0 2>/dev/null)
+  red=$(tput setaf 1 2>/dev/null); grn=$(tput setaf 2 2>/dev/null); yel=$(tput setaf 3 2>/dev/null)
+fi
 
 problems=0
 uncommitted=0
@@ -49,15 +58,29 @@ for entry in "${REPOS[@]}"; do
   # ---- uncommitted work -------------------------------------------------
   # A changed file that has not been committed is invisible to git push.
   # This is the one way to run this script, see success, and still not be
-  # backed up — so it is checked first and reported loudly.
+  # backed up. Interactively it is reported; unattended it is committed,
+  # because an unread warning at 6:45pm protects nothing.
   changed=$(git status --porcelain --untracked-files=normal 2>/dev/null)
   if [ -n "$changed" ]; then
     count=$(printf '%s\n' "$changed" | wc -l | tr -d ' ')
-    echo "  ${yel}$count file(s) changed but not committed — these will NOT be pushed:${n}"
-    printf '%s\n' "$changed" | head -12 | sed 's/^/      /'
-    [ "$count" -gt 12 ] && echo "      … and $((count-12)) more"
-    uncommitted=$((uncommitted+1))
-    echo
+    if [ $AUTO -eq 1 ]; then
+      echo "  $count file(s) uncommitted — taking a snapshot"
+      printf '%s\n' "$changed" | head -20 | sed 's/^/      /'
+      git add -A
+      git -c commit.gpgsign=false commit -q -m "Automatic daily snapshot — $(date '+%Y-%m-%d %H:%M')
+
+Taken by the scheduled backup because these files were changed but never
+committed. Not a considered commit: it is a safety net, and its only claim is
+that this is what the folder looked like at this moment." \
+        && echo "      snapshot committed" \
+        || { echo "  ${red}snapshot failed${n}"; problems=$((problems+1)); }
+    else
+      echo "  ${yel}$count file(s) changed but not committed — these will NOT be pushed:${n}"
+      printf '%s\n' "$changed" | head -12 | sed 's/^/      /'
+      [ "$count" -gt 12 ] && echo "      … and $((count-12)) more"
+      uncommitted=$((uncommitted+1))
+      echo
+    fi
   fi
 
   # ---- what is waiting to go -------------------------------------------
@@ -117,4 +140,5 @@ if [ "$uncommitted" -gt 0 ]; then
 fi
 
 echo
+[ $AUTO -eq 1 ] && exit $([ "$problems" -gt 0 ] && echo 1 || echo 0)
 read -r -p "Press return to close. "
