@@ -279,6 +279,9 @@ h2.signature span:nth-child(3){color:var(--signal)}
 .industry-picker{background:#fff;padding:36px 0 72px}
 .industry-picker-inner{max-width:var(--max);margin:auto;padding:0 24px}
 .industry-picker-heading{margin-bottom:24px}
+.industry-picker-row{display:flex;align-items:baseline;justify-content:space-between;gap:40px}
+/* The invitation sits on the heading's baseline, its right edge flush with the grid */
+.industry-picker-lead{margin:0;color:var(--graphite);font-size:19px;text-align:right}
 .industry-picker-heading h2{color:var(--navy);font-size:clamp(32px,3.4vw,46px);line-height:1.05;margin:8px 0 0}
 .industry-picker-compact{border-top:1px solid var(--haze)}
 .industry-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;gap:20px}
@@ -379,6 +382,8 @@ h2.signature span:nth-child(3){color:var(--signal)}
   .problem-label{display:block}
 }
 @media (max-width:600px){
+  .industry-picker-row{display:block}
+  .industry-picker-lead{text-align:left;margin-top:10px}
   .industry-picker{padding:48px 0 60px}
   .industry-picker-inner,.service-band-inner{padding:0 20px}
   .industry-tile{grid-template-columns:1fr;grid-template-rows:auto}
@@ -417,6 +422,7 @@ h2.signature span:nth-child(3){color:var(--signal)}
 .industry-tile-ask .industry-tile-body p:last-child{color:var(--haze);font-size:16px}
 .industry-tile-ask .btn{align-self:flex-start;margin:0 28px}
 @media (max-width:900px){.industry-tile-ask{display:flex;flex-direction:column;gap:22px;padding-bottom:26px}}
+.industry-picker-row h2{margin-top:2px}
 
 .industry-hero-pipelines-energy{background-image:url('assets/pipeline-supports/pipeline-supports-cotton-creek-hero.png');background-position:center 55%}
 .industry-hero-transportation{background-image:url('assets/home-critical-infrastructure.png');background-position:center 50%}

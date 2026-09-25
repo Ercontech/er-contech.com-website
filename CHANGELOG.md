@@ -2,6 +2,14 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.53 - "Look familiar?"
+
+The industry picker's heading changes from "Start with your industry / Who are
+you protecting?" to "Industry applications / Look familiar?", with "Choose your
+industry and let's get started." set on the heading's baseline and flush with
+the grid's right edge. The same heading replaces "Industries we serve" on
+Services. Narrow screens stack the line beneath the heading.
+
 ## v0.52 - Industry tiles in two rows of three
 
 The five industry tiles now sit in a 3 x 2 grid, so each tile and its before
