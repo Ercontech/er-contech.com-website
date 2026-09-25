@@ -2,6 +2,31 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.41 - The photography is allowed to show
+
+The brand standards say a near-opaque wash "removes the one thing on the page
+that is actually Er-Con's work." The site contradicted its own guide: the
+product hero ran navy at .98 falling to .93 across the first half of the frame,
+and the careers hero at .99 to .96. At those values the photograph was gone.
+
+Both now open at .86 and reach .74 at the midpoint, easing to .28 and .12 at
+the right edge (careers holds its Navy Lift partner at .52 and .40).
+
+The setting was chosen against measured contrast, not taste alone. Figures are
+against the brightest patch of each photograph behind the text - the worst
+case, not the average:
+
+                       headline / white    body / Haze #D8D7D6
+  product hero .74          7.6:1                5.3:1
+  careers hero .74          8.9:1                6.2:1
+
+The standard is 3:1 for the headline and 4.5:1 for body text, so both clear it.
+One step further open - .80 falling to .64 - put the product page's lead
+paragraph at 3.7:1, below the standard, which is a real failure on a phone in
+daylight. That is the floor, and .74 sits above it deliberately.
+
+Applies to all six product pages and the careers hero.
+
 ## v0.40 - The signature stresses Results everywhere
 
 The About hero was the last instance still stressing "Innovation." It now
