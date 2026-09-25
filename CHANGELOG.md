@@ -2,6 +2,20 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.52 - Industry tiles in two rows of three
+
+The five industry tiles now sit in a 3 x 2 grid, so each tile and its before
+and after photographs are larger. The sixth position is a navy "Not sure where
+you fit?" card that leads to Contact, for the visitor who does not see their
+industry.
+
+Rows are equal height, and at 1920 x 1080 the hero plus the first full row fill
+the screen with the second row showing below it. Scrolled to the picker, both
+rows fill the screen. The hero and picker padding were tightened slightly to
+get there. Utilities' description was shortened so no tile needs a third line.
+Between 901 and 1100px wide, where two names wrap, the names reserve two lines
+so the descriptions start at the same height across a row.
+
 ## v0.51 - Before and after on the industry tiles
 
 Each home-page industry tile now shows a before and after from the same site.
