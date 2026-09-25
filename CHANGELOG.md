@@ -2,6 +2,31 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.43 - One name per colour
+
+Four tokens were aliases left over from the rebrand - `--blue`, `--navy2`,
+`--sky` and `--muted` - each defined as another token so older rules kept
+working. Seventy-six uses now point at the real names and the aliases are gone.
+Two names for one colour is how a stylesheet drifts: the next person changes one
+and not the other.
+
+`--slate-light` was renamed `--silver`. Its value `#ABAAA9` is Silver in the
+standards, a true neutral. It is not a light version of Slate `#6A5948`, which
+is a warm earth tone and unrelated - the name invited exactly the wrong
+substitution.
+
+Seven declared-but-unused colours were removed: `--white`, `--green`, `--clay`,
+`--amber-deep`, `--straw`, `--hazard` and `--slate`. They are chart colours and
+this site has no charts. The values live in the standards, so nothing is lost by
+leaving them out, and nothing goes stale by carrying them. Signal Amber stays -
+it is the one earth accent the site actually uses.
+
+The block is now grouped and commented by role rather than being one flat line.
+Sixteen tokens declared, sixteen used, none dangling.
+
+Purely mechanical: the Ercoform and careers pages render pixel-for-pixel
+identical before and after.
+
 ## v0.42 - Two defects the heavy overlay had been hiding
 
 Opening the overlay in v0.41 exposed two problems that were always there.
