@@ -2,8 +2,13 @@
 #
 # Push Er-Con — sends both Er-Con repositories to GitHub.
 #
-#   Website   ~/Downloads/Claude - WebDev/ercon-site   -> RoloDev2026/Er-Con-website
-#   Branding  ~/Downloads/Claude - Branding            -> RoloDev2026/Er-Con-Brand
+#   Website   ~/Er-Con/WebDev/ercon-site   -> RoloDev2026/Er-Con-website
+#   Branding  ~/Er-Con/Branding            -> RoloDev2026/Er-Con-Brand
+#
+# Paths are worked out from this script's own location, so moving the Er-Con
+# folder does not break it. They are NOT under ~/Downloads on purpose: macOS
+# protects that folder and refuses to let a background job read it, which is
+# what stopped the daily schedule the first time.
 #
 #   (no flag)  double-click in Finder, or run in Terminal. Reports and waits.
 #   --check    inspect without pushing anything.
@@ -15,9 +20,21 @@
 
 set -uo pipefail
 
+# Work out where we are rather than hard-coding a path. This script lives in
+# the website repo; the branding repo is its sibling one level up:
+#
+#   Er-Con/
+#     WebDev/ercon-site/Push Er-Con.command   <- here
+#     Branding/
+#
+# So the whole Er-Con folder can be moved or renamed and this keeps working.
+# Only the launchd schedule holds an absolute path, because it has to.
+HERE="$(cd "$(dirname "$0")" && pwd)"
+ROOT="$(cd "$HERE/../.." && pwd)"
+
 REPOS=(
-  "Website:$HOME/Downloads/Claude - WebDev/ercon-site"
-  "Branding:$HOME/Downloads/Claude - Branding"
+  "Website:$HERE"
+  "Branding:$ROOT/Branding"
 )
 
 MODE="${1:-}"
