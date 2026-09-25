@@ -17,59 +17,63 @@
       <a class="brand" href="index.html" aria-label="Er-Con Technologies home"><img src="assets/header-logo.svg" alt="Er-Con Technologies"></a>
       <button class="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Home</a><a href="services.html">Solutions</a><a href="contact.html">Contact</a><a href="careers.html">Careers</a><a href="about.html">About</a>
+        <div class="nav-group"><a class="nav-top" href="index.html#industries">Industries</a><div class="nav-sub"><a href="pipelines-energy.html">Pipelines &amp; Energy</a><a href="transportation.html">Transportation</a><a href="municipal.html">Municipal &amp; Public Agencies</a><a href="utilities.html">Utilities</a><a href="property.html">Commercial &amp; Private Property</a></div></div><a href="services.html">Services</a><a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero hero-compact">
       <div class="hero-overlay"></div>
       <div class="hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">Backed by more than 50 years of field experience</p>
-          <h1>Engineered Erosion Mitigation &<br>Bank Stabilization</h1>
+          <h1>Engineered Erosion<br>Mitigation &amp;<br>Bank Stabilization</h1>
           <span class="accent-line"></span>
-          <p class="lead">Er-Con Technologies solves complex erosion problems, stabilizes banks and protects critical assets with solutions designed around actual field conditions.</p>
-          <div class="hero-actions"><a class="btn primary" href="contact.html">Tell Us About Your Project</a><a class="btn ghost" href="services.html">Discover Solutions</a></div>
+          <p class="lead">Erosion looks different in every industry. Choose yours to see the problems we solve there, and how our services solve them.</p>
+          <div class="hero-actions"><a class="btn primary" href="#industries">Choose Your Industry</a><a class="btn ghost" href="contact.html">Tell Us About Your Project</a></div>
         </div>
       </div>
+    </section>
+
+    <section class="industry-picker" id="industries" aria-labelledby="industries-title">
+      <div class="industry-picker-inner">
+        <div class="industry-picker-heading">
+          <p class="eyebrow blue">Start with your industry</p>
+          <h2 id="industries-title">Who are you protecting?</h2>
+        </div>
+        <div class="industry-grid">
+          <a class="industry-tile" href="pipelines-energy.html"><div class="industry-tile-photo"><img src="assets/home-pipeline-free-span.jpg" alt="Supported pipeline crossing with completed erosion protection"></div><div class="industry-tile-body"><h3>Pipelines &amp; Energy</h3><p>Exposures, free spans, loss of cover, bank retreat into the right-of-way.</p></div><span class="industry-tile-link">See the problems →</span></a>
+          <a class="industry-tile" href="transportation.html"><div class="industry-tile-photo"><img src="assets/home-critical-infrastructure.png" alt="Er-Con erosion protection installed at a bridge crossing"></div><div class="industry-tile-body"><h3>Transportation</h3><p>Rail, highway, bridges. Scour at piers and abutments, bank retreat under subgrades and approaches, culvert outlets.</p></div><span class="industry-tile-link">See the problems →</span></a>
+          <a class="industry-tile" href="municipal.html"><div class="industry-tile-photo"><img src="assets/fcr/fcr-channel-after.jpg" alt="Drainage channel reconstructed with Flexible Concrete Revetment"></div><div class="industry-tile-body"><h3>Municipal &amp; Public Agencies</h3><p>Stormwater channels, outfalls, creek banks failing near roads and parks.</p></div><span class="industry-tile-link">See the problems →</span></a>
+          <a class="industry-tile" href="utilities.html"><div class="industry-tile-photo"><img src="assets/fcr/fcr-headcut-after.jpg" alt="Headcut stabilized with Flexible Concrete Revetment"></div><div class="industry-tile-body"><h3>Utilities</h3><p>Power, water, wastewater. Exposed water and sewer crossings, threatened structures, washed-out rights-of-way.</p></div><span class="industry-tile-link">See the problems →</span></a>
+          <a class="industry-tile" href="property.html"><div class="industry-tile-photo"><img src="assets/home-river-bends.jpg" alt="Recovered riverbank five years after Palisade installation"></div><div class="industry-tile-body"><h3>Commercial &amp; Private Property</h3><p>Waterfront, lakes and ponds, drainage through developed land.</p></div><span class="industry-tile-link">See the problems →</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section dark" id="services">
+      <div class="section-heading light"><p class="eyebrow">How we solve it</p><h2>One accountable partner, from site to installation.</h2><p>Whatever the industry, the work runs through the same in-house teams: technical evaluation, engineering, permitting and field execution, with nothing handed off along the way.</p></div>
+      <div class="service-grid">
+        <article class="service-card"><h3>Site Surveys</h3><p>Field teams document the site condition, surrounding constraints and forces acting on the site. That information helps our engineers distinguish the visible symptom from the underlying problem.</p></article>
+        <article class="service-card"><h3>Scoping &amp; Root Cause</h3><p>From that foundation, we define the problem, the assets at risk and the boundaries of the work. The team evaluates alternatives and establishes a clear, defensible path forward.</p></article>
+        <article class="service-card"><h3>Engineering &amp; Drawings</h3><p>Er-Con engineers translate field conditions into practical, site-specific engineering and construction documents. Each drawing accounts for constructability and long-term performance.</p></article>
+        <article class="service-card"><h3>Permitting &amp; Approvals</h3><p>Permitting extends beyond environmental review to floodplain and other site-specific requirements. Er-Con prepares and submits applications, coordinates with agencies and sees every required permit through review and approval before work moves into the field.</p></article>
+        <article class="service-card"><h3>Installation</h3><p>In the field, Operations coordinates local vendors and suppliers while managing safety, quality and changing site conditions. When challenges arise, crews make informed field adjustments without compromising the intent of the design.</p></article>
+        <article class="service-card"><h3>Long-Term Protection</h3><p>The result is a site-specific solution that addresses the forces behind the problem, stabilizes the site and protects critical assets for years to come.</p></article>
+      </div>
+      <div class="services-more"><a class="btn primary" href="services.html">See Our Services</a></div>
+    </section>
+
+    <section class="section engineering-callout">
+      <div class="engineering-image" role="img" aria-label="Er-Con civil engineering plans showing site-specific stabilization design"></div>
+      <div class="engineering-copy"><h2>Solutions designed around the problem, not the other way around.</h2><p>Er-Con engineers each solution around the forces acting on the site, the assets at risk and the realities of construction. Before a design reaches a client, our engineering and field leaders review it together, applying decades of field experience to constructability, sequencing and long-term performance. That discipline creates a clear path from field investigation and permitting through installation.</p></div>
     </section>
 
     <section class="stats" aria-label="Er-Con results">
       <div class="stat"><span class="stat-num">3,000+</span><span>Projects Completed</span></div>
       <div class="stat"><span class="stat-num stat-num-text">Nationwide + Global</span><span>Project Experience</span></div>
       <div class="stat"><span class="stat-num">50+</span><span>Years Designing and Delivering Solutions in Demanding Environments</span></div>
-    </section>
-
-    <section class="section intro" id="about">
-      <div class="section-heading"><h2>Built for critical applications.</h2></div>
-      <div class="intro-grid">
-        <div class="intro-copy"><p>Er-Con combines disciplined engineering, proprietary technologies and hands-on field execution to protect infrastructure, property and natural resources.</p><p>Our work includes exposed pipeline remediation, bank stabilization, channel restoration, bridge protection and other complex erosion-control challenges across creeks, rivers, lakes, ponds, stormwater systems and coastlines.</p><p>More than <strong>3,000 completed projects</strong> have reinforced a practical standard: engineer for performance, plan for constructability and build for demanding field conditions.</p></div>
-        <div class="application-grid">
-          <a class="application-card" href="services.html" aria-label="Explore river stabilization solutions"><h3>River Stabilization</h3><p>Address severe bank retreat threatening pipeline easements, rail subgrades, highway approaches and high-value waterfront property.</p><div class="application-photo application-photo-river"><img src="assets/home-river-bends.jpg" alt="Recovered riverbank five years after Palisade installation"></div></a>
-          <a class="application-card" href="services.html" aria-label="Explore pipeline exposure and free span solutions"><h3>Pipeline Exposures &amp; Free Spans</h3><p>Correcting pipeline exposure, restoring reliable support and stabilizing the surrounding site.</p><div class="application-photo application-photo-pipeline"><img src="assets/home-pipeline-free-span.jpg" alt="Supported pipeline crossing with completed erosion protection"></div></a>
-          <a class="application-card" href="services.html" aria-label="Explore critical infrastructure solutions"><h3>Critical Infrastructure</h3><p>Protecting bridges, crossings and other civil infrastructure for municipalities, commercial properties and public agencies.</p><div class="application-photo application-photo-bridge"><img src="assets/home-critical-infrastructure.png" alt="Er-Con erosion protection installed at a bridge crossing"></div></a>
-          <a class="application-card" href="services.html" aria-label="Explore erosion control systems"><h3>Erosion Control Systems</h3><p>Site-specific systems engineered and installed to manage flow, stabilize vulnerable ground and protect critical assets.</p><div class="application-photo application-photo-installed"><img src="assets/home-installed-solutions.jpg" alt="Completed FCR roadside channel installation"></div></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="services section dark" id="services">
-      <div class="section-heading light"><h2>Dedicated expertise at every stage.</h2><p>Our in-house teams connect technical evaluation, engineering, permitting and field execution, giving clients a single accountable partner from initial site assessment through installation.</p></div>
-      <div class="service-grid">
-        <article class="service-card"><h3>Surveys</h3><p>Field teams document the site condition, surrounding constraints and forces acting on the site. That information helps our engineers distinguish the visible symptom from the underlying problem.</p></article>
-        <article class="service-card"><h3>Scoping</h3><p>From that foundation, we define the problem, the assets at risk and the boundaries of the work. The team evaluates alternatives and establishes a clear, defensible path forward.</p></article>
-        <article class="service-card"><h3>Drawings</h3><p>Er-Con engineers translate field conditions into practical, site-specific engineering and construction documents. Each drawing accounts for constructability and long-term performance.</p></article>
-        <article class="service-card"><h3>Permitting &amp; Approvals</h3><p>Permitting extends beyond environmental review to floodplain and other site-specific requirements. Er-Con prepares and submits applications, coordinates with agencies and sees every required permit through review and approval before work moves into the field.</p></article>
-        <article class="service-card"><h3>Installations</h3><p>In the field, Operations coordinates local vendors and suppliers while managing safety, quality and changing site conditions. When challenges arise, crews make informed field adjustments without compromising the intent of the design.</p></article>
-        <article class="service-card"><h3>Long-Term Protection</h3><p>The result is a site-specific solution that addresses the forces behind the problem, stabilizes the site and protects critical assets for years to come.</p></article>
-      </div>
-    </section>
-
-    <section class="section engineering-callout">
-      <div class="engineering-image" role="img" aria-label="Er-Con civil engineering plans showing site-specific stabilization design"></div>
-      <div class="engineering-copy"><h2>Solutions designed around the problem, not the other way around.</h2><p>Er-Con engineers each solution around the forces acting on the site, the assets at risk and the realities of construction. Before a design reaches a client, our engineering and field leaders review it together, applying decades of field experience to constructability, sequencing and long-term performance. That discipline creates a clear path from field investigation and permitting through installation.</p></div>
     </section>
 
     <section class="local-partnerships">

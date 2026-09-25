@@ -2,6 +2,43 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.50 - Industry first
+
+The site was organised around what Er-Con sells. It is now organised around who
+is visiting: a visitor finds their industry, then recognises the problem at their
+site, then sees how Er-Con's services solve it. The systems are still here, as
+the proof beneath the services rather than the way in.
+
+**Navigation.** Industries · Services · About · Careers · Contact. Industries
+opens a menu of the five industry pages; Home is the logo. "Solutions" is gone
+from the menu.
+
+**Home.** The hero is shorter and its lead now asks the visitor to choose an
+industry. Directly below it, five industry tiles - Pipelines & Energy,
+Transportation, Municipal & Public Agencies, Utilities, Commercial & Private
+Property - replace the product-led "Built for critical applications" block. The
+six-stage service grid follows as "How we solve it", with a link to Services.
+The stats band moved below the engineering callout so it no longer runs into
+the navy service section.
+
+**Industry pages (new, five).** Same template on each: photo hero, a strip to
+switch between industries, a ruled table of four problems - what you're seeing,
+what's driving it, how we solve it, and the systems used - then the six
+services, three relevant systems, and a contact block. The hero anchors to the
+top, so the back link, eyebrow and title sit at identical positions on all five
+pages, as does the switcher.
+
+**Services.** Leads with the framework as before, then a new service section
+naming the six services with anchors that the industry pages link to, then
+the systems (now "The systems behind our services"), additional capabilities,
+and the five industries.
+
+**Product pages.** "Back to Solutions" is now "Back to Services" and returns to
+the systems section.
+
+**Alignment.** Systems sections now share the 124px content edge the rest of
+the page uses at 1440 wide; they previously sat 24px wider.
+
 ## v0.43 - One name per colour
 
 Four tokens were aliases left over from the rebrand - `--blue`, `--navy2`,
