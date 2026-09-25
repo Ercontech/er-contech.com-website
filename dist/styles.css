@@ -284,7 +284,7 @@ h2.signature span:nth-child(3){color:var(--signal)}
 .industry-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
 .industry-tile{display:flex;flex-direction:column;background:#fff;border:1px solid var(--haze);border-top:5px solid var(--signal);box-shadow:0 10px 30px rgba(6,26,54,.07);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
 .industry-tile:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(6,26,54,.13)}
-.industry-tile-photo{height:150px;overflow:hidden;background:var(--frost)}
+.industry-tile-photo{position:relative;height:176px;overflow:hidden;background:var(--frost)}
 .industry-tile-photo img{display:block;width:100%;height:100%;object-fit:cover}
 .industry-tile-body{flex:1;padding:20px 20px 18px}
 .industry-tile-body h3{color:var(--navy);font-size:20px;line-height:1.15;margin:0 0 10px;min-height:2.3em}
@@ -352,7 +352,7 @@ h2.signature span:nth-child(3){color:var(--signal)}
 
 @media (max-width:1100px) and (min-width:901px){
   .industry-tile-body h3{font-size:18px}
-  .industry-tile-photo{height:120px}
+  .industry-tile-photo{height:150px}
 }
 @media (max-width:900px){
   .nav-group{padding:0;margin:0}
@@ -380,7 +380,7 @@ h2.signature span:nth-child(3){color:var(--signal)}
   .industry-picker{padding:48px 0 60px}
   .industry-picker-inner,.service-band-inner{padding:0 20px}
   .industry-tile{grid-template-columns:1fr;grid-template-rows:auto}
-  .industry-tile-photo{grid-row:auto;height:150px;min-height:0}
+  .industry-tile-photo{grid-row:auto;height:190px;min-height:0}
   .service-list,.service-band-steps{grid-template-columns:1fr}
   .service-band{padding:60px 0}
   .industry-hero h1{font-size:44px}
@@ -396,6 +396,14 @@ h2.signature span:nth-child(3){color:var(--signal)}
    at the same height on all five pages instead of re-centring per page */
 .industry-hero .product-hero-inner{justify-content:flex-start;padding-top:96px}
 @media (max-width:900px){.industry-hero .product-hero-inner{padding-top:64px}}
+
+/* Before / after on the industry tiles. The before photo is inset flush into
+   the after photo's bottom-left corner - it costs no extra height, and its
+   edges sit exactly on the tile's edges rather than floating over them. */
+.industry-tile-before{position:absolute;left:0;bottom:0;width:46%;height:52%;margin:0;border-top:3px solid #fff;border-right:3px solid #fff;overflow:hidden;background:var(--frost)}
+.industry-tile-before img{display:block;width:100%;height:100%;object-fit:cover}
+.ba-tag{position:absolute;left:0;top:0;padding:4px 7px;background:var(--navy);color:#fff;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;line-height:1}
+.ba-after{left:auto;right:0}
 
 .industry-hero-pipelines-energy{background-image:url('assets/pipeline-supports/pipeline-supports-cotton-creek-hero.png');background-position:center 55%}
 .industry-hero-transportation{background-image:url('assets/home-critical-infrastructure.png');background-position:center 50%}

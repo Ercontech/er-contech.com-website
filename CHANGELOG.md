@@ -2,6 +2,21 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.51 - Before and after on the industry tiles
+
+Each home-page industry tile now shows a before and after from the same site.
+The after photograph fills the tile; the before sits inset in its bottom-left
+corner, flush with the tile's edges, labelled on a navy chip. It costs no extra
+height beyond a taller photo band (150px to 176px at desktop).
+
+Pairs: Pipelines & Energy - pipeline support crossing. Transportation - roadside
+channel rebuilt with FCR. Municipal & Public Agencies - creek crossing protected
+with Ercoform over culverts. Utilities - headcut stabilised with stepped FCR.
+Commercial & Private Property - riverbank before Palisade and five years after.
+
+The same tiles appear on Services. The Transportation hint now names bridge
+scour, embankments, culvert outlets and roadside channels, matching its photo.
+
 ## v0.50 - Industry first
 
 The site was organised around what Er-Con sells. It is now organised around who
