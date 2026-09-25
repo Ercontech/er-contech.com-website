@@ -2,6 +2,14 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.54 - Hero buttons removed
+
+"Choose Your Industry" and "Tell Us About Your Project" are gone from the home
+hero. The first only scrolled a short distance to tiles already in view, and the
+second duplicated the contact card at the foot of the page and the "Not sure
+where you fit?" card. The industry tiles directly below the hero are now the
+page's call to action, and the first row sits 36px higher as a result.
+
 ## v0.53 - "Look familiar?"
 
 The industry picker's heading changes from "Start with your industry / Who are
