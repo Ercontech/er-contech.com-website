@@ -2,6 +2,14 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.56 - "Industry Applications"
+
+The industry picker's heading is now just "Industry Applications". The eyebrow
+above it and the "Look familiar?" / "Choose your industry and let's get
+started." pairing are gone, on the home page and on Services. The tiles move up
+about 30px; at 1920 x 1080 the first row ends at 981px and the second row
+starts in view.
+
 ## v0.55 - Site Investigation: we are water experts
 
 Site Investigation is now the named foundation of every Er-Con service.

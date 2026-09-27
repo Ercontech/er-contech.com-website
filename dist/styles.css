@@ -457,6 +457,9 @@ h2.signature span:nth-child(3){color:var(--signal)}
 .job-hero-inner,.contact-hero-inner,.product-process-inner,.project-recognition-inner,
 .project-environments-inner{max-width:calc(var(--max) - 48px)}
 
+/* The picker heading stands alone: no eyebrow, no lead line */
+.industry-picker-heading h2{margin-top:0}
+
 .industry-hero-pipelines-energy{background-image:url('assets/pipeline-supports/pipeline-supports-cotton-creek-hero.png');background-position:center 55%}
 .industry-hero-transportation{background-image:url('assets/home-critical-infrastructure.png');background-position:center 50%}
 .industry-hero-municipal{background-image:url('assets/fcr/fcr-channel-after.jpg');background-position:center 60%}
