@@ -2,6 +2,17 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.57 - Statement strip under the hero
+
+The hero lead ("Erosion looks different in every industry...") is removed. It
+was hard to read over the photograph. In its place, a flat navy strip directly
+beneath the hero carries one statement in white: "Erosion solutions for pipeline
+exposures and other valuable infrastructure."
+
+The hero is shorter to match (360px, down from 410px), so the industry tiles sit
+about where they did. On phones the white wash behind the title now runs to the
+bottom of the hero, because the title reaches further down it than before.
+
 ## v0.56 - "Industry Applications"
 
 The industry picker's heading is now just "Industry Applications". The eyebrow
