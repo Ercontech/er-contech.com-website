@@ -2,6 +2,14 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.58 - Strip wording
+
+The statement under the hero now reads: "Protecting and preserving critical
+infrastructure and assets: pipelines, roads and rail, public works, utilities,
+and commercial and private property." The list names the five industries in the
+order of the tiles below it, so the strip introduces the grid. It runs to two
+lines at desktop widths.
+
 ## v0.57 - Statement strip under the hero
 
 The hero lead ("Erosion looks different in every industry...") is removed. It
