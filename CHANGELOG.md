@@ -2,6 +2,18 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.63 - Services page: no product talk
+
+The Services page's systems section ("The right system for the conditions", six
+product cards) and "Additional capabilities" are removed. The hero lead now ends
+"before recommending the right solution" instead of "the right system or
+combination of systems". The page now runs: framework, Site Investigation, the
+six services, Industry Applications, contact.
+
+The six product pages still exist but nothing outside them links to them. Their
+"Back to Services" link now goes to the top of Services, since the systems
+anchor is gone.
+
 ## v0.62 - Industry pages: no product talk, two field cases
 
 The industry pages no longer talk about products. The "Systems we use most in..."
