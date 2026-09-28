@@ -2,6 +2,33 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.62 - Industry pages: no product talk, two field cases
+
+The industry pages no longer talk about products. The "Systems we use most in..."
+section is removed from all five, as is the "Systems:" line under each problem
+row.
+
+"In the field" now shows two before/after cases side by side, each labelled with
+the problem-table row it illustrates, word for word, with a one-line caption
+under each photo. Six real before/after pairs exist; each page uses two, none
+repeats on a page, and none is used more than twice across the site.
+
+| Page | Cases |
+|---|---|
+| Pipelines & Energy | The line is exposed at a crossing · A free span needs support |
+| Transportation | A culvert outlet is eroding · Roadside channels are cutting down |
+| Municipal | Stormwater channels are eroding · Creek banks are failing near roads, parks or homes |
+| Utilities | A water or sewer line is exposed at a creek crossing · Rights-of-way and access roads are washing out |
+| Property | The riverbank or shoreline is moving toward buildings · Drainage through the property is cutting a gully |
+
+"A free span has developed" is now "A free span needs support", and its row no
+longer assumes erosion: a span can be designed and engineered. The row reads
+"The line spans a gap, by design or because the ground beneath it has washed
+away", and the solution is to engineer and install support, stabilising the site
+where erosion opened the gap.
+
+Home-page tile alt text no longer names products.
+
 ## v0.61 - Industry pages: shorter table, field evidence sooner
 
 The problem table on each industry page is about 170px shorter: tighter cell

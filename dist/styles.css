@@ -507,6 +507,17 @@ h2.signature span:nth-child(3){color:var(--signal)}
   .evidence-photo{height:220px}
 }
 
+/* v0.62 - Industry pages carry no product talk: the systems section and the
+   "Systems:" line in each problem row are gone. "In the field" shows two
+   before/after cases side by side, each labelled with the table row it proves. */
+.evidence-cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px;margin-top:14px}
+.evidence-case h3{color:var(--navy);font-size:19px;line-height:1.2;margin:0 0 12px;min-height:2.4em}
+.evidence-case .evidence-pair{margin-top:0;gap:10px}
+.evidence-case .evidence-photo{height:230px}
+.evidence-case figcaption{font-size:13px;line-height:1.4}
+@media (max-width:900px){.evidence-cases{grid-template-columns:1fr;gap:32px}.evidence-case h3{min-height:0}.evidence-case .evidence-photo{height:240px}}
+@media (max-width:600px){.evidence-case .evidence-pair{grid-template-columns:1fr 1fr}.evidence-case .evidence-photo{height:150px}}
+
 .industry-hero-pipelines-energy{background-image:url('assets/pipeline-supports/pipeline-supports-cotton-creek-hero.png');background-position:center 55%}
 .industry-hero-transportation{background-image:url('assets/home-critical-infrastructure.png');background-position:center 50%}
 .industry-hero-municipal{background-image:url('assets/fcr/fcr-channel-after.jpg');background-position:center 60%}
