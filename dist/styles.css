@@ -460,15 +460,19 @@ h2.signature span:nth-child(3){color:var(--signal)}
 /* The picker heading stands alone: no eyebrow, no lead line */
 .industry-picker-heading h2{margin-top:0}
 
-/* Statement strip under the home hero: flat navy, white type, so it reads
-   cleanly where the lead over the photograph did not */
-.hero-strip{background:linear-gradient(100deg,var(--navy-deep),var(--navy-lift))}
-.hero-strip-inner{max-width:var(--max);margin:0 auto;padding:22px 24px;color:#fff;font-size:clamp(18px,1.6vw,22px);font-weight:700;line-height:1.35}
-@media (max-width:600px){
-  .hero-strip-inner{padding:18px 20px}
-  /* The title now runs to the bottom of the hero, so the white wash does too */
-  .hero-compact .hero-overlay{background:linear-gradient(180deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.92) 78%,rgba(255,255,255,.80) 100%)}
-}
+/* Home hero: one flat navy block carrying the eyebrow, title and statement.
+   No photograph - the industry tiles are the first imagery on the page.
+   Dark ground, so the eyebrow takes Signal Light and the type is white. */
+.hero-navy{background:linear-gradient(100deg,var(--navy-deep),var(--navy-lift))}
+.hero-navy,.hero-navy .hero-inner{min-height:0}
+.hero-navy .hero-inner{padding-top:56px;padding-bottom:56px}
+.hero-navy .hero-copy{max-width:none}
+.hero-navy .hero-copy>.eyebrow{color:var(--signal-light)}
+.hero-navy h1{color:#fff}
+.hero-statement{margin:0;max-width:900px;color:#fff;font-size:clamp(18px,1.6vw,22px);font-weight:700;line-height:1.4}
+@media (max-width:900px){.hero-navy .hero-inner{min-height:0}}
+@media (max-width:600px){.hero-navy .hero-inner{padding-top:44px;padding-bottom:44px}}
+
 
 .industry-hero-pipelines-energy{background-image:url('assets/pipeline-supports/pipeline-supports-cotton-creek-hero.png');background-position:center 55%}
 .industry-hero-transportation{background-image:url('assets/home-critical-infrastructure.png');background-position:center 50%}

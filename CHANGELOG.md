@@ -2,6 +2,20 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.59 - Navy hero, no photograph
+
+The home hero and the statement strip beneath it are merged into one flat navy
+block: eyebrow in Signal Light, title in white, the accent line, then the
+statement. The rock-and-brick photograph is gone from the hero.
+
+The first screen had eleven photographs competing (the hero and a before and
+after in each of five tiles), all similar in texture. With the hero flat, the
+industry tiles are the first imagery on the page and the before and after pairs
+carry it. The tiles sit about 50px higher at desktop widths, and on phones the
+white title on navy reads more clearly than navy over a washed photograph.
+
+The separate strip, its styles and the phone-only white wash are removed.
+
 ## v0.58 - Strip wording
 
 The statement under the hero now reads: "Protecting and preserving critical
