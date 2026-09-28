@@ -2,6 +2,21 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.61 - Industry pages: shorter table, field evidence sooner
+
+The problem table on each industry page is about 170px shorter: tighter cell
+padding, a smaller problem title and 15px body text. The section heading sits on
+one row with its lead to the right, and the heading itself is smaller.
+
+A new "In the field" band follows the table, showing the industry's before and
+after pair (the same pair as its home-page tile) side by side, with a one-line
+caption under each. The first photograph after the hero now appears before
+"How we solve it", about 370px higher than the systems photos did.
+
+The industry hero is 40px shorter (610px). It stays a fixed height, so the back
+link, title and industry switcher still sit at identical positions on all five
+pages, checked by script.
+
 ## v0.60 - Discipline order
 
 The five Site Investigation disciplines are reordered so that reading left to
