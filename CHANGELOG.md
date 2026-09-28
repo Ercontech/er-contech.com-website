@@ -2,6 +2,15 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.60 - Discipline order
+
+The five Site Investigation disciplines are reordered so that reading left to
+right, Hydrology and Hydraulics are never side by side and no two "-ology" names
+touch: Hydrology, Soil Mechanics, Geomorphology, Hydraulics, Sedimentology.
+Hydraulics now reads "What the water does", since it no longer follows
+Hydrology. The same order is used where the disciplines are named in text: the
+Site Investigation service and the service band on the five industry pages.
+
 ## v0.59 - Navy hero, no photograph
 
 The home hero and the statement strip beneath it are merged into one flat navy
