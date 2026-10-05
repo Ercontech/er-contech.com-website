@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.74 - More room around the logo
+
+The header now has 24px of space above and below the logo on every page (was
+10px), so the logo no longer crowds the navy band and the header reads as one
+balanced strip. The header is 123px tall at desktop width (was 95px). On phones
+the menu still drops down directly under the header.
+
 ## v0.73 - Before photo on hover
 
 Pointing at an industry tile (Home and Services) fades it to the same site's
