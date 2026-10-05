@@ -2,6 +2,38 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.69 - Copy pass, Ron's review
+
+Ron reviewed v0.68 item by item. Reverted to the v0.67 wording:
+
+- the engineering callout (heading and text)
+- the "Years Designing and Delivering…" stat
+- "Expertise that travels"
+- the Services top lead and its five-step framework
+- the Services contact block
+- the About story close and leadership intro
+- the Field Construction Technician posting
+
+Job descriptions are out of scope for website copy work. Never edit them as part
+of a copy pass.
+
+Kept:
+
+- "We'll tell you how we'd approach it." on the home card, the home and industry
+  contact blocks, and the contact page
+- the home contact line
+- "Start a Conversation" buttons on the industry pages
+- the two Utilities rows
+
+Changed again:
+
+- **Engineering & Drawings:** "Our engineers turn the investigation findings into
+  an engineered design for the site, set out in construction drawings built for
+  the field and made to last." Findings lead to the engineering and design;
+  drawings record it.
+- **Construction:** "If conditions on the ground turn out to be different from the
+  drawings, the crew and our engineers work it out together."
+
 ## v0.68 - Copy pass, cover to cover
 
 One pass over every page a visitor can reach, rewritten together rather than line
