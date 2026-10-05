@@ -2,6 +2,25 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.66 - "How we work"
+
+The services band's eyebrow is now "How we work" instead of "How we solve it",
+on the home page and all five industry pages. (The problem table's column header
+"How we solve it" is unchanged.)
+
+The line under "One team, from site investigation through construction." now
+reads: "Whatever the industry, every project follows the same six steps, and our
+own people carry it through each one. Nothing is handed off to another firm
+along the way." It replaces "the same in-house teams: site investigation, ..."
+on the home page, where the colon promised teams and listed steps. On the
+industry pages it replaces the discipline list, which "We are water experts."
+already covers.
+
+The Site Investigation service card no longer says the disciplines "together
+establish the forces". It now reads "We study the site's hydrology, soil
+mechanics, geomorphology, hydraulics and sedimentology, so our engineers can
+separate the visible symptom from the underlying problem."
+
 ## v0.65 - Site Investigation lead
 
 The lead beside "We are water experts." (home and Services) no longer has five
