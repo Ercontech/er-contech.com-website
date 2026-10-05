@@ -2,6 +2,14 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.67 - Scoping card
+
+The Scoping & Root Cause card dropped "evaluates alternatives and establishes a
+clear, defensible path forward". It now reads: "We find what's actually
+causing the damage and how far the work needs to go, then recommend the fix
+that fits the site." (Ron's pick, with "what's at risk" dropped: the client
+calls us because the risk is already apparent.) Home and Services.
+
 ## v0.66 - "How we work"
 
 The services band's eyebrow is now "How we work" instead of "How we solve it",
