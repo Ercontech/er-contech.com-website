@@ -2,6 +2,14 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.70 - Slim hero
+
+The home hero now holds only the title and the statement. The eyebrow "Backed by
+more than 50 years of field experience" and the amber accent line are removed.
+The title is now sentence case, smaller and on two lines: "Engineered erosion
+mitigation and bank stabilization." The statement is regular weight. Ron: this
+goes in whichever tile layout is chosen.
+
 ## v0.69 - Copy pass, Ron's review
 
 Ron reviewed v0.68 item by item. Reverted to the v0.67 wording:

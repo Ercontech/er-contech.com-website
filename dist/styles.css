@@ -523,6 +523,12 @@ h2.signature span:nth-child(3){color:var(--signal)}
 /* The lead under the services headline breaks after its first sentence */
 .services .section-heading p:last-child{max-width:820px;margin-left:auto;margin-right:auto}
 
+/* v0.70 - slim hero: sentence-case title and the statement, nothing else */
+.hero-navy h1{text-transform:none;font-size:clamp(34px,3.4vw,48px);line-height:1.08;letter-spacing:-.02em;margin:0 0 16px}
+.hero-navy .hero-inner{padding-top:48px;padding-bottom:48px}
+.hero-statement{font-weight:400;color:var(--frost)}
+@media (max-width:600px){.hero-navy h1 br{display:none}}
+
 .industry-hero-pipelines-energy{background-image:url('assets/pipeline-supports/pipeline-supports-cotton-creek-hero.png');background-position:center 55%}
 .industry-hero-transportation{background-image:url('assets/home-critical-infrastructure.png');background-position:center 50%}
 .industry-hero-municipal{background-image:url('assets/fcr/fcr-channel-after.jpg');background-position:center 60%}
