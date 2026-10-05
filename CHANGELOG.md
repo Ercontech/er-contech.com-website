@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.75 - Services page label removed
+
+The small blue "OUR SERVICES" label above "One team, from site investigation
+through construction." on the Services page is gone, so that heading matches
+"We are water experts." and "Industry Applications", neither of which has a label.
+
 ## v0.74 - More room around the logo
 
 The header now has 24px of space above and below the logo on every page (was
