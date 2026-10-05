@@ -2,6 +2,14 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.65 - Site Investigation lead
+
+The lead beside "We are water experts." (home and Services) no longer has five
+disciplines "establishing" things. It now reads: "Every project starts with a
+site investigation. Before we design anything, we study how water reaches the
+site, what it does there, and what the ground can hold." The three clauses map
+onto the five discipline cards below it.
+
 ## v0.64 - "One team, from site investigation through construction."
 
 The services headline drops "One accountable partner, from site to installation"
