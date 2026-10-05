@@ -2,6 +2,23 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.64 - "One team, from site investigation through construction."
+
+The services headline drops "One accountable partner, from site to installation"
+and the Services page's "One team from the first site visit to the finished
+installation". Home, Services and all five industry pages now read "One team,
+from site investigation through construction." It reuses the name of the first
+service, so the headline and the service list say the same thing.
+
+The "Installation" service is now "Construction" (anchor `#construction`), and
+the Services framework's last step is "Build: Construct the solution in the
+field." "Accountable for solving it" now reads "the ones who solve it". On the
+home page, the meta description and the engineering callout say construction
+instead of installation. Verbs in the problem rows ("install support") are
+unchanged.
+
+The home-page heading is allowed to 960px so it sets on two lines.
+
 ## v0.63 - Services page: no product talk
 
 The Services page's systems section ("The right system for the conditions", six
