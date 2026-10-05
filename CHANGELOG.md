@@ -2,6 +2,14 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.76 - Industry tables without the instruction line
+
+On all five industry pages, the small "RECOGNIZE THE PROBLEM" label and the line
+"Find the condition that looks like your site: what is visible in the field, what
+is driving it, and how we solve it." are removed. The table's own column headings
+already say this. The heading "What we see in …" now stands alone above the table,
+on one line at desktop width (it no longer shares the row with the removed line).
+
 ## v0.75 - Services page label removed
 
 The small blue "OUR SERVICES" label above "One team, from site investigation

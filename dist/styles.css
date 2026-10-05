@@ -557,6 +557,8 @@ h2.signature span:nth-child(3){color:var(--signal)}
 /* v0.74 header breathing room */
 .nav-wrap{padding-top:24px;padding-bottom:24px}
 @media (max-width:900px){.main-nav{top:100%}}
+/* v0.76 problems heading stands alone */
+.problems-row{grid-template-columns:1fr}
 
 .industry-hero-pipelines-energy{background-image:url('assets/pipeline-supports/pipeline-supports-cotton-creek-hero.png');background-position:center 55%}
 .industry-hero-transportation{background-image:url('assets/home-critical-infrastructure.png');background-position:center 50%}
