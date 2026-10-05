@@ -2,6 +2,15 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.72 - Matched section headings
+
+On Home and Services, "Industry Applications" and "We are water experts." are now
+set as a matched pair. Both are on two lines ("Industry / Applications", "We are
+water / experts."), and neither has an eyebrow: the small "SITE INVESTIGATION"
+label is removed, since the lead beside the heading opens with "Every project
+starts with a site investigation." "We are water experts." now aligns to the top
+of the lead beside it.
+
 ## v0.71 - Quiet industry tiles (layout A)
 
 Ron chose layout A: industries first, with quiet tiles. The industry grid on Home
