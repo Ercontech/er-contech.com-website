@@ -2,6 +2,48 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.68 - Copy pass, cover to cover
+
+One pass over every page a visitor can reach, rewritten together rather than line
+by line. The rules: plain words, people doing things, no consultant-speak, no
+product names, and no promises about future performance.
+
+- **Contact line, everywhere.** "We'll help determine the right path forward"
+  becomes "We'll tell you how we'd approach it." The contact blocks on Home and
+  Services now read "Send us the location, what you're seeing and any photos you
+  have." Home loses "Er-Con solutions are proven to protect critical assets in
+  demanding environments."
+- **Engineering & Drawings.** "Our engineers turn the investigation findings into
+  construction drawings for that site, designed to be built in the field and to
+  last."
+- **Construction.** "Our own crews build it, managing safety and quality on site.
+  If the ground turns out to be different from the drawings, the crew and our
+  engineers work it out together."
+- **Engineering callout.** "Designed by people who build it." Before a design
+  goes to a client, engineers and field leaders review it: can it be built, in
+  what order, and will it hold up?
+- **Stat.** "Years in the Field".
+- **Expertise that travels.** Two plain sentences: local equipment and materials
+  wherever possible; a small footprint, restoring what we disturb. The
+  self-praise is gone.
+- **Services.** New lead: "The damage you can see is often caused somewhere else:
+  upstream, downstream or below ground. We look at both before recommending a
+  fix." The five-step framework is removed, because it contradicted the six
+  steps listed below it. New meta description.
+- **Utilities.** "We find what is driving the movement"; "protection designed for
+  the range of water levels and how the facility operates".
+- **About.** The story closes with "Today one team handles all of it: site
+  investigation, engineering, permitting, fabrication and construction." Plain
+  leadership intro.
+- **Field Construction Technician.** "Palisade systems" becomes "river-training
+  systems".
+- **Buttons.** "Discuss Your Site" and "Tell Us About Your Project" become "Start
+  a Conversation".
+
+Unchanged by Ron's call: Permitting & Approvals, Long-Term Protection.
+
+The rules live in `copypass.py`, applied after `build.py`.
+
 ## v0.67 - Scoping card
 
 The Scoping & Root Cause card dropped "evaluates alternatives and establishes a
