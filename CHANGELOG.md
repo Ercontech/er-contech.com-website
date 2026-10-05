@@ -2,6 +2,14 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.73 - Before photo on hover
+
+Pointing at an industry tile (Home and Services) fades it to the same site's
+"before" photo over 0.7s, with a small navy BEFORE tag in the corner. Moving away
+fades back to the "after". The row is otherwise still. Ron chose hover over timed
+rotation; the audience is desktop. With reduced motion turned on, the swap is
+instant.
+
 ## v0.72 - Matched section headings
 
 On Home and Services, "Industry Applications" and "We are water experts." are now
