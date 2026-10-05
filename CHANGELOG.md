@@ -2,6 +2,27 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.71 - Quiet industry tiles (layout A)
+
+Ron chose layout A: industries first, with quiet tiles. The industry grid on Home
+and Services is now one row of five. Each tile shows one photo with the industry
+name under it.
+
+Removed:
+
+- the before inset and the BEFORE/AFTER tags
+- the descriptions
+- the "See the problems" links
+- card frames and shadows
+- the navy "Not sure where you fit?" card
+
+That card is now a one-line link beneath the grid: "Not sure where you fit? Tell
+us what you're seeing →". The whole tile is the link; the name turns blue on
+hover. Below 1100px wide the grid wraps to three columns, and on phones it is one
+column. Site Investigation stays directly below the tiles.
+
+The before/after story now lives on the industry pages ("In the field").
+
 ## v0.70 - Slim hero
 
 The home hero now holds only the title and the statement. The eyebrow "Backed by
