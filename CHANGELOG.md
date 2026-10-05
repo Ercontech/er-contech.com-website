@@ -2,6 +2,22 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.77 - In the field: one sentence per case (Pipelines & Energy)
+
+On the Pipelines & Energy page, each "In the field" case is now its before/after
+photo pair with one sentence beneath it (Ron's wording, lightly edited). The case
+headings and the per-photo captions are removed; the BEFORE and AFTER tags carry
+the rest.
+
+- Exposed line: "Meandering creeks see changing water levels and flow rates, and
+  they can expose a pipeline quickly."
+- Free span: "Over time, erosion can leave a line spanning a gap it was never meant
+  to cross. That calls for prompt work: support beneath the line and armoring
+  around it."
+
+The other four industry pages keep the previous style until their sentences are
+written.
+
 ## v0.76 - Industry tables without the instruction line
 
 On all five industry pages, the small "RECOGNIZE THE PROBLEM" label and the line

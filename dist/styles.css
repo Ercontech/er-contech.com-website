@@ -559,6 +559,9 @@ h2.signature span:nth-child(3){color:var(--signal)}
 @media (max-width:900px){.main-nav{top:100%}}
 /* v0.76 problems heading stands alone */
 .problems-row{grid-template-columns:1fr}
+/* v0.77 one story sentence per case */
+.evidence-story{margin:16px 0 0;color:var(--graphite);font-size:17px;line-height:1.5}
+.evidence-cases:has(.evidence-story-case){margin-top:20px}
 
 .industry-hero-pipelines-energy{background-image:url('assets/pipeline-supports/pipeline-supports-cotton-creek-hero.png');background-position:center 55%}
 .industry-hero-transportation{background-image:url('assets/home-critical-infrastructure.png');background-position:center 50%}
