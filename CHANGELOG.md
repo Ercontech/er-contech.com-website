@@ -2,6 +2,19 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.78 - Safety page
+
+New Safety page, linked in the main menu between About and Careers on every page.
+
+- Hero: "Moments Matter." (Ron's tagline) with a short statement.
+- "Safety starts before the work does.": ten programs grouped Before the job,
+  On the job and After every job. The descriptions are drafts for Er-Con's safety
+  lead to review.
+- Stop Work Authority in its own navy band.
+- Contact block for clients prequalifying a contractor.
+
+No EMR, TRIR or incident-free counter, at Ron's request.
+
 ## v0.77 - In the field: one sentence per case (Pipelines & Energy)
 
 On the Pipelines & Energy page, each "In the field" case is now its before/after
