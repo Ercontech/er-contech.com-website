@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.79 - Safety hero wording
+
+The first sentence of the Safety page hero, before → after:
+"A job is made of small moments: where to stand, when to look again, when to say
+stop." → "A job is made of small moments: where to stand, what to watch and, most
+importantly, when to say stop." (Ron's wording, tightened.)
+
 ## v0.78 - Safety page
 
 New Safety page, linked in the main menu between About and Careers on every page.
