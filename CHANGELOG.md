@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.81 - Safety: "Always" group label
+
+The third program group on the Safety page, before → after: "After every job" →
+"Always". Near-miss reporting happens the moment it occurs and training is yearly,
+so neither belongs to the end of a job.
+
 ## v0.80 - Safety: prequalification wording
 
 Prequalification, before → after: "We hold our place in ISNetworld, Avetta and
