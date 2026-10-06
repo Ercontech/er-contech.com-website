@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.80 - Safety: prequalification wording
+
+Prequalification, before → after: "We hold our place in ISNetworld, Avetta and
+Veriforce, …" → "We maintain current memberships in ISNetworld, Avetta and
+Veriforce, so clients can review our safety programs and record before we arrive."
+
 ## v0.79 - Safety hero wording
 
 The first sentence of the Safety page hero, before → after:
