@@ -50,3 +50,20 @@ projectForm?.addEventListener('submit',event=>{
   ].join('\n');
   window.location.href=`mailto:info@er-contech.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
+
+// v0.83 In the field gallery: step through before/after jobs, no autoplay
+document.querySelectorAll('.g-evidence, .evidence').forEach(function (sec) {
+  var track = sec.querySelector('.g-track'); if (!track) return;
+  var cards = Array.prototype.slice.call(track.children), btns = sec.querySelectorAll('.g-btn'), count = sec.querySelector('.g-count'), i = 0;
+  function per() { return window.matchMedia('(max-width: 900px)').matches ? 1 : 2; }
+  function go() {
+    var p = per(), max = Math.max(0, cards.length - p); i = Math.max(0, Math.min(i, max));
+    var w = cards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0);
+    track.style.transform = 'translateX(' + (-i * w) + 'px)';
+    btns[0].disabled = i === 0; btns[1].disabled = i >= max;
+    count.textContent = p === 1 ? (i + 1) + ' of ' + cards.length : (i + 1) + '–' + (i + p) + ' of ' + cards.length;
+    cards.forEach(function (c, n) { c.setAttribute('aria-hidden', n < i || n >= i + p ? 'true' : 'false'); });
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { i += (+b.dataset.d) * per(); go(); }); });
+  window.addEventListener('resize', go); go();
+});

@@ -2,6 +2,25 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.83 - Best-of photos: "In the field" gallery and new tiles
+
+Ron chose the best before/after photos from everything we have, on the site and in
+the new PhotoCollection, since any job could illustrate any industry.
+
+- "In the field" on all five industry pages is now one gallery of seven jobs, two at
+  a time with arrows (one at a time on phones), no autoplay. Each job has one
+  sentence describing that job. Pipelines & Energy shows its own two jobs first.
+  - Jobs: headcut to stepped grade control; exposed pipe in a creek bank to a
+    stepped wall (new); free span supported and armored; red-clay channel to lined
+    channel; debris crossing to new culverts; farmland riverbank rebuilt; plant
+    drainage under pipe racks lined (new).
+  - Dropped: the taped-off creek crossing (Ron: the weakest of the lot).
+- Home and Services tiles: Municipal now shows a vegetated channel at a road bridge;
+  Utilities shows a lined channel under power lines. Neither has a before photo, so
+  they don't change on hover.
+- New photos are in assets/field/, cropped to remove the GPS and date bands and
+  sized for the web.
+
 ## v0.82 - Safety: Stop Work Authority wording
 
 The Stop Work Authority band, before → after:
