@@ -2,6 +2,17 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.82 - Safety: Stop Work Authority wording
+
+The Stop Work Authority band, before → after:
+"Anyone on an Er-Con site, from a first-week hire to a visitor, has the authority to
+stop work when something isn't right. No one is questioned for using it. The work
+starts again when the hazard is dealt with." → "On an Er-Con site, a new hire has
+the same right to stop the job as the person running it. If something doesn't feel
+right, we want to hear it, and nobody gets grief for speaking up. Work starts again
+when it's safe to proceed, not a moment before." (Ron chose option 3; the closing
+line is his.)
+
 ## v0.81 - Safety: "Always" group label
 
 The third program group on the Safety page, before → after: "After every job" →
