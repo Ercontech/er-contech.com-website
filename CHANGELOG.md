@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.85 - Pipelines: free span "How we solve it"
+
+Before → after: "We engineer and install support under the span and, where erosion opened it, stabilize the surrounding site so the gap does not grow." → "We engineer and install support under the span and, where erosion created the condition, stabilize the surrounding site." (Ron's wording.)
+
 ## v0.84 - Pipelines & Energy hero lead
 
 Before → after (Ron's wording, typos corrected):
