@@ -2,6 +2,11 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.84 - Pipelines & Energy hero lead
+
+Before → after (Ron's wording, typos corrected):
+"Creeks, rivers and drainages keep moving after a pipeline goes in. When cover is lost or a bank retreats toward the right-of-way, the line is exposed to loads and forces it was never designed to carry." → "Creeks, rivers and drainage areas can move long after a pipeline is installed. When cover is lost or banks retreat toward the right-of-way, lines can be exposed to vehicles, vandalism and, in some cases, loads they were never designed to withstand."
+
 ## v0.83 - Best-of photos: "In the field" gallery and new tiles
 
 Ron chose the best before/after photos from everything we have, on the site and in
