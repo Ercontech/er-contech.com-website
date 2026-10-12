@@ -32,17 +32,74 @@
     </section>
 
     <section class="section contact-page">
-      <form class="project-form" data-project-form>
+      <form id="form" class="project-form sv-form" action="send.php" method="post" enctype="multipart/form-data" data-survey-form>
+        <p class="sv-error" hidden>Please fill in your name, email, site location and what you're seeing, then send again.</p>
+        <input type="text" name="website" class="sv-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <h2 class="sv-h">About you</h2>
         <div class="form-grid">
-          <div class="form-field"><label for="first-name">First name <span class="required">*</span></label><input id="first-name" name="first-name" autocomplete="given-name" required></div>
-          <div class="form-field"><label for="last-name">Last name <span class="required">*</span></label><input id="last-name" name="last-name" autocomplete="family-name" required></div>
-          <div class="form-field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization"></div>
-          <div class="form-field"><label for="email">Email address <span class="required">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="form-field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-          <div class="form-field"><label for="project-location">Project location</label><input id="project-location" name="project-location" placeholder="City and state, or region"></div>
-          <div class="form-field full"><label for="project-details">What’s happening at the site? <span class="required">*</span></label><textarea id="project-details" name="project-details" placeholder="Tell us about the erosion concern, affected infrastructure and any known timing." required></textarea></div>
+          <div class="form-field"><label for="name">Name <span class="required">*</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="form-field"><label for="company">Company</label><input id="company" name="company" type="text" autocomplete="organization"></div>
+          <div class="form-field"><label for="email">Email <span class="required">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
         </div>
-        <div class="form-actions"><button class="btn primary" type="submit">Send Project Details</button><p class="form-note">This will open your email application with the project details ready to review and send.</p></div>
+
+        <h2 class="sv-h">The site</h2>
+        <div class="form-grid">
+          <div class="form-field"><label for="location">Site location <span class="required">*</span></label><input id="location" name="location" type="text" placeholder="City and state, or coordinates" required></div>
+          <div class="form-field"><label for="industry">Industry</label><select id="industry" name="industry"><option value="">Choose one</option><option>Pipelines &amp; Energy</option><option>Transportation</option><option>Municipal &amp; Public Agencies</option><option>Utilities</option><option>Commercial &amp; Private Property</option><option>Other</option></select></div>
+          <div class="form-field full"><label for="details">What are you seeing? <span class="required">*</span></label><textarea id="details" name="details" required placeholder="What's happening at the site, what's at risk and any timing we should know about."></textarea></div>
+          <div class="form-field full"><label for="photos">Photos</label>
+            <label class="sv-drop" for="photos"><input id="photos" name="photos[]" type="file" accept="image/*,.pdf" multiple><span class="sv-drop-main">Add photos of the site</span><span class="sv-drop-sub">Up to 10 files, 25 MB total. Photos are the most helpful thing you can send.</span></label>
+            <ul class="sv-files" aria-live="polite"></ul></div>
+        </div>
+
+        <details class="sv-more">
+          <summary><span>Add site details</span><small>Optional. Fill in what you know, skip the rest.</small></summary>
+          <div class="sv-more-body">
+            <h3 class="sv-h3">Site</h3>
+            <div class="form-grid sv-grid3">
+              <div class="form-field"><label for="water">Body of water</label><input id="water" name="water" type="text"></div>
+              <div class="form-field"><label for="county">County</label><input id="county" name="county" type="text"></div>
+              <div class="form-field"><label for="project">Project name</label><input id="project" name="project" type="text"></div>
+              <div class="form-field"><label for="lat">Latitude</label><input id="lat" name="lat" type="text"></div>
+              <div class="form-field"><label for="long">Longitude</label><input id="long" name="long" type="text"></div>
+            </div>
+
+            <h3 class="sv-h3">The erosion</h3>
+            <fieldset class="sv-checks"><legend>Erosion type</legend><div><label class="sv-check"><input type="checkbox" name="erosion_type[]" value="Degradation"><span>Degradation</span></label><label class="sv-check"><input type="checkbox" name="erosion_type[]" value="Head cutting"><span>Head cutting</span></label><label class="sv-check"><input type="checkbox" name="erosion_type[]" value="Lateral migration"><span>Lateral migration</span></label><label class="sv-check"><input type="checkbox" name="erosion_type[]" value="Other"><span>Other</span></label></div></fieldset>
+            <div class="form-grid"><div class="form-field"><label for="flow_depth">Nominal depth of flow</label><input id="flow_depth" name="flow_depth" type="text"></div></div>
+            <div class="sv-pair">
+              <fieldset class="sv-checks"><legend>Bed material</legend><div><label class="sv-check"><input type="checkbox" name="bed[]" value="Clay"><span>Clay</span></label><label class="sv-check"><input type="checkbox" name="bed[]" value="Rock"><span>Rock</span></label><label class="sv-check"><input type="checkbox" name="bed[]" value="Gravel"><span>Gravel</span></label><label class="sv-check"><input type="checkbox" name="bed[]" value="Sand"><span>Sand</span></label></div></fieldset>
+              <fieldset class="sv-checks"><legend>Bank material</legend><div><label class="sv-check"><input type="checkbox" name="bank[]" value="Clay"><span>Clay</span></label><label class="sv-check"><input type="checkbox" name="bank[]" value="Rock"><span>Rock</span></label><label class="sv-check"><input type="checkbox" name="bank[]" value="Gravel"><span>Gravel</span></label><label class="sv-check"><input type="checkbox" name="bank[]" value="Sand"><span>Sand</span></label></div></fieldset>
+            </div>
+
+            <h3 class="sv-h3">Pipeline</h3>
+            <div class="sv-yn"><span class="sv-q">Is a pipeline involved?</span><label class="sv-check"><input type="radio" name="pipeline" value="Yes"><span>Yes</span></label><label class="sv-check"><input type="radio" name="pipeline" value="No"><span>No</span></label></div>
+            <div class="sv-pipe" hidden>
+              <div class="form-grid sv-grid3">
+                <div class="form-field"><label for="pipe_company">Pipeline company</label><input id="pipe_company" name="pipe_company" type="text"></div>
+                <div class="form-field"><label for="line">Line name / number</label><input id="line" name="line" type="text"></div>
+                <div class="form-field"><label for="milepost">Milepost / station</label><input id="milepost" name="milepost" type="text"></div>
+                <div class="form-field"><label for="lines_row">Pipelines in right-of-way</label><input id="lines_row" name="lines_row" type="text"></div>
+                <div class="form-field"><label for="diameter">Pipeline diameter(s)</label><input id="diameter" name="diameter" type="text"></div>
+                <div class="form-field"><label for="exposure">Length of exposure</label><input id="exposure" name="exposure" type="text"></div>
+                <div class="form-field"><label for="span">Length of free span</label><input id="span" name="span" type="text"></div>
+              </div>
+              <div class="sv-yn"><span class="sv-q">Is the pipeline visible?</span><label class="sv-check"><input type="radio" name="pipe_visible" value="Yes"><span>Yes</span></label><label class="sv-check"><input type="radio" name="pipe_visible" value="No"><span>No</span></label></div>
+            </div>
+
+            <h3 class="sv-h3">Access</h3>
+            <div class="sv-yn"><span class="sv-q">Is the right-of-way cleared?</span><label class="sv-check"><input type="radio" name="row_cleared" value="Yes"><span>Yes</span></label><label class="sv-check"><input type="radio" name="row_cleared" value="No"><span>No</span></label></div>
+            <div class="sv-yn"><span class="sv-q">Walk to site?</span><label class="sv-check"><input type="radio" name="walk" value="Yes"><span>Yes</span></label><label class="sv-check"><input type="radio" name="walk" value="No"><span>No</span></label><input class="sv-follow" name="walk_detail" type="text" placeholder="Distance walked" aria-label="Distance walked"></div>
+            <div class="sv-yn"><span class="sv-q">Tree removal needed?</span><label class="sv-check"><input type="radio" name="trees" value="Yes"><span>Yes</span></label><label class="sv-check"><input type="radio" name="trees" value="No"><span>No</span></label><input class="sv-follow" name="trees_detail" type="text" placeholder="Number of trees / size" aria-label="Number of trees / size"></div>
+            <div class="sv-yn"><span class="sv-q">Other pipelines or utilities in the ROW?</span><label class="sv-check"><input type="radio" name="utilities" value="Yes"><span>Yes</span></label><label class="sv-check"><input type="radio" name="utilities" value="No"><span>No</span></label><input class="sv-follow" name="utilities_detail" type="text" placeholder="Company name(s)" aria-label="Company name(s)"></div>
+            <div class="sv-yn"><span class="sv-q">Road or bridge weight limits?</span><label class="sv-check"><input type="radio" name="road_limits" value="Yes"><span>Yes</span></label><label class="sv-check"><input type="radio" name="road_limits" value="No"><span>No</span></label><input class="sv-follow" name="road_limits_detail" type="text" placeholder="Weight limits" aria-label="Weight limits"></div>
+            <div class="sv-yn"><span class="sv-q">Overhead power lines?</span><label class="sv-check"><input type="radio" name="power" value="Yes"><span>Yes</span></label><label class="sv-check"><input type="radio" name="power" value="No"><span>No</span></label></div>
+            <div class="sv-yn"><span class="sv-q">Weather sensitive?</span><label class="sv-check"><input type="radio" name="weather" value="Yes"><span>Yes</span></label><label class="sv-check"><input type="radio" name="weather" value="No"><span>No</span></label><input class="sv-follow" name="weather_detail" type="text" placeholder="Explain" aria-label="Explain"></div>
+          </div>
+        </details>
+
+        <div class="form-actions"><button class="btn primary" type="submit">Send Site Details</button><p class="form-note">Your details go straight to our team.</p></div>
       </form>
 
       <aside class="contact-details">
@@ -50,7 +107,8 @@
         <a href="tel:+17134604601">+1 (713) 460-4601</a>
         <a href="mailto:info@er-contech.com">info@er-contech.com</a>
         <p>6715 Theall Road<br>Houston, TX 77066</p>
-        <div class="photo-note"><strong>Photos are helpful.</strong><p>If you have field photos, drawings or other supporting information, please attach them to the email before sending. They can help our team understand the site conditions and respond more effectively.</p></div>
+        <div class="photo-note"><strong>Prefer a form you can print?</strong><p>Download our site survey, fill it in on your computer or by hand, and email it back with your photos.</p>
+        <a class="sv-pdf" href="assets/Er-Con-Site-Survey.pdf" download>Download the site survey (PDF)</a></div>
       </aside>
     </section>
   </main>

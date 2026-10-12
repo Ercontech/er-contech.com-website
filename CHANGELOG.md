@@ -2,6 +2,26 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.96 - Contact form becomes the web site survey
+
+The contact page form is now a web version of the field Site Survey.
+
+- As it opens it's short: name, company, email, phone, site location, industry,
+  "What are you seeing?" and photo upload (up to 10 files, 25 MB). Name, email,
+  location and the description are required.
+- "Add site details" opens the optional survey questions: site, erosion type and
+  materials, pipeline (shown only if a pipeline is involved or Pipelines & Energy is
+  picked) and access. The equipment list and sketches are left to the PDF.
+- Submissions go to `send.php` on the GoDaddy (cPanel) host. It emails them, with
+  photos attached, to web.inquiry@er-contech.com and saves a copy of each in a
+  private `survey-submissions` folder above the web root. It has a hidden spam trap
+  and only accepts image and PDF files. Visitors land on a new thank-you page.
+  **The address web.inquiry@er-contech.com must exist before the site goes live.**
+  Nothing sends from the preview link; it only works once the site is on GoDaddy.
+- New rebranded Er-Con Site Survey PDF (fillable, two pages) for download from the
+  contact page, at assets/Er-Con-Site-Survey.pdf. Its generator is in
+  tools/site-survey/.
+
 ## v0.95 - Gallery: riverbank wording
 
 "…the farmland above it, a little more with every high water event." → "…the farmland above it, with every high water event." (Ron; shows on every industry page).

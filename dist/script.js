@@ -67,3 +67,23 @@ document.querySelectorAll('.g-evidence, .evidence').forEach(function (sec) {
   btns.forEach(function (b) { b.addEventListener('click', function () { i += (+b.dataset.d) * per(); go(); }); });
   window.addEventListener('resize', go); go();
 });
+
+// v0.96 site survey form: pipeline fields on demand, file list
+(function () {
+  var f = document.querySelector('[data-survey-form]'); if (!f) return;
+  if (/[?&]error=/.test(location.search)) f.querySelector('.sv-error').hidden = false;
+  var pipe = f.querySelector('.sv-pipe'), ind = f.querySelector('#industry');
+  function syncPipe() {
+    var yes = (f.querySelector('input[name="pipeline"]:checked') || {}).value === 'Yes';
+    pipe.hidden = !(yes || (ind && ind.value.indexOf('Pipelines') === 0));
+  }
+  f.querySelectorAll('input[name="pipeline"]').forEach(function (r) { r.addEventListener('change', syncPipe); });
+  if (ind) ind.addEventListener('change', syncPipe);
+  var input = f.querySelector('#photos'), list = f.querySelector('.sv-files');
+  if (input) input.addEventListener('change', function () {
+    list.innerHTML = '';
+    Array.prototype.forEach.call(input.files, function (file) {
+      var li = document.createElement('li'); li.textContent = file.name + ' (' + Math.round(file.size / 1024) + ' KB)'; list.appendChild(li);
+    });
+  });
+})();
