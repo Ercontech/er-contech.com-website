@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.88 - Utility job tagged Before / After
+
+The utility job's tags change from "The problem" / "Our work" to Before / After, so
+every job in the gallery follows the same pattern (Ron's call). The sentence is
+unchanged.
+
 ## v0.87 - Safety: safety director's edits
 
 Three program descriptions, reworded by Er-Con's safety director (serial commas dropped to match the site):
