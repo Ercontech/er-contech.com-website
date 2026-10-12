@@ -2,6 +2,14 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.87 - Safety: safety director's edits
+
+Three program descriptions, reworded by Er-Con's safety director (serial commas dropped to match the site):
+
+- "Equipment is run only by trained, certified operators, inspected before every shift, with spotters wherever visibility is limited." → "Equipment is run only by trained, qualified operators, inspected before every shift and assisted by spotters to help maintain visibility."
+- "We report near misses as seriously as incidents, find out why they happened and share the lesson with every crew." → "We report near misses as seriously as incidents, investigate contributing factors, identify corrective actions and share lessons learned across our crews."
+- "Crews at the water's edge wear flotation and keep rescue equipment at hand, and the plan accounts for water that can rise quickly." → "Crews at the water's edge wear Personal Flotation Devices and keep rescue equipment at hand, and the plan accounts for water that can rise quickly."
+
 ## v0.86 - Utility job added to the gallery
 
 The gallery now has eight jobs. The new one is the only utility setting in the
