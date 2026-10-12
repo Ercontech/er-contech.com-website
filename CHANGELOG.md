@@ -2,6 +2,17 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.98 - Site Survey PDF back to two pages
+
+Ron: the three-page version wasted space. The PDF is back to two pages, in the
+original form's column layout, keeping the new look.
+
+- Page 1: contact across the top, then two columns. Site, erosion and pipeline are
+  on the left; access and construction, with the equipment list, are on the right.
+- Page 2: project name and pipeline company, comments beside the plan-view example,
+  a full-width plan-view sketch grid, then the cross-section and exposure examples
+  with a sketch grid under each.
+
 ## v0.97 - Site Survey PDF: reference sketches
 
 The downloadable Site Survey (also the PMs' field form) now has a third page of

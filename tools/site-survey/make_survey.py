@@ -30,7 +30,7 @@ def header(page):
     c.setFillColor(NAVY); c.setFont('Helvetica-Bold', 22)
     c.drawRightString(W - M, H - 46, 'Site Survey')
     c.setFillColor(GRAPHITE); c.setFont('Helvetica', 8.5)
-    c.drawRightString(W - M, H - 60, f'Page {page} of 3')
+    c.drawRightString(W - M, H - 60, f'Page {page} of 2')
     c.setStrokeColor(SIGNAL); c.setLineWidth(2); c.line(M, H - 82, W - M, H - 82)
 
 def footer():
@@ -39,134 +39,69 @@ def footer():
     c.drawString(M, 27, 'Er-Con Technologies  ·  6715 Theall Road, Houston, TX 77066')
     c.drawRightString(W - M, 27, '+1 (713) 460-4601  ·  info@er-contech.com')
 
-def section(title, note=None):
+
+GAP = 18
+COLW = (CW - GAP) / 2
+LX, RX = M, M + COLW + GAP
+FH2 = 16
+
+def section_at(x, w, title, note=None):
     global y
-    y -= 22
-    c.setFillColor(SIGNAL); c.setFont('Helvetica-Bold', 8.5)
-    c.drawString(M, y, title.upper())
+    y -= 18
+    c.setFillColor(SIGNAL); c.setFont('Helvetica-Bold', 8.5); c.drawString(x, y, title.upper())
     if note:
         c.setFillColor(GRAPHITE); c.setFont('Helvetica-Oblique', 7.5)
-        c.drawString(M + c.stringWidth(title.upper(), 'Helvetica-Bold', 8.5) + 8, y, note)
-    c.setStrokeColor(NAVY); c.setLineWidth(1.2); c.line(M, y - 5, W - M, y - 5)
-    y -= 12
+        c.drawString(x + c.stringWidth(title.upper(), 'Helvetica-Bold', 8.5) + 8, y, note)
+    c.setStrokeColor(NAVY); c.setLineWidth(1.2); c.line(x, y - 5, x + w, y - 5)
+    y -= 10
 
-def text(label, x, w, h=FH, multiline=False):
-    """label above, field below; returns nothing. caller manages row y."""
-    c.setFillColor(GRAPHITE); c.setFont('Helvetica-Bold', LAB)
-    c.drawString(x, y - LAB, label.upper())
-    form.textfield(name=fid(label), tooltip=label, x=x, y=y - LAB - 3 - h, width=w, height=h,
+def tfield(label, x, w, h=FH2, multiline=False, top=None):
+    t = y if top is None else top
+    c.setFillColor(GRAPHITE); c.setFont('Helvetica-Bold', LAB); c.drawString(x, t - LAB, label.upper())
+    form.textfield(name=fid(label), tooltip=label, x=x, y=t - LAB - 3 - h, width=w, height=h,
                    borderColor=HAZE, fillColor=FIELD, textColor=NAVY, borderWidth=.8,
-                   fontName='Helvetica', fontSize=0 if multiline else 9,
-                   fieldFlags='multiline' if multiline else '')
+                   fontName='Helvetica', fontSize=0 if multiline else 9, fieldFlags='multiline' if multiline else '')
 
-def row(*cols, h=FH, gap=12, multiline=False):
-    """cols: (label, fraction)"""
+def frow(x, w, *cols, h=FH2, gap=10, multiline=False):
     global y
-    total = sum(f for _, f in cols); avail = CW - gap * (len(cols) - 1); x = M
+    total = sum(f for _, f in cols); avail = w - gap * (len(cols) - 1); cx = x
     for label, f in cols:
-        w = avail * f / total; text(label, x, w, h, multiline); x += w + gap
-    y -= LAB + 3 + h + 6
+        cw = avail * f / total; tfield(label, cx, cw, h, multiline); cx += cw + gap
+    y -= LAB + 3 + h + 7
 
-def box(label, x, yy):
-    form.checkbox(name=fid(label), tooltip=label, x=x, y=yy - 1, size=10, buttonStyle='check',
+def cb(prefix, o, x, yy, size=8.5):
+    form.checkbox(name=fid(f'{prefix} {o}'), tooltip=f'{prefix}: {o}', x=x, y=yy - 1, size=9.5, buttonStyle='check',
                   borderColor=GRAPHITE, fillColor=white, textColor=NAVY, borderWidth=.8)
-    c.setFillColor(NAVY); c.setFont('Helvetica', 8.5); c.drawString(x + 14, yy + 1, label)
-    return x + 14 + c.stringWidth(label, 'Helvetica', 8.5) + 16
+    c.setFillColor(NAVY); c.setFont('Helvetica', size); c.drawString(x + 13, yy + 1, o)
+    return x + 13 + c.stringWidth(o, 'Helvetica', size) + 12
 
-def checks(label, options, x=M, prefix=''):
-    """one line: LABEL  [] a  [] b ..."""
+def cbgroup(x, w, label, prefix, opts):
+    """label then options, wrapping inside width w"""
     global y
     c.setFillColor(GRAPHITE); c.setFont('Helvetica-Bold', LAB); c.drawString(x, y - LAB, label.upper())
-    yy = y - LAB - 16; cx = x
-    for o in options:
-        cx = box(o if not prefix else o, cx, yy) if not prefix else _pbox(prefix, o, cx, yy)
-    y -= LAB + 26
+    yy = y - LAB - 15; cx = x
+    for o in opts:
+        need = 13 + c.stringWidth(o, 'Helvetica', 8.5) + 12
+        if cx + need > x + w + 12: cx = x; yy -= 15
+        cx = cb(prefix, o, cx, yy)
+    y = yy - 9
 
-def _pbox(prefix, o, x, yy):
-    form.checkbox(name=fid(f'{prefix} {o}'), tooltip=f'{prefix}: {o}', x=x, y=yy - 1, size=10, buttonStyle='check',
-                  borderColor=GRAPHITE, fillColor=white, textColor=NAVY, borderWidth=.8)
-    c.setFillColor(NAVY); c.setFont('Helvetica', 8.5); c.drawString(x + 14, yy + 1, o)
-    return x + 14 + c.stringWidth(o, 'Helvetica', 8.5) + 16
-
-def yesno(question, follow=None, follow_w=None):
-    """QUESTION ............ [] Yes [] No   [follow-up field]"""
+def yn(x, w, q, follow=None):
+    """question, Yes/No at right; optional follow-up field on the next line"""
     global y
-    qw = 210
-    c.setFillColor(NAVY); c.setFont('Helvetica', 9); c.drawString(M, y - 12, question)
-    x = M + qw
-    x = _pbox(question, 'Yes', x, y - 13)
-    x = _pbox(question, 'No', x, y - 13)
+    c.setFillColor(NAVY); c.setFont('Helvetica', 8.5); c.drawString(x, y - 11, q)
+    bx = x + w - 78
+    nx = cb(q, 'Yes', bx, y - 12); cb(q, 'No', nx, y - 12)
+    y -= 17
     if follow:
-        fx = M + qw + 100
-        c.setFillColor(GRAPHITE); c.setFont('Helvetica-Bold', LAB); c.drawString(fx, y - 4, follow.upper())
-        form.textfield(name=fid(follow), tooltip=follow, x=fx, y=y - 22, width=W - M - fx, height=15,
-                       borderColor=HAZE, fillColor=FIELD, textColor=NAVY, borderWidth=.8, fontName='Helvetica', fontSize=9)
-    c.setStrokeColor(MIST); c.setLineWidth(.6); c.line(M, y - 27, W - M, y - 27)
-    y -= 31
+        c.setFillColor(GRAPHITE); c.setFont('Helvetica-Bold', 6.5); c.drawString(x + 10, y - 9, follow.upper())
+        fx = x + 10 + c.stringWidth(follow.upper(), 'Helvetica-Bold', 6.5) + 6
+        form.textfield(name=fid(follow), tooltip=follow, x=fx, y=y - 13, width=x + w - fx, height=13,
+                       borderColor=HAZE, fillColor=FIELD, textColor=NAVY, borderWidth=.8, fontName='Helvetica', fontSize=8)
+        y -= 17
+    c.setStrokeColor(MIST); c.setLineWidth(.6); c.line(x, y - 2, x + w, y - 2)
+    y -= 5
 
-# ------------------------------------------------------------------ page 1
-header(1); y = H - 92
-c.setFillColor(GRAPHITE); c.setFont('Helvetica', 9)
-c.drawString(M, y - 10, 'Fill in what you know and leave the rest blank. Save the completed form and email it, with any photos,')
-c.drawString(M, y - 22, 'to info@er-contech.com. Photos of the site are the most helpful thing you can send.')
-y -= 26
-
-section('Contact')
-row(('Company', 3), ('Date', 1))
-row(('Site contact', 2), ('Title', 2))
-row(('Office phone', 1), ('Cell phone', 1), ('Email', 2))
-row(('Address', 1))
-
-section('Site')
-row(('Project name', 2), ('Body of water', 2))
-row(('City', 2), ('County', 2), ('State', 1))
-row(('Latitude', 1), ('Longitude', 1))
-
-section('The erosion')
-checks('Erosion type', ['Degradation', 'Head cutting', 'Lateral migration', 'Other'], prefix='Erosion type')
-row(('If other, describe', 3), ('Nominal depth of flow', 1))
-for lab, x0 in (('Bed material', M), ('Bank material', M + CW / 2 + 6)):
-    c.setFillColor(GRAPHITE); c.setFont('Helvetica-Bold', LAB); c.drawString(x0, y - LAB, (lab + ' (check all that apply)').upper())
-    cx = x0
-    for o in ['Clay', 'Rock', 'Gravel', 'Sand']:
-        cx = _pbox(lab, o, cx, y - LAB - 16)
-y -= LAB + 26
-
-section('Pipeline', 'if a pipeline is involved')
-row(('Pipeline company', 2), ('Line name / number', 2))
-row(('Milepost / station', 1), ('Pipelines in right-of-way', 1), ('Pipeline diameter(s)', 1))
-row(('Length of exposure', 1), ('Length of free span', 1))
-# two yes/no questions on one line
-c.setFillColor(NAVY); c.setFont('Helvetica', 9)
-c.drawString(M, y - 12, 'Is the pipeline visible?')
-x = _pbox('Is the pipeline visible?', 'Yes', M + 130, y - 13); _pbox('Is the pipeline visible?', 'No', x, y - 13)
-c.setFillColor(NAVY); c.setFont('Helvetica', 9)
-c.drawString(M + CW / 2 + 6, y - 12, 'Is recoating needed?')
-x = _pbox('Is recoating needed?', 'Yes', M + CW / 2 + 130, y - 13); _pbox('Is recoating needed?', 'No', x, y - 13)
-y -= 24
-assert y > 52, y
-footer(); c.showPage()
-
-# ------------------------------------------------------------------ page 2
-header(2); y = H - 92
-section('Access and construction')
-yesno('Weather sensitive?', 'If yes, explain')
-yesno('Is the right-of-way cleared?')
-yesno('Walk to site?', 'If yes, distance walked')
-yesno('Tree removal needed?', 'Number of trees / size')
-yesno('Other pipelines or utilities in the ROW?', 'Company name(s)')
-yesno('Road or bridge limits?', 'If yes, weight limits')
-yesno('Overhead power lines?')
-y -= 4
-checks('Additional equipment / material for access or construction',
-       ['Excavator', 'Pumps', 'Dozer', 'Loader', 'Culvert', 'Rock', 'Timber mats', 'Forklift'], prefix='Equipment')
-
-section('Comments')
-row(('Anything else we should know', 1), h=62, multiline=True)
-
-footer(); c.showPage()
-
-# ------------------------------------------------------------------ page 3: sketches with reference examples
 import math
 SIG_L = HexColor('#DCE9F8')
 def lab(x, y, t, size=6.5, bold=True, color=None, anchor='c', rot=0, bg=False):
@@ -210,37 +145,36 @@ def brace_v(x, y1, y2, left=True, t=''):
 
 def ex_plan(x, y, w, h):
     """Plan view of a crossing: pipeline band across high banks and toes, skew D1/D2, exposure."""
-    xs = [x + w * f for f in (.32, .48, .64, .84)]
+    xs = [x + w * f for f in (.30, .46, .62, .80)]
     names = ['HIGH BANK', 'TOE', 'TOE', 'HIGH BANK']
-    top, bot = y + h - 6, y + 36
-    def py(px):  # pipeline centreline
-        return (y + h - 18) - (px - (x + 8)) * .55
-    # bank lines (gentle curves)
+    top, bot = y + h - 2, y + 14
+    x0, x1 = x + 10, x + w - 6
+    ya, yb = y + h - 12, y + 30
+    slope = (yb - ya) / (x1 - x0)
+    def py(px): return ya + (px - x0) * slope
+    ang = math.degrees(math.atan(slope))
     c.setStrokeColor(NAVY); c.setLineWidth(1.1)
     for i, bx in enumerate(xs):
-        k = 5 if i in (1, 2) else 3
+        k = 4 if i in (1, 2) else 2.5
         sgn = -1 if i < 2 else 1
-        pth = c.beginPath(); pth.moveTo(bx - sgn * 2, top); pth.curveTo(bx + sgn * k, top - 30, bx + sgn * k, bot + 30, bx - sgn * 3, bot)
+        pth = c.beginPath(); pth.moveTo(bx - sgn * 2, top); pth.curveTo(bx + sgn * k, top - (top - bot) * .3, bx + sgn * k, bot + (top - bot) * .3, bx - sgn * 2, bot)
         c.drawPath(pth, stroke=1, fill=0)
-        lab(bx + 2, y + 6, names[i], size=5.5, rot=90, anchor='l')
-    # pipeline band
-    x0, x1 = x + 8, x + w - 6
+        lab(bx - sgn * 2, y + 4, names[i], size=5.5)
     c.setFillColor(SIG_L); c.setStrokeColor(SIGNAL); c.setLineWidth(.8)
-    pth = c.beginPath(); pth.moveTo(x0, py(x0) + 4); pth.lineTo(x1, py(x1) + 4); pth.lineTo(x1, py(x1) - 4); pth.lineTo(x0, py(x0) - 4); pth.close()
+    pth = c.beginPath(); pth.moveTo(x0, py(x0) + 3.5); pth.lineTo(x1, py(x1) + 3.5); pth.lineTo(x1, py(x1) - 3.5); pth.lineTo(x0, py(x0) - 3.5); pth.close()
     c.drawPath(pth, stroke=1, fill=1)
-    lab(x1 - 4, py(x1) + 10, 'PL', size=6.5, color=SIGNAL, anchor='r')
-    # skew D2: horizontal dashed from left high bank to where PL meets right high bank
+    lab(x1 - 2, py(x1) + 8, 'PL', size=6.5, color=SIGNAL, anchor='r')
+    # skew D2: horizontal dashed from left high bank to where the PL meets the right high bank
     yd = py(xs[3])
     c.setStrokeColor(NAVY); c.setLineWidth(.8); c.setDash(3, 2); c.line(xs[0], yd, xs[3], yd); c.line(xs[0], yd, xs[0], py(xs[0])); c.setDash()
-    lab((xs[1] + xs[2]) / 2, yd - 10, 'SKEW (D2)', bg=True)
-    # skew D1: vertical at left high bank
+    lab((xs[1] + xs[2]) / 2, yd - 9, 'SKEW (D2)', bg=True)
     brace_v(xs[0] - 4, yd, py(xs[0]), left=True, t='SKEW (D1)')
     # exposure along the pipe between the toes
     c.setStrokeColor(GRAPHITE); c.setLineWidth(.6)
     ax, bx2 = xs[1], xs[2]
-    c.line(ax, py(ax) + 7, bx2, py(bx2) + 7); c.line(ax, py(ax) + 5, ax, py(ax) + 9); c.line(bx2, py(bx2) + 5, bx2, py(bx2) + 9)
+    c.line(ax, py(ax) + 6, bx2, py(bx2) + 6); c.line(ax, py(ax) + 4, ax, py(ax) + 8); c.line(bx2, py(bx2) + 4, bx2, py(bx2) + 8)
     mx = (ax + bx2) / 2
-    lab(mx + 5, py(mx) + 14, 'EXPOSURE', rot=-28.8, bg=True)
+    lab(mx, py(mx) + 10, 'EXPOSURE', rot=ang, bg=True)
 
 def ex_xsec(x, y, w, h):
     """Cross section: channel with pipeline, high bank width, bottom width, depth."""
@@ -294,33 +228,95 @@ def ex_exposure(x, y, w, h):
     dim(cx + 2, ry - 4, rx - 8, ry - 4)
     brace_h(cx, rx, ry - 12, up=False, t='DISTANCE (D2)', ty=ry - 30)
 
-header(3); y = H - 92
-section('Sketches', 'optional; photos work just as well')
-y -= 2
-rows3 = [('Plan view', 'Show the crossing from above: high banks, toes, the pipeline and its skew.', ex_plan),
-         ('Cross section', 'Show the channel across the flow: bank-to-bank width, bottom width, depth, pipeline.', ex_xsec),
-         ('Exposure', 'Show where the pipeline sits relative to the bed, and the flow direction.', ex_exposure)]
-rh = (y - 52 - 2 * 10) / 3
-ew = 205; gap = 12; gw = CW - ew - gap
-for t, hint, fn in rows3:
-    top = y; bot = y - rh
-    # example panel
-    c.setFillColor(MIST); c.setStrokeColor(HAZE); c.setLineWidth(.8); c.rect(M, bot, ew, rh, stroke=1, fill=1)
-    c.setFillColor(SIGNAL); c.setFont('Helvetica-Bold', LAB); c.drawString(M + 8, top - 13, 'EXAMPLE')
-    c.setFillColor(NAVY); c.setFont('Helvetica-Bold', 9); c.drawString(M + 8 + c.stringWidth('EXAMPLE', 'Helvetica-Bold', LAB) + 6, top - 13, t)
-    c.setFillColor(white); c.rect(M + 6, bot + 6, ew - 12, rh - 26, stroke=0, fill=1)
-    fn(M + 6, bot + 6, ew - 12, rh - 26)
-    # sketch area with grid
-    gx0 = M + ew + gap
-    c.setFillColor(FIELD); c.setStrokeColor(HAZE); c.rect(gx0, bot, gw, rh, stroke=1, fill=1)
+
+def grid(x, yb, w, h, title=None):
+    c.setFillColor(FIELD); c.setStrokeColor(HAZE); c.setLineWidth(.8); c.rect(x, yb, w, h, stroke=1, fill=1)
     c.setStrokeColor(HexColor('#ECEBEA')); c.setLineWidth(.4)
-    gx = gx0 + 14
-    while gx < gx0 + gw - 3: c.line(gx, bot + 3, gx, top - 32); gx += 14
-    gy = bot + 14
-    while gy < top - 32: c.line(gx0 + 3, gy, gx0 + gw - 3, gy); gy += 14
-    c.setFillColor(GRAPHITE); c.setFont('Helvetica-Bold', LAB); c.drawString(gx0 + 8, top - 13, (t + ' sketch').upper())
-    c.setFont('Helvetica', 7); c.drawString(gx0 + 8, top - 24, hint)
-    y = bot - 10
+    top = yb + h - (18 if title else 3)
+    gx = x + 13
+    while gx < x + w - 2: c.line(gx, yb + 3, gx, top); gx += 13
+    gy = yb + 13
+    while gy < top: c.line(x + 3, gy, x + w - 3, gy); gy += 13
+    if title:
+        c.setFillColor(GRAPHITE); c.setFont('Helvetica-Bold', LAB); c.drawString(x + 8, yb + h - 12, title.upper())
+
+def example(x, yb, w, h, title, fn):
+    c.setFillColor(white); c.setStrokeColor(HAZE); c.setLineWidth(.8); c.rect(x, yb, w, h, stroke=1, fill=1)
+    c.setFillColor(SIGNAL); c.setFont('Helvetica-Bold', LAB); c.drawString(x + 8, yb + h - 12, 'EXAMPLE')
+    c.setFillColor(NAVY); c.setFont('Helvetica-Bold', 8); c.drawString(x + 48, yb + h - 12, title)
+    fn(x + 4, yb + 3, w - 8, h - 18)
+
+# ================================================================== page 1
+header(1); y = H - 92
+c.setFillColor(GRAPHITE); c.setFont('Helvetica', 8.5)
+c.drawString(M, y - 10, 'Fill in what you know and leave the rest blank. Save the completed form and email it, with any photos, to')
+c.drawString(M, y - 21, 'info@er-contech.com. Photos of the site are the most helpful thing you can send.')
+y -= 22
+
+section_at(M, CW, 'Contact')
+frow(M, CW, ('Company', 3), ('Date', 1))
+frow(M, CW, ('Site contact', 2), ('Title', 2))
+frow(M, CW, ('Office phone', 1), ('Cell phone', 1), ('Email', 2))
+frow(M, CW, ('Address', 1))
+ystart = y
+
+# left column: site, erosion, pipeline
+section_at(LX, COLW, 'Site')
+frow(LX, COLW, ('Body of water', 2), ('State', 1))
+frow(LX, COLW, ('City', 1), ('County', 1))
+frow(LX, COLW, ('Latitude', 1), ('Longitude', 1))
+section_at(LX, COLW, 'The erosion')
+cbgroup(LX, COLW, 'Erosion type', 'Erosion type', ['Degradation', 'Head cutting', 'Lateral migration', 'Other'])
+frow(LX, COLW, ('If other, describe', 3), ('Depth of flow', 2))
+cbgroup(LX, COLW, 'Bed material (check all that apply)', 'Bed material', ['Clay', 'Rock', 'Gravel', 'Sand'])
+cbgroup(LX, COLW, 'Bank material (check all that apply)', 'Bank material', ['Clay', 'Rock', 'Gravel', 'Sand'])
+section_at(LX, COLW, 'Pipeline', 'if a pipeline is involved')
+frow(LX, COLW, ('Line name / number', 1), ('Milepost / station', 1))
+frow(LX, COLW, ('Pipelines in ROW', 1), ('Diameter(s)', 1))
+frow(LX, COLW, ('Length of exposure', 1), ('Length of free span', 1))
+yn(LX, COLW, 'Is the pipeline visible?')
+yn(LX, COLW, 'Is recoating needed?')
+yleft = y
+
+# right column: access and construction
+y = ystart
+section_at(RX, COLW, 'Access and construction')
+yn(RX, COLW, 'Weather sensitive?', 'If yes, explain')
+yn(RX, COLW, 'Is the right-of-way cleared?')
+yn(RX, COLW, 'Walk to site?', 'Distance walked')
+yn(RX, COLW, 'Tree removal needed?', 'Number of trees / size')
+yn(RX, COLW, 'Other pipelines or utilities in ROW?', 'Company name(s)')
+yn(RX, COLW, 'Road or bridge limits?', 'Weight limits')
+yn(RX, COLW, 'Overhead power lines?')
+y -= 4
+cbgroup(RX, COLW, 'Additional equipment / material needed', 'Equipment',
+        ['Excavator', 'Pumps', 'Dozer', 'Loader', 'Culvert', 'Rock', 'Timber mats', 'Forklift'])
+assert min(yleft, y) > 50, (yleft, y)
+print('page1 bottoms', round(yleft), round(y))
+footer(); c.showPage()
+
+# ================================================================== page 2
+header(2); y = H - 92
+y -= 4
+frow(M, CW, ('Project name', 1), ('Pipeline company', 1), gap=GAP)
+# comments + plan example
+rowh = 140
+top = y
+tfield('Comments', LX, COLW, h=rowh - 13, multiline=True, top=top)
+example(RX, top - rowh, COLW, rowh, 'Plan view', ex_plan)
+y = top - rowh - 10
+# shared plan-view sketch grid
+bottom = 52
+exh = 118; gap = 10
+sk2 = (y - bottom - exh - 2 * gap) * .5
+plan_h = y - bottom - exh - 2 * gap - sk2
+grid(M, y - plan_h, CW, plan_h, 'Plan view sketch')
+y -= plan_h + gap
+example(LX, y - exh, COLW, exh, 'Cross section', ex_xsec)
+example(RX, y - exh, COLW, exh, 'Exposure', ex_exposure)
+y -= exh + gap
+grid(LX, bottom, COLW, y - bottom, 'Cross section sketch')
+grid(RX, bottom, COLW, y - bottom, 'Exposure sketch')
 footer(); c.showPage()
 c.save()
 print('ok')
