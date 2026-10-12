@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.91 - Gallery: red-clay channel references the road
+
+Before → after (shows on every industry page): "Runoff cut this drainage channel deep into red clay and exposed the line running through it. We rebuilt it as a lined channel that holds its grade." → "Below a roadway, runoff cut this drainage channel deep into red clay and exposed the line running through it. We rebuilt it as a lined channel, from the road culvert down, that holds its grade."
+
 ## v0.90 - Transportation gallery: red-clay channel first
 
 Transportation now opens with the red-clay channel on the left and the debris crossing on the right (Ron).
