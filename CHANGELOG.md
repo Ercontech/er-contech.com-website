@@ -2,6 +2,18 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.97 - Site Survey PDF: reference sketches
+
+The downloadable Site Survey (also the PMs' field form) now has a third page of
+sketches. Each one has a redrawn reference example beside a gridded sketch area:
+
+- Plan view: high banks, toes, pipeline, skew (D1, D2) and exposure
+- Cross section: high bank width, bottom width, depth and pipeline
+- Exposure: pipeline height above the bed, distances (D1, D2) and flow direction
+
+These come from the old form's example drawings, redrawn in Er-Con colors. Page 2
+keeps access, equipment and comments.
+
 ## v0.96 - Contact form becomes the web site survey
 
 The contact page form is now a web version of the field Site Survey.
