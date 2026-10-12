@@ -2,6 +2,16 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.86 - Utility job added to the gallery
+
+The gallery now has eight jobs. The new one is the only utility setting in the
+photo collection: a riverbank eroding near a transmission line (Jan 2020) and a
+lined channel beneath power lines (Sept 2015). Because the photos are five years
+apart and may be different sites, they're tagged "The problem" and "Our work"
+rather than Before and After, and the sentence doesn't claim they're the same
+place. The Utilities page shows this job first. The GPS band is cropped off the
+2020 photo.
+
 ## v0.85 - Pipelines: free span "How we solve it"
 
 Before → after: "We engineer and install support under the span and, where erosion opened it, stabilize the surrounding site so the gap does not grow." → "We engineer and install support under the span and, where erosion created the condition, stabilize the surrounding site." (Ron's wording.)
