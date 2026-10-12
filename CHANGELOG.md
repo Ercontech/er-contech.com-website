@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.92 - Gallery: utility job wording
+
+Second sentence, before → after (Ron's wording; shows on every industry page): "We protect the banks and channels that utility lines depend on." → "We armor the banks and channels to protect the utility infrastructure."
+
 ## v0.91 - Gallery: red-clay channel references the road
 
 Before → after (shows on every industry page): "Runoff cut this drainage channel deep into red clay and exposed the line running through it. We rebuilt it as a lined channel that holds its grade." → "Below a roadway, runoff cut this drainage channel deep into red clay and exposed the line running through it. We rebuilt it as a lined channel, from the road culvert down, that holds its grade."
