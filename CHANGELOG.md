@@ -2,6 +2,17 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.89 - Gallery: opening pair per industry
+
+Every industry page still shows all eight jobs; each now opens with the two that
+fit it best (Ron):
+
+- Pipelines & Energy: creek bank wall, free span
+- Transportation: debris crossing to new culverts, red-clay channel
+- Municipal & Public: headcut, debris crossing
+- Utilities: power line, plant drainage
+- Commercial & Private: riverbank, headcut
+
 ## v0.88 - Utility job tagged Before / After
 
 The utility job's tags change from "The problem" / "Our work" to Before / After, so
