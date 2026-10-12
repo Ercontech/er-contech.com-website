@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.93 - Gallery: riverbank wording
+
+"a little more with every high water" → "a little more with every high water event" (Ron; shows on every industry page).
+
 ## v0.92 - Gallery: utility job wording
 
 Second sentence, before → after (Ron's wording; shows on every industry page): "We protect the banks and channels that utility lines depend on." → "We armor the banks and channels to protect the utility infrastructure."
