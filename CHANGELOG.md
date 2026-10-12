@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.95 - Gallery: riverbank wording
+
+"…the farmland above it, a little more with every high water event." → "…the farmland above it, with every high water event." (Ron; shows on every industry page).
+
 ## v0.94 - Gallery: utility job tense
 
 "We armor the banks…" → "We armored the banks and channels to protect the utility infrastructure." (Ron; shows on every industry page).
