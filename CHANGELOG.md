@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.94 - Gallery: utility job tense
+
+"We armor the banks…" → "We armored the banks and channels to protect the utility infrastructure." (Ron; shows on every industry page).
+
 ## v0.93 - Gallery: riverbank wording
 
 "a little more with every high water" → "a little more with every high water event" (Ron; shows on every industry page).
