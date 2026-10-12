@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.90 - Transportation gallery: red-clay channel first
+
+Transportation now opens with the red-clay channel on the left and the debris crossing on the right (Ron).
+
 ## v0.89 - Gallery: opening pair per industry
 
 Every industry page still shows all eight jobs; each now opens with the two that
