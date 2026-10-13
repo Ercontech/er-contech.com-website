@@ -2,6 +2,14 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v0.99 - Every industry tile shows a before on hover
+
+Municipal and Utilities tiles had no before photo, so they didn't change on hover.
+- Municipal: now the headcut and stepped grade control pair (Ron's pick); it also
+  leads Municipal's gallery.
+- Utilities: keeps the channel under power lines, with the riverbank by the
+  transmission line as its before, matching the gallery.
+
 ## v0.98 - Site Survey PDF back to two pages
 
 Ron: the three-page version wasted space. The PDF is back to two pages, in the
