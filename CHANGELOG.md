@@ -2,6 +2,17 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.00 - Transportation and Municipal tiles: stronger photos
+
+Ron preferred two photos from the original (ChatGPT-hosted) home page, even
+without a before on hover:
+- Transportation: bank and slope protection beneath a bridge
+  (assets/field/bridge-abutment.jpg, from home-critical-infrastructure.png)
+- Municipal: a channel lined and walled with protection systems
+  (home-installed-solutions.jpg)
+
+Pipelines, Utilities and Commercial & Private still show a before on hover.
+
 ## v0.99 - Every industry tile shows a before on hover
 
 Municipal and Utilities tiles had no before photo, so they didn't change on hover.
