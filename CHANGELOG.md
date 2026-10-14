@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.14 - "We are water experts." lead
+
+"…how water reaches the site, what it does there, and what the ground can hold." → "…how water reaches the site, what it does there and where it goes." (Ron; Home and Services.)
+
 ## v1.13 - Gallery: span caption, first sentence
 
 "…erosion can leave a line spanning a gap…" → "…erosion can leave a pipeline spanning a ravine…" (Ron; every industry page.)
