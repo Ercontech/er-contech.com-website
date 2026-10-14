@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.05 - Pipelines: bank row heading
+
+"The bank is retreating toward the right-of-way." → "The bank is eroding due to lateral migration." (Ron)
+
 ## v1.04 - Pipelines: free span description
 
 "The line spans a ravine, by design or because the ground beneath it has washed away, and needs mechanical support from below." → "The designed span in a ravine has eroded because the ground beneath it has washed away, and needs mechanical support from below." (Ron)
