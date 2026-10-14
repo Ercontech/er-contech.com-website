@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.17 - Transportation: roadside channel wording
+
+"…follows the grade, and with vegetation where the flow allows it." → "…follows the grade and supports vegetation where the flow allows it." (Ron)
+
 ## v1.16 - Transportation: roadside channel wording
 
 "…a connected system that follows the grade, with vegetation where the flow allows it." → "…follows the grade, and with vegetation where the flow allows it." (Ron)
