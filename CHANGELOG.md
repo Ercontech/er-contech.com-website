@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.08 - Long-Term Protection wording
+
+"…stabilizes the site and protects critical assets for years to come." → "…stabilizes the ground and protects critical assets." Removes the repeated "site" and the promise about future performance (Ron). Home and Services.
+
 ## v1.07 - Soil Mechanics wording
 
 "…slope stability and the foundation the solution sits on." → "…slope stability and bearing capacity for the protection we build." (Home and Services.)
