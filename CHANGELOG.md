@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.11 - Pipelines: span description and "knickpoint"
+
+- Span: "…has washed away, and needs mechanical support from below." → "…has washed away and the span needs mechanical support." (Ron)
+- Knickpoint row, How we solve it: "stops the headcut where it is" → "stops the knickpoint where it is".
+- Gallery (every industry page): "…to stop the headcut and step the water down…" → "…to stop the knickpoint and step the water down…"
+
 ## v1.10 - Pipelines & Energy page edits (Ron)
 
 - Hero lead: "…banks retreat toward the right-of-way, lines can be exposed…" →
