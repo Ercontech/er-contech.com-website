@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.16 - Transportation: roadside channel wording
+
+"…a connected system that follows the grade, with vegetation where the flow allows it." → "…follows the grade, and with vegetation where the flow allows it." (Ron)
+
 ## v1.15 - Site Investigation card
 
 "…the site's hydrology, soil mechanics, geomorphology, hydraulics and sedimentology…" → "…the site's hydrology, geomorphology, hydraulics and sedimentology…" (Ron)
