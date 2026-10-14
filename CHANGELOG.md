@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.15 - Site Investigation card
+
+"…the site's hydrology, soil mechanics, geomorphology, hydraulics and sedimentology…" → "…the site's hydrology, geomorphology, hydraulics and sedimentology…" (Ron)
+
 ## v1.14 - "We are water experts." lead
 
 "…how water reaches the site, what it does there, and what the ground can hold." → "…how water reaches the site, what it does there and where it goes." (Ron; Home and Services.)
