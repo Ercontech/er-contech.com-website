@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.13 - Gallery: span caption, first sentence
+
+"…erosion can leave a line spanning a gap…" → "…erosion can leave a pipeline spanning a ravine…" (Ron; every industry page.)
+
 ## v1.12 - Gallery: span caption
 
 "…support beneath the line and armoring around it." → "…support beneath the pipeline and armoring around it." (Ron; every industry page.)
