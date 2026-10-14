@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.09 - Gallery: headcut wording
+
+"Stepped grade control stopped it where it stood." → "We installed stepped grade control to stop the headcut and step the water down safely to the channel below." (Ron; shows on every industry page.)
+
 ## v1.08 - Long-Term Protection wording
 
 "…stabilizes the site and protects critical assets for years to come." → "…stabilizes the ground and protects critical assets." Removes the repeated "site" and the promise about future performance (Ron). Home and Services.
