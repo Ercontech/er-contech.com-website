@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.01 - Pipelines table: "line" → "pipeline"
+
+Two row headings on Pipelines & Energy (Ron):
+- "The line is exposed at a crossing." → "The pipeline is exposed at a crossing."
+- "A headcut is moving toward the line." → "A headcut is moving toward the pipeline."
+- Free span: "The line spans a gap, by design…" → "The line spans a ravine, by design…"
+
 ## v1.00 - Transportation and Municipal tiles: stronger photos
 
 Ron preferred two photos from the original (ChatGPT-hosted) home page, even
