@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.06 - Pipelines: bank row description
+
+"The outside bend is cutting back, and each high-water event takes more ground toward the line." → "The outside bend is eroding and endangering the nearby pipeline." (Ron)
+
 ## v1.05 - Pipelines: bank row heading
 
 "The bank is retreating toward the right-of-way." → "The bank is eroding due to lateral migration." (Ron)
