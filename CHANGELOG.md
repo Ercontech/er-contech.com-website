@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.07 - Soil Mechanics wording
+
+"…slope stability and the foundation the solution sits on." → "…slope stability and bearing capacity for the protection we build." (Home and Services.)
+
 ## v1.06 - Pipelines: bank row description
 
 "The outside bend is cutting back, and each high-water event takes more ground toward the line." → "The outside bend is eroding and endangering the nearby pipeline." (Ron)
