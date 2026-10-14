@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.12 - Gallery: span caption
+
+"…support beneath the line and armoring around it." → "…support beneath the pipeline and armoring around it." (Ron; every industry page.)
+
 ## v1.11 - Pipelines: span description and "knickpoint"
 
 - Span: "…has washed away, and needs mechanical support from below." → "…has washed away and the span needs mechanical support." (Ron)
