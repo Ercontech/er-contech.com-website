@@ -2,6 +2,16 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.10 - Pipelines & Energy page edits (Ron)
+
+- Hero lead: "…banks retreat toward the right-of-way, lines can be exposed…" →
+  "…banks retreat, pipelines can be exposed…"
+- "The pipeline is exposed at a crossing." → "The pipeline is exposed at a water crossing."
+- "Cover has washed out and pipeline is visible…" → "Cover has washed out and the pipeline is visible…"
+- "A free span needs support." → "A span needs support."
+- "A headcut is moving toward the pipeline." → "A knickpoint is moving toward the pipeline."
+- "…working its way upstream toward the crossing." → "…working its way upstream toward the pipeline crossing."
+
 ## v1.09 - Gallery: headcut wording
 
 "Stepped grade control stopped it where it stood." → "We installed stepped grade control to stop the headcut and step the water down safely to the channel below." (Ron; shows on every industry page.)
