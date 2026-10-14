@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.03 - Pipelines: exposed pipeline wording
+
+"Cover has washed out and pipe is visible in the bed or banks of a creek or river crossing." → "Cover has washed out and pipeline is visible in the bed or banks of a water crossing." (Ron)
+
 ## v1.02 - Pipelines: free span wording
 
 "…has washed away, and needs support from below." → "…has washed away, and needs mechanical support from below." (Ron)
