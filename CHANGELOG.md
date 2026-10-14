@@ -2,6 +2,10 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.02 - Pipelines: free span wording
+
+"…has washed away, and needs support from below." → "…has washed away, and needs mechanical support from below." (Ron)
+
 ## v1.01 - Pipelines table: "line" → "pipeline"
 
 Two row headings on Pipelines & Energy (Ron):
