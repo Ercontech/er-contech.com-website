@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.22 - Transportation tile uses the road crossing pair
+
+The Transportation tile on Home and Services now shows the rebuilt bank beside the
+road crossing, with the cut-away bank as its before on hover (Ron). It replaces
+the bridge abutment photo, which had no before.
+
 ## v1.21 - Transportation before/after added to the gallery
 
 A new gallery job (Ron's photos, GPS bands cropped): a bank cut away beside a road
