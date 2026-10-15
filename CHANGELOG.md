@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.20 - "Municipal & Public Agencies" renamed "Geohazards"
+
+Label only (Ron): the Industries menu, home and Services tiles, industry switcher,
+page title and heading, and the contact form's industry list now say Geohazards.
+The page content, its address (municipal.html), photos and gallery are unchanged.
+
 ## v1.19 - Utility job: a real before/after
 
 The utility gallery job and the Utilities tile now use one confirmed job (Ron): a
