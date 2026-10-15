@@ -15,7 +15,6 @@ This repository is private and proprietary to Er-Con Technologies. All rights re
 | `source-assets/` | Original photos and graphics the site was built from. |
 | `tools/` | Supporting tools, such as the generator for the downloadable Site Survey PDF. |
 | `CHANGELOG.md` | Every change to the site, version by version. |
-| `Push Er-Con.command` | Double-click on the Mac to back up this folder to GitHub. |
 | `Preview Site.command` | Double-click on the Mac to preview the site locally. |
 
 ## The site
@@ -32,6 +31,10 @@ to web.inquiry@er-contech.com and keeps a copy on the server outside the public
 web folder. That address must exist before launch.
 
 To publish, upload the contents of `dist/` to the site's web root.
+
+## Backing up
+
+Changes are pushed to GitHub with GitHub Desktop (**Push origin**).
 
 ## Versions
 
