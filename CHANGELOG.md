@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.21 - Transportation before/after added to the gallery
+
+A new gallery job (Ron's photos, GPS bands cropped): a bank cut away beside a road
+crossing (Apr 2025), and the same bank rebuilt and armored (Aug 2026, matching
+angle). Transportation now opens with it, then the red-clay channel. Caption
+drafted for Ron's review. The gallery has nine jobs.
+
 ## v1.20 - "Municipal & Public Agencies" renamed "Geohazards"
 
 Label only (Ron): the Industries menu, home and Services tiles, industry switcher,
