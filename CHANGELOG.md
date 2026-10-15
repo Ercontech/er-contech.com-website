@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v.Launch - Launch baseline
+
+Ron, 2026-10-15: the site as of v1.23 is the launch baseline. The website build
+source (`build/`) is now kept in the repository alongside the finished site, so the
+site can be rebuilt without the original working session. A full backup zip was
+made at this point.
+
 ## v1.23 - Geohazards tile uses the creek bank pair
 
 The Geohazards tile on Home and Services now shows the stepped wall, with the
