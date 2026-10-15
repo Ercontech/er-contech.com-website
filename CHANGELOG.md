@@ -2,6 +2,12 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.23 - Geohazards tile uses the creek bank pair
+
+The Geohazards tile on Home and Services now shows the stepped wall, with the
+exposed pipe in the creek bank as its before on hover (Ron). It replaces the
+walled channel photo, which had no before. All five tiles now have a before.
+
 ## v1.22 - Transportation tile uses the road crossing pair
 
 The Transportation tile on Home and Services now shows the rebuilt bank beside the
