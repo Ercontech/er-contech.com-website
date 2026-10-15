@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.19 - Utility job: a real before/after
+
+The utility gallery job and the Utilities tile now use one confirmed job (Ron): a
+riverbank eroding beneath a transmission line (Sept 2019, GPS band cropped), and
+the same bend after the work, at the matching angle. This replaces the earlier
+pair, whose photos were five years apart. The caption is unchanged.
+
 ## v1.18 - Gallery: plant drainage caption
 
 "…to protect the ground the supports stand on." → "…to protect the ground the supports stand on and mitigate sediment flow." (Ron; every industry page.)
