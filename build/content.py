@@ -45,7 +45,7 @@ SHORT = {"palisade": "Palisade", "fcr": "FCR", "ercoform": "Ercoform", "ecoflex"
 INDUSTRIES = [
     dict(
         slug="pipelines-energy", name="Pipelines &amp; Energy", short="Pipelines &amp; Energy",
-        img="assets/pipeline-supports/pipeline-supports-cotton-creek-hero.png", pos="center 55%",
+        img="assets/field/pipelines-hero.jpg", pos="center 15%",
         tile_img="assets/pipeline-supports/pipeline-supports-completed-application.jpg",
         tile_alt="The same crossing with the pipeline supported and the channel protected",
         tile_before="assets/pipeline-supports/pipeline-supports-field-condition.jpg",

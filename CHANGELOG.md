@@ -2,6 +2,18 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.24 - New Pipelines & Energy hero photo
+
+Ron, 2026-10-16: the Pipelines & Energy page header now uses Ron's photo of a
+white pipeline on supports crossing a dry, cracked channel, with autumn trees
+behind.
+
+- Before: `pipeline-supports/pipeline-supports-cotton-creek-hero.png`, centre 55%.
+- After: `field/pipelines-hero.jpg`, mirrored left to right so the pipeline runs
+  from the trees on the left to its end on the right, clear of the headline and
+  text. Cropped toward the top (centre 15%) so the treeline and the full run of
+  pipe show rather than the grass in the foreground. 2000 px wide, 0.8 MB.
+
 ## v.Launch - Launch baseline
 
 Ron, 2026-10-15: the site as of v1.23 is the launch baseline. The website build

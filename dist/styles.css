@@ -637,7 +637,7 @@ h2.signature span:nth-child(3){color:var(--signal)}
 .sv-pdf::before{content:"\2193  "}
 @media (max-width:900px){.sv-grid3,.sv-pair{grid-template-columns:1fr}.sv-q{flex-basis:100%}}
 
-.industry-hero-pipelines-energy{background-image:url('assets/pipeline-supports/pipeline-supports-cotton-creek-hero.png');background-position:center 55%}
+.industry-hero-pipelines-energy{background-image:url('assets/field/pipelines-hero.jpg');background-position:center 15%}
 .industry-hero-transportation{background-image:url('assets/home-critical-infrastructure.png');background-position:center 50%}
 .industry-hero-municipal{background-image:url('assets/fcr/fcr-channel-after.jpg');background-position:center 60%}
 .industry-hero-utilities{background-image:url('assets/fcr/fcr-headcut-after.jpg');background-position:center 55%}
