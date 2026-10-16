@@ -2,6 +2,18 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.25 - Pipelines hero moved right
+
+Ron, 2026-10-16: move the pipeline further right so it sits clear of the text.
+
+- Before: `field/pipelines-hero.jpg` was the flipped photo alone (2000 x 1500),
+  centre 15%. The pipeline ran from under the headline to the right side.
+- After: `field/pipelines-hero.jpg` is the original and the flipped photo side by
+  side (4000 x 930, trimmed to the treeline, pipe and a band of grass), shown at
+  75% across. The whole pipeline sits right of the text and its near end runs
+  off the right edge, so it reads as coming toward the viewer. The mirrored half
+  sits behind the headline under the dark overlay; no seam shows.
+
 ## v1.24 - New Pipelines & Energy hero photo
 
 Ron, 2026-10-16: the Pipelines & Energy page header now uses Ron's photo of a
