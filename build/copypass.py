@@ -24,6 +24,8 @@ RULES = [
   ("with a system suited to the water level range and the facility's operation.", "with protection designed for the range of water levels and how the facility operates."),
   # industry-page buttons
   (">Discuss Your Site<", ">Start a Conversation<"),
+  # About: leadership name (v1.26, Ron)
+  ("Jim Hodges", "Jim Hodgson"),
 ]
 hits = [0]*len(RULES)
 for f in glob.glob(os.path.join(D, '*.html')):

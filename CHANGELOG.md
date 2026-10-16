@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.26 - Jim Hodgson's name corrected
+
+Ron, 2026-10-16: the About page leadership card misspelled Jim's surname.
+
+- Before: Jim Hodges (card name and portrait label).
+- After: Jim Hodgson.
+
 ## v1.25 - Pipelines hero moved right
 
 Ron, 2026-10-16: move the pipeline further right so it sits clear of the text.
