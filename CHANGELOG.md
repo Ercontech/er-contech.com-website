@@ -2,6 +2,18 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.29 - Gold kept for Stop Work Authority only
+
+Ron, 2026-10-20, from Sandra's review: Safety and Careers were the only pages with
+gold accents, which looked unplanned. Gold (amber) is the brand's caution colour, so
+it now appears only where it means caution.
+
+- "Moments Matter." period, Safety: before gold → after Signal Light, matching
+  how "Results." is stressed in the signature.
+- "Now hiring" badges, Careers: before gold with dark text → after Signal with
+  white text.
+- Stop Work Authority band, Safety: stays gold (bar and label).
+
 ## v1.28 - Safety intro comma matches site style
 
 Ron, 2026-10-20: drop the serial comma so the intro matches the rest of the site.
