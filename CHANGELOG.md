@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.28 - Safety intro comma matches site style
+
+Ron, 2026-10-20: drop the serial comma so the intro matches the rest of the site.
+
+- Before: "the knowledge, support, and confidence"
+- After: "the knowledge, support and confidence"
+
 ## v1.27 - Safety page intro rewritten
 
 Ron, 2026-10-20: new intro under "Moments Matter." on the Safety page, in Ron's words.
