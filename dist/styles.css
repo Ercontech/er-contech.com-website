@@ -566,7 +566,6 @@ h2.signature span:nth-child(3){color:var(--signal)}
 .safety-hero h1{font-size:clamp(40px,4.4vw,64px);line-height:1.02;margin:0 0 18px}
 .sp-dot{color:var(--signal-light)}
 /* v1.29 gold is reserved for caution: Stop Work Authority only */
-.opening-status{background:var(--signal);color:#fff}
 .accent-line{background:var(--signal-light)}
 .safety-hero .hero-inner{padding-top:64px;padding-bottom:64px}
 .safety-hero .hero-statement{max-width:760px}

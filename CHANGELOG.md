@@ -2,6 +2,16 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.30 - "Now hiring" badges removed from Careers
+
+Ron, 2026-10-20: with the badges blue (v1.29) the job list was awash in blue, and
+the badge was redundant anyway: a job wouldn't be posted if we weren't hiring.
+
+- Before: each of the four job cards had a "Now hiring" badge top right, opposite
+  the team label.
+- After: no badge; the team label (Project Management, Field Operations…) stands
+  alone. Job description pages unchanged.
+
 ## v1.29 - Gold kept for Stop Work Authority only
 
 Ron, 2026-10-20, from Sandra's review: Safety and Careers were the only pages with

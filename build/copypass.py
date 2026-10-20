@@ -26,6 +26,8 @@ RULES = [
   (">Discuss Your Site<", ">Start a Conversation<"),
   # About: leadership name (v1.26, Ron)
   ("Jim Hodges", "Jim Hodgson"),
+  # Careers: "Now hiring" badges removed (v1.30, Ron) - every posted job is open
+  ('<span class="opening-status">Now hiring</span>', ''),
 ]
 hits = [0]*len(RULES)
 for f in glob.glob(os.path.join(D, '*.html')):
