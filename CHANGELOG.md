@@ -2,6 +2,13 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.27 - Safety page intro rewritten
+
+Ron, 2026-10-20: new intro under "Moments Matter." on the Safety page, in Ron's words.
+
+- Before: "A job is made of small moments: where to stand, what to watch and, most importantly, when to say stop. Our safety program is built so every person on our crews gets those moments right, and goes home the way they arrived."
+- After: "Safety isn’t defined by a single moment. It’s the result of many choices we make throughout the day. From staying aware of our surroundings to recognizing when conditions have changed, every decision plays a role. Our safety program gives our crews the knowledge, support, and confidence to make the right choices, ensuring everyone returns home safely at the end of each day."
+
 ## v1.26 - Jim Hodgson's name corrected
 
 Ron, 2026-10-16: the About page leadership card misspelled Jim's surname.
