@@ -19,6 +19,6 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./dist/
-          server-dir: /
-          # Document root is .../c8w.fa8.mytemp.website/sysadmin
-          # FTP user is scoped to that folder, so / places files directly in the web root
+          server-dir: /public_html/
+          # New FTP user is rooted at /home/cxvetl8k679h/
+          # so /public_html/ is the primary domain document root
