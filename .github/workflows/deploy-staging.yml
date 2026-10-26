@@ -13,10 +13,13 @@ jobs:
       - name: Deploy dist/ via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftp.yourdomain.com          # Replace with the FTP host from GoDaddy for c8w.fa8.mytemp.website
+          server: ftp.c8w.fa8.mytemp.website
           username: ${{ secrets.GODADDY_FTP_USER }}
           password: ${{ secrets.GODADDY_FTP_PASS }}
-          protocol: ftps                      # Preferred; change to ftp if needed
+          protocol: ftps
+          port: 21
           local-dir: ./dist/
-          server-dir: /public_html/           # Adjust to the document root of the temporary domain
-          # server-dir: /public_html/staging/ # Alternative if using a subfolder
+          server-dir: /public_html/
+          # If the files land in the wrong place, change server-dir to the
+          # document root shown in your GoDaddy panel for this temporary domain
+          # (sometimes / or a specific folder name).
