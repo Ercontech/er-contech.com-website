@@ -19,6 +19,6 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./dist/
-          server-dir: /
-          # FTP user is scoped under the temp domain. Using / places files
-          # at the document root of c8w.fa8.mytemp.website.
+          server-dir: ../
+          # FTP user home is nested under the temp domain.
+          # ../ places files in the actual document root of c8w.fa8.mytemp.website
