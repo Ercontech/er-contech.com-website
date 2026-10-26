@@ -20,5 +20,5 @@ jobs:
           port: 21
           local-dir: ./dist/
           server-dir: /public_html/
-          # New FTP user is rooted at /home/cxvetl8k679h/
-          # so /public_html/ is the primary domain document root
+          # New FTP user rooted at /home/cxvetl8k679h/
+          # /public_html/ is the primary domain document root
