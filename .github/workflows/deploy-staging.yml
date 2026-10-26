@@ -19,7 +19,6 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./dist/
-          server-dir: /public_html/
-          # If the files land in the wrong place, change server-dir to the
-          # document root shown in your GoDaddy panel for this temporary domain
-          # (sometimes / or a specific folder name).
+          server-dir: /
+          # FTP user is scoped under the temp domain. Using / places files
+          # at the document root of c8w.fa8.mytemp.website.
