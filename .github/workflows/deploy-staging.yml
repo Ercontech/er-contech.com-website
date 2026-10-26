@@ -16,9 +16,9 @@ jobs:
           server: ftp.c8w.fa8.mytemp.website
           username: ${{ secrets.GODADDY_FTP_USER }}
           password: ${{ secrets.GODADDY_FTP_PASS }}
-          protocol: ftps
+          protocol: ftp
           port: 21
           local-dir: ./dist/
           server-dir: /public_html/
+          # Switched to plain FTP; GoDaddy sometimes rejects FTPS with 530
           # New FTP user rooted at /home/cxvetl8k679h/
-          # /public_html/ is the primary domain document root
