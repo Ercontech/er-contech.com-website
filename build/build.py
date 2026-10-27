@@ -378,6 +378,52 @@ _js = read('script.js')
 if 'data-survey-form' not in _js:
     write('script.js', _js + SV_JS)
 
+# ---------------------------------------------------------------- 5e. leadership portraits (v1.32, Ron 2026-10-27)
+# Real photographs replace the illustrated placeholders. Every portrait is 4:5 and framed the same way:
+# eye line 36% down, eye spacing 16% of the width, so the Er-Con polo logo shows on everyone. George keeps his placeholder until
+# his photo arrives (Ron); Danny Cantrell is no longer listed (Ron).
+LEADERS = [
+    ('Jim Hodgson', 'Operations', 'jim-hodgson'),
+    ('Ken Pittman', 'Project Management', 'ken-pittman'),
+    ('Katherine Zayas', 'Design &amp; Permitting', 'katherine-zayas'),
+    ('George Babcock', 'Technical Services', None),
+    ('Ian Schuur', 'Project Management', 'ian-schuur'),
+    ('James Urmin', 'Project Management', 'james-urmin'),
+    ('Derek Henry', 'Project Management', 'derek-henry'),
+    # Michael last (Ron): his photo is used whole, uncropped, because it is tighter than the
+    # others; framed to match it needed fill that showed. Slightly larger head, same eye level.
+    ('Michael Gallup', 'Business Development', 'michael-gallup'),
+]
+def leader_card(name, title, slug):
+    if slug:
+        pic = (f'<img class="leader-portrait leader-photo" src="assets/leader-{slug}.jpg" '
+               f'alt="Portrait of {name}" width="800" height="1000" loading="lazy">')
+    else:
+        # provisional illustration, cut to its own square so it fills the card like the photographs
+        pic = (f'<img class="leader-portrait leader-photo" src="assets/leader-george-babcock-placeholder.jpg" '
+               f'alt="Provisional illustrated portrait for {name}" width="800" height="1000" loading="lazy">')
+    return f'<article class="leader-card">{pic}<div><h3>{name}</h3><p>{title}</p></div></article>'
+s = read('about.html')
+grid = '<div class="leader-grid" aria-label="The Er-Con team">\n' + '\n'.join(
+    '          ' + leader_card(*l) for l in LEADERS) + '\n        </div>'
+s, n = re.subn(r'<div class="leader-grid" aria-label="[^"]*">.*?</div>\s*(?=</div>\s*</section>)',
+               grid + '\n      ', s, count=1, flags=re.S)
+assert n == 1, 'leadership grid not found'
+# Team, not leadership (Ron, 2026-10-27): no "Our leadership" eyebrow, and the
+# words leadership/leaders come off the page.
+for a, b in [
+    ('<div><p class="eyebrow">Our leadership</p><h2>The people behind the work.</h2></div>',
+     '<div><h2>The people behind the work.</h2></div>'),
+    ('Er-Con’s leaders bring together', 'Er-Con’s team brings together'),
+    ('About Er-Con Technologies | Our Story &amp; Leadership', 'About Er-Con Technologies | Our Story &amp; Team'),
+    ('About Er-Con Technologies | Our Story & Leadership', 'About Er-Con Technologies | Our Story & Team'),
+    ('and the leadership behind our work.', 'and the team behind our work.'),
+    ('aria-label="Er-Con leadership team"', 'aria-label="The Er-Con team"'),
+]:
+    s = s.replace(a, b)
+assert 'leadership' not in re.sub(r'(class|id)="[^"]*"', '', s).lower().replace('leadership-', ''), 'leadership wording left on About'
+write('about.html', s)
+
 # ---------------------------------------------------------------- 6. css
 css = read('styles.css')
 marker = '/* ===== v0.50 Industry-first structure ===== */'

@@ -384,3 +384,9 @@
 .sv-pdf{display:inline-block;margin-top:12px;color:var(--signal);font-weight:800}
 .sv-pdf::before{content:"\2193  "}
 @media (max-width:900px){.sv-grid3,.sv-pair{grid-template-columns:1fr}.sv-q{flex-basis:100%}}
+
+/* Leadership photographs (v1.32): real portraits, 4:5 so the polo logo shows; no sprite */
+.leader-photo{display:block;height:auto;aspect-ratio:4/5;object-fit:cover;background:none}
+
+/* Team heading (v1.32): no eyebrow, so the headline starts level with the copy beside it */
+.leadership-inner h2{margin-top:0}

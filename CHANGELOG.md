@@ -2,6 +2,35 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.32 - Leadership photographs on About
+
+Ron, 2026-10-27: the illustrated placeholders "will never go live that way". Real
+photographs, all in the Er-Con polo, now fill the leadership grid.
+
+- Before: eight illustrated placeholder portraits (Jim, Ken, Katherine, George,
+  Ian, James, Derek, Danny Cantrell).
+- After: photographs of Jim Hodgson, Ken Pittman, Katherine Zayas, Michael
+  Gallup, Ian Schuur, James Urmin and Derek Henry, every one framed the same way
+  (eyes level, same head size). The photo area is 4:5 instead of square, so the
+  Er-Con logo on the polo shows on everyone (Ron: "we lost all the logos").
+- Michael Gallup added: Business Development.
+- Ian, James and Derek: "Project Manager" → "Project Management", so every
+  card names a function, as Ken's does.
+- Danny Cantrell removed (Ron).
+- Michael's photo is cropped tighter than the others. Framed to match them it
+  needed filling in at the sides and bottom, which left a visible seam. It is
+  now used whole, with nothing added, and he moves to the last card (Ron): eye
+  level matches within a few pixels; his head is about 17% larger.
+- Team, not leadership (Ron): the "Our leadership" eyebrow is gone and the
+  intro reads "Er-Con's team brings together…" (was "Er-Con's leaders bring
+  together…"). Page title "Our Story & Leadership" → "Our Story & Team";
+  search description "the leadership behind our work" → "the team behind our
+  work". The headline moves up 8px to start level with the intro beside it.
+- George Babcock keeps his illustrated placeholder until his photo arrives (Ron),
+  now cut to its own 4:5 image so it fills the card like the photographs.
+- Built by `build.py` step 5e from a `LEADERS` list; the old "Jim Hodges" copy
+  rule is retired because the build now writes the name directly.
+
 ## v1.31 - Old product pages retired
 
 Ron, 2026-10-27: "we are never going back there." The six product pages are no
