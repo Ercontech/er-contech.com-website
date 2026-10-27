@@ -386,3 +386,10 @@ bg = '\n'.join(f'.industry-hero-{i["slug"]}{{background-image:url(\'{i["img"]}\'
 write('styles.css', css + '\n' + bg + '\n')
 print('built')
 exec(open('/home/claude/site/copypass.py').read())
+
+# ---------------------------------------------------------------- 7. product pages retired (v1.31, Ron)
+# The old product pages are not published. They stay in dist-orig (palisade.html is
+# the page template above) and their photos stay in assets; only the pages go.
+for _f in PRODUCTS:
+    os.remove(os.path.join(D, _f))
+print('product pages removed:', len(PRODUCTS))

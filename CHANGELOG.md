@@ -2,6 +2,19 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.31 - Old product pages retired
+
+Ron, 2026-10-27: "we are never going back there." The six product pages are no
+longer published. Nothing on the site linked to them, so no visible change, but
+they could still be opened by address and found by search engines.
+
+- Removed from `dist/`: eco-flex, ercoform, fcr, palisade, pipeline-supports and
+  system-21 (.html).
+- Kept: every photo and asset they used (Ron: we may use them again), and the
+  original pages in `build/dist-orig/`. The build now drops the six pages as its
+  last step, so a rebuild does not bring them back.
+- To undo: revert this commit.
+
 ## v1.30 - "Now hiring" badges removed from Careers
 
 Ron, 2026-10-20: with the badges blue (v1.29) the job list was awash in blue, and
