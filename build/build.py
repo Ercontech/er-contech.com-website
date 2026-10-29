@@ -386,7 +386,7 @@ LEADERS = [
     ('Jim Hodgson', 'Operations', 'jim-hodgson'),
     ('Ken Pittman', 'Project Management', 'ken-pittman'),
     ('Katherine Zayas', 'Design &amp; Permitting', 'katherine-zayas'),
-    ('George Babcock', 'Technical Services', None),
+    ('George Babcock', 'Technical Services', 'george-babcock'),   # real photo since v1.33
     ('Ian Schuur', 'Project Management', 'ian-schuur'),
     ('James Urmin', 'Project Management', 'james-urmin'),
     ('Derek Henry', 'Project Management', 'derek-henry'),

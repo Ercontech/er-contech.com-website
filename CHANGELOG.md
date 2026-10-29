@@ -2,6 +2,16 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.33 - George Babcock's photograph
+
+Ron, 2026-10-29: George's illustrated placeholder is replaced by his
+photograph in the Er-Con polo, framed exactly like the rest of the team (eye
+line 36% down, same eye spacing, same grey studio background).
+
+- Before: an illustrated portrait (navy suit, drafting-grid background).
+- After: George's polo photograph, Er-Con logo showing like everyone else's.
+  All eight cards are now real photographs.
+
 ## v1.32 - Leadership photographs on About
 
 Ron, 2026-10-27: the illustrated placeholders "will never go live that way". Real
