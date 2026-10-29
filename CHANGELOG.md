@@ -2,6 +2,16 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.35 - Geohazards removed from the contact form's Industry list
+
+Ron, 2026-10-29: take Geohazards out of the Industry dropdown on the contact form.
+
+- Before: Pipelines & Energy, Transportation, Geohazards, Utilities, Commercial &
+  Private Property, Other.
+- After: Pipelines & Energy, Transportation, Utilities, Commercial & Private
+  Property, Other.
+- Not changed: the Geohazards page and its place in the Industries menu.
+
 ## v1.34 - Contact form email: readable layout and Houston time
 
 Ron, 2026-10-29, after the first real test submission.

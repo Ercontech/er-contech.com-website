@@ -20,7 +20,7 @@ def _yn(name, q, follow=None):
             f'<label class="sv-check"><input type="radio" name="{name}" value="Yes"><span>Yes</span></label>'
             f'<label class="sv-check"><input type="radio" name="{name}" value="No"><span>No</span></label>{fl}</div>')
 
-INDUSTRIES = ['Pipelines &amp; Energy', 'Transportation', 'Geohazards', 'Utilities',
+INDUSTRIES = ['Pipelines &amp; Energy', 'Transportation', 'Utilities',
               'Commercial &amp; Private Property', 'Other']
 
 def survey_form():
