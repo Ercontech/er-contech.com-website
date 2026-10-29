@@ -2,6 +2,20 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.34 - Contact form email: readable layout and Houston time
+
+Ron, 2026-10-29, after the first real test submission.
+
+- Before: answers were spaced for a fixed-width font, so in Outlook they wandered
+  out of line; the time was in UTC ("2026-10-29 23:15 UTC").
+- After: the email has an HTML version laid out as a two-column table under navy
+  section headings (with a plain-text version alongside for mail apps that want it),
+  and the time reads "Thursday, October 29, 2026 at 6:15 PM CDT". Anything a visitor
+  types is shown as text, never as formatting. Saved copies on the server use
+  Houston time too.
+- Not changed: who it is sent to, from or reply-to. The Junk problem is a Microsoft
+  365 setting (sent to Sam), not the code.
+
 ## v1.33 - George Babcock's photograph
 
 Ron, 2026-10-29: George's illustrated placeholder is replaced by his

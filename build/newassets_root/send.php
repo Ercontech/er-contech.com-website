@@ -15,6 +15,8 @@ $ALLOWED   = ['image/jpeg', 'image/png', 'image/gif', 'image/webp', 'image/heic'
 // Copies go above the public web folder when possible (e.g. /home/<user>/survey-submissions)
 $SAVE_DIR  = dirname(__DIR__) . '/survey-submissions';
 
+date_default_timezone_set('America/Chicago');           // Houston time in emails and file names
+
 function done($page) { header('Location: ' . $page, true, 303); exit; }
 function clean($v) { return trim(str_replace(["\r", "\0"], '', is_array($v) ? implode(', ', $v) : (string)$v)); }
 
@@ -42,19 +44,31 @@ $LABELS = [
                    'utilities' => 'Other pipelines/utilities in ROW', 'road_limits' => 'Road or bridge weight limits',
                    'power' => 'Overhead power lines', 'weather' => 'Weather sensitive'],
 ];
-$body = "New site survey from er-contech.com\n" . date('Y-m-d H:i T') . "\n";
+function h($v) { return htmlspecialchars($v, ENT_QUOTES, 'UTF-8'); }
+$when = date('l, F j, Y \a\t g:i A T');               // e.g. Thursday, October 29, 2026 at 6:15 PM CDT
+$body = "New site survey from er-contech.com\n" . $when . "\n";
+$html = '<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#1D1D1B">'
+      . '<p style="margin:0 0 4px;font-size:16px;font-weight:bold;color:#0B2D5B">New site survey from er-contech.com</p>'
+      . '<p style="margin:0 0 18px;color:#4A4949">' . h($when) . '</p>'
+      . '<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;font-size:14px">';
 $record = ['received' => date('c'), 'ip' => $_SERVER['REMOTE_ADDR'] ?? ''];
 foreach ($LABELS as $group => $fields) {
-    $lines = '';
+    $lines = ''; $rows = '';
     foreach ($fields as $key => $label) {
         $v = clean($_POST[$key] ?? '');
         $d = clean($_POST[$key . '_detail'] ?? '');
         if ($d !== '') $v = trim($v . ' — ' . $d, ' —');
         if ($v === '') continue;
-        $lines .= str_pad($label . ':', 34) . $v . "\n";
+        $lines .= $label . ': ' . $v . "\n";
+        $rows  .= '<tr><td style="padding:4px 24px 4px 0;color:#4A4949;vertical-align:top;white-space:nowrap">' . h($label)
+                . '</td><td style="padding:4px 0;vertical-align:top">' . nl2br(h($v)) . '</td></tr>';
         $record[$key] = $v;
     }
-    if ($lines !== '') $body .= "\n" . strtoupper($group) . "\n" . $lines;
+    if ($lines !== '') {
+        $body .= "\n" . strtoupper($group) . "\n" . $lines;
+        $html .= '<tr><td colspan="2" style="padding:18px 0 6px;border-bottom:2px solid #0B2D5B;font-size:12px;font-weight:bold;letter-spacing:1px;color:#0B2D5B">'
+               . h(strtoupper($group)) . '</td></tr>' . $rows;
+    }
 }
 
 // ---------------------------------------------------------------- photos
@@ -74,7 +88,12 @@ if (!empty($_FILES['photos']) && is_array($_FILES['photos']['name'])) {
         $files[] = ['tmp' => $tmp, 'name' => $safe, 'mime' => $mime];
     }
 }
-if ($files) $body .= "\nPHOTOS\n" . count($files) . " attached\n";
+if ($files) {
+    $body .= "\nPHOTOS\n" . count($files) . " attached\n";
+    $html .= '<tr><td colspan="2" style="padding:18px 0 6px;border-bottom:2px solid #0B2D5B;font-size:12px;font-weight:bold;letter-spacing:1px;color:#0B2D5B">PHOTOS</td></tr>'
+           . '<tr><td colspan="2" style="padding:4px 0">' . count($files) . ' attached</td></tr>';
+}
+$html .= '</table></div>';
 
 // ---------------------------------------------------------------- keep a copy on the server
 $stamp = date('Ymd-His') . '-' . bin2hex(random_bytes(3));
@@ -98,8 +117,13 @@ $headers .= "Reply-To: \"$replyName\" <$email>\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
 
-$msg  = "--$boundary\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n\r\n";
-$msg .= str_replace("\n", "\r\n", $body) . "\r\n";
+$alt  = 'ercon_alt_' . bin2hex(random_bytes(8));
+$msg  = "--$boundary\r\nContent-Type: multipart/alternative; boundary=\"$alt\"\r\n\r\n";
+$msg .= "--$alt\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n";
+$msg .= chunk_split(base64_encode($body)) . "\r\n";
+$msg .= "--$alt\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n";
+$msg .= chunk_split(base64_encode('<!doctype html><html><body>' . $html . '</body></html>')) . "\r\n";
+$msg .= "--$alt--\r\n";
 foreach ($files as $f) {
     $msg .= "--$boundary\r\nContent-Type: {$f['mime']}; name=\"{$f['name']}\"\r\n";
     $msg .= "Content-Transfer-Encoding: base64\r\nContent-Disposition: attachment; filename=\"{$f['name']}\"\r\n\r\n";
