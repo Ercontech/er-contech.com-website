@@ -2,6 +2,16 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.41 - Company age corrected: since 1980, 40+ years
+
+Ron, 2026-10-30.
+
+- About hero: "Since 1970, Er-Con has combined…" → "Since 1980, Er-Con has combined…"
+- About story: "For more than 50 years, Er-Con has worked…" → "For more than 40 years, …"
+- About stat: "50+ Years of specialized experience" → "40+"
+- Home stat band: "50+ Years designing and delivering solutions…" → "40+"
+- About page search description: "our 50+ years of erosion mitigation experience" → "40+"
+
 ## v1.40 - Contact form: Industry dropdown matches the other fields in Safari
 
 Ron, 2026-10-30, screenshot from Safari after v1.39.

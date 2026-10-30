@@ -27,6 +27,12 @@ RULES = [
   # About: leadership name (v1.26, Ron) - since v1.32 the leadership grid is written by build.py step 5e
   # Careers: "Now hiring" badges removed (v1.30, Ron) - every posted job is open
   ('<span class="opening-status">Now hiring</span>', ''),
+  # Company age: founded 1980, 40+ years (v1.41, Ron)
+  ("Since 1970, Er-Con", "Since 1980, Er-Con"),
+  ("our 50+ years of erosion", "our 40+ years of erosion"),
+  ("For more than 50 years, Er-Con", "For more than 40 years, Er-Con"),
+  ("<strong>50+</strong>", "<strong>40+</strong>"),
+  ('<span class="stat-num">50+</span>', '<span class="stat-num">40+</span>'),
 ]
 hits = [0]*len(RULES)
 for f in glob.glob(os.path.join(D, '*.html')):
