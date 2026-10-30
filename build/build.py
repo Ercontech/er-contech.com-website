@@ -443,6 +443,11 @@ for _f in glob.glob(os.path.join(D, '*.html')):
     _s, _c = re.subn(r'<p>© 2026 Er-Con Technologies</p>',
                      f'<p>© 2026 Er-Con Technologies<span class="site-version">{_ver}</span></p>', _s)
     _n += _c
+    # v1.39: stamp the version on the stylesheet and script links, so browsers fetch the
+    # new copies after every release instead of mixing a new page with an old saved script.
+    _s, _c1 = re.subn(r'href="styles\.css"', f'href="styles.css?{_ver}"', _s)
+    _s, _c2 = re.subn(r'src="script\.js"', f'src="script.js?{_ver}"', _s)
+    assert _c1 == 1 and _c2 == 1, ('cache stamp', _f, _c1, _c2)
     open(_f, 'w', encoding='utf-8').write(_s)
 assert _n == len(glob.glob(os.path.join(D, '*.html'))), ('footer version', _n)
 print('footer version:', _ver, 'on', _n, 'pages')

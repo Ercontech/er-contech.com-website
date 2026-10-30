@@ -2,6 +2,21 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.39 - Browsers always get the current stylesheet and script
+
+Found 2026-10-30 while checking Turnstile on staging: the browser showed the new v1.38
+page but kept its saved copy of the old script and stylesheet, so the Turnstile box did
+not appear and the footer version had no spacing. With Turnstile now switched on, a
+visitor holding the old script could have had their submission turned away.
+
+- Before: pages linked `styles.css` and `script.js`, which browsers may reuse for days.
+- After: pages link `styles.css?v1.39` and `script.js?v1.39`. The version comes from this
+  changelog, so every release makes browsers fetch fresh copies. No visible change.
+
+Also confirmed on staging: the Turnstile keys are live (Ron added the settings file in
+cPanel, permissions 600); only the public site key reaches the browser; the Cloudflare
+check renders above the Send button.
+
 ## v1.38 - Version number in the footer
 
 Ron, 2026-10-30: "Some of these behind the scene code changes I can't tell if they are
