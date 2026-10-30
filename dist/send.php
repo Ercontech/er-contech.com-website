@@ -129,8 +129,21 @@ if (@is_dir($SAVE_DIR) || @mkdir($SAVE_DIR, 0700, true)) {
 }
 
 // ---------------------------------------------------------------- email
-$subject = ($verified === 'unreachable' ? '[unverified] ' : '') . 'Site survey: ' . ($record['company'] ?? $name) . ' — ' . $location;
-$subject = '=?UTF-8?B?' . base64_encode(mb_substr($subject, 0, 150)) . '?=';
+$subjectPlain = mb_substr(($verified === 'unreachable' ? '[unverified] ' : '') . 'Site survey: ' . ($record['company'] ?? $name) . ' — ' . $location, 0, 150);
+$htmlDoc = '<!doctype html><html><body>' . $html . '</body></html>';
+
+// ---------------------------------------------------------------- 1. Microsoft Graph (v1.37)
+// Used when all four graph_* values are in er-con-config.php; otherwise skipped.
+// Mail then genuinely comes from Microsoft 365, so SPF/INKY see a real internal sender.
+if (graph_ready($CFG)) {
+    $gerr = '';
+    $ok = graph_send($CFG, $TO, $subjectPlain, $htmlDoc, $email, $name, $files, $gerr);
+    graph_log($SAVE_DIR, $gerr);                       // problems (even recovered ones) go to graph-errors.log
+    if ($ok) done('thank-you.html');                   // otherwise fall through to the old route; the copy is saved either way
+}
+
+// ---------------------------------------------------------------- 2. server mail() (the original route)
+$subject = '=?UTF-8?B?' . base64_encode($subjectPlain) . '?=';
 $boundary = 'ercon_' . bin2hex(random_bytes(8));
 $replyName = str_replace(['"', "\n"], '', $name);
 $headers  = "From: Er-Con Website <$FROM>\r\n";
@@ -143,7 +156,7 @@ $msg  = "--$boundary\r\nContent-Type: multipart/alternative; boundary=\"$alt\"\r
 $msg .= "--$alt\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n";
 $msg .= chunk_split(base64_encode($body)) . "\r\n";
 $msg .= "--$alt\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n";
-$msg .= chunk_split(base64_encode('<!doctype html><html><body>' . $html . '</body></html>')) . "\r\n";
+$msg .= chunk_split(base64_encode($htmlDoc)) . "\r\n";
 $msg .= "--$alt--\r\n";
 foreach ($files as $f) {
     $msg .= "--$boundary\r\nContent-Type: {$f['mime']}; name=\"{$f['name']}\"\r\n";
@@ -154,3 +167,121 @@ $msg .= "--$boundary--\r\n";
 
 $sent = @mail($TO, $subject, $msg, $headers, '-f' . $FROM);
 done($sent ? 'thank-you.html' : 'thank-you.html?saved=1');
+
+// ================================================================ Microsoft Graph helpers (v1.37)
+// Needs, in Entra: an app with APPLICATION permissions Mail.Send (and Mail.ReadWrite for
+// submissions with large photos), both restricted to the one sending mailbox.
+// Small submissions: one sendMail call (Graph limit ~4 MB per request).
+// Larger: create a draft, add photos (>3 MB ones via an upload session), then send.
+// If the large route is refused (e.g. no Mail.ReadWrite), the email still goes out without
+// the photos and says so; the photos are always in the saved copy on the server.
+
+function graph_ready($c) {
+    foreach (['graph_tenant_id', 'graph_client_id', 'graph_client_secret', 'graph_sender'] as $k)
+        if (empty($c[$k])) return false;
+    return true;
+}
+
+function graph_http($method, $url, $headers, $body, &$status) {
+    $status = 0;
+    if (function_exists('curl_init')) {
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [CURLOPT_CUSTOMREQUEST => $method, CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => $headers, CURLOPT_TIMEOUT => 30, CURLOPT_CONNECTTIMEOUT => 10]);
+        if ($body !== null) curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
+        $out = curl_exec($ch);
+        $status = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        return $out === false ? '' : $out;
+    }
+    $ctx = stream_context_create(['http' => ['method' => $method, 'header' => implode("\r\n", $headers),
+        'content' => $body ?? '', 'timeout' => 30, 'ignore_errors' => true]]);
+    $out = @file_get_contents($url, false, $ctx);
+    if (isset($http_response_header[0]) && preg_match('#\s(\d{3})\s#', $http_response_header[0], $m)) $status = (int)$m[1];
+    return $out === false ? '' : $out;
+}
+
+function graph_token($c, &$err) {
+    $login = rtrim($c['graph_login_base'] ?? 'https://login.microsoftonline.com', '/');
+    $out = graph_http('POST', $login . '/' . rawurlencode($c['graph_tenant_id']) . '/oauth2/v2.0/token',
+        ['Content-Type: application/x-www-form-urlencoded'],
+        http_build_query(['client_id' => $c['graph_client_id'], 'client_secret' => $c['graph_client_secret'],
+                          'scope' => 'https://graph.microsoft.com/.default', 'grant_type' => 'client_credentials']), $st);
+    $j = json_decode($out, true);
+    if ($st === 200 && !empty($j['access_token'])) return $j['access_token'];
+    $err = "token: HTTP $st " . ($j['error'] ?? '') . ' ' . substr($j['error_description'] ?? $out, 0, 300);
+    return '';
+}
+
+function graph_send($c, $to, $subject, $htmlDoc, $replyEmail, $replyName, $files, &$err) {
+    $tok = graph_token($c, $err);
+    if ($tok === '') return false;
+    $api  = rtrim($c['graph_api_base'] ?? 'https://graph.microsoft.com/v1.0', '/');
+    $user = $api . '/users/' . rawurlencode($c['graph_sender']);
+    $auth = ['Authorization: Bearer ' . $tok, 'Content-Type: application/json'];
+    $msg = ['subject' => $subject,
+            'body' => ['contentType' => 'HTML', 'content' => $htmlDoc],
+            'toRecipients' => [['emailAddress' => ['address' => $to]]],
+            'replyTo' => [['emailAddress' => ['address' => $replyEmail, 'name' => $replyName]]]];
+    $total = 0;
+    foreach ($files as $f) $total += filesize($f['tmp']);
+
+    // small: everything in one sendMail call
+    if ($total <= 2800000) {
+        $msg['attachments'] = [];
+        foreach ($files as $f) $msg['attachments'][] = ['@odata.type' => '#microsoft.graph.fileAttachment',
+            'name' => $f['name'], 'contentType' => $f['mime'], 'contentBytes' => base64_encode(file_get_contents($f['tmp']))];
+        $out = graph_http('POST', $user . '/sendMail', $auth,
+            json_encode(['message' => $msg, 'saveToSentItems' => false], JSON_UNESCAPED_UNICODE), $st);
+        if ($st === 202) return true;
+        $err = "sendMail: HTTP $st " . substr($out, 0, 300);
+        return false;
+    }
+
+    // large: draft -> attachments -> send
+    $out = graph_http('POST', $user . '/messages', $auth, json_encode($msg, JSON_UNESCAPED_UNICODE), $st);
+    $draft = json_decode($out, true);
+    if ($st !== 201 || empty($draft['id'])) {
+        $err = "draft: HTTP $st " . substr($out, 0, 300) . ' | sent without photos';
+        $note = '<p style="font-family:Arial,sans-serif;color:#B0301E"><b>' . count($files)
+              . ' photo(s) were too large to attach automatically. They are saved with this submission on the web server.</b></p>';
+        $msg['body']['content'] = str_replace('<body>', '<body>' . $note, $htmlDoc);
+        $out = graph_http('POST', $user . '/sendMail', $auth,
+            json_encode(['message' => $msg, 'saveToSentItems' => false], JSON_UNESCAPED_UNICODE), $st2);
+        if ($st2 === 202) return true;                 // sent; $err still explains the missing photos
+        $err .= " | fallback sendMail: HTTP $st2 " . substr($out, 0, 200);
+        return false;
+    }
+    $mid = $user . '/messages/' . rawurlencode($draft['id']);
+    foreach ($files as $f) {
+        $size = filesize($f['tmp']);
+        if ($size < 3000000) {
+            $out = graph_http('POST', $mid . '/attachments', $auth, json_encode(['@odata.type' => '#microsoft.graph.fileAttachment',
+                'name' => $f['name'], 'contentType' => $f['mime'], 'contentBytes' => base64_encode(file_get_contents($f['tmp']))]), $st);
+            if ($st !== 201) { $err = "attach {$f['name']}: HTTP $st " . substr($out, 0, 200); return false; }
+            continue;
+        }
+        $out = graph_http('POST', $mid . '/attachments/createUploadSession', $auth, json_encode(['AttachmentItem' =>
+            ['attachmentType' => 'file', 'name' => $f['name'], 'size' => $size, 'contentType' => $f['mime']]]), $st);
+        $sess = json_decode($out, true);
+        if ($st !== 201 || empty($sess['uploadUrl'])) { $err = "upload session {$f['name']}: HTTP $st " . substr($out, 0, 200); return false; }
+        $fh = fopen($f['tmp'], 'rb'); $pos = 0; $chunk = 3276800;        // 10 x 320 KiB, as Graph requires
+        while ($pos < $size) {
+            $data = fread($fh, $chunk); $len = strlen($data);
+            graph_http('PUT', $sess['uploadUrl'], ['Content-Length: ' . $len,
+                'Content-Range: bytes ' . $pos . '-' . ($pos + $len - 1) . '/' . $size], $data, $st);
+            if ($st !== 200 && $st !== 201) { fclose($fh); $err = "upload {$f['name']} at $pos: HTTP $st"; return false; }
+            $pos += $len;
+        }
+        fclose($fh);
+    }
+    $out = graph_http('POST', $mid . '/send', ['Authorization: Bearer ' . $tok, 'Content-Length: 0'], '', $st);
+    if ($st === 202) return true;
+    $err = "send draft: HTTP $st " . substr($out, 0, 300);
+    return false;
+}
+
+function graph_log($dir, $e) {
+    if ($e === '' || !@is_dir($dir)) return;
+    @file_put_contents($dir . '/graph-errors.log', date('c') . '  ' . $e . "\n", FILE_APPEND);
+}

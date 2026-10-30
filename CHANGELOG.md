@@ -2,6 +2,26 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.37 - Contact form: Microsoft Graph sending (dormant until keys)
+
+Ron, 2026-10-30: build the Graph sending now, dormant like Turnstile. Agreed with Sam:
+the form's email was quarantined as a "Spoofed Internal Sender" because it came from
+GoDaddy's server; sending through Microsoft 365 fixes it at the source.
+
+- Before: send.php always used the web server's own mail(), which fails er-contech.com's
+  SPF and lands in Junk or quarantine.
+- After: when the four Microsoft values are in the private settings file, the email is
+  sent by Microsoft 365 as the website mailbox (e.g. website@er-contech.com). Same
+  content, same To and Reply-To. Small submissions go in one call; larger ones are built
+  as a draft with photos uploaded in pieces, because Microsoft caps a single call at
+  about 4 MB.
+- Until those values exist nothing changes. If Microsoft refuses (wrong secret, missing
+  permission), the form falls back to the old route and logs why in
+  `survey-submissions/graph-errors.log`; if only the large-photo step is refused, the
+  email goes out with a note that the photos are saved on the server.
+- Settings template updated with the permissions Sam needs: Mail.Send, plus
+  Mail.ReadWrite for large photos, both locked to the one mailbox.
+
 ## v1.36 - Contact form: Cloudflare Turnstile human check (dormant until keys)
 
 Ron, 2026-10-30: add Turnstile now so it is in place before the form sends

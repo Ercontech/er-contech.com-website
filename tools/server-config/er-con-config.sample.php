@@ -17,7 +17,14 @@ return [
     'turnstile_site_key' => '',   // public "Site Key"
     'turnstile_secret'   => '',   // private "Secret Key"
 
-    // Microsoft Graph (sending the form email through Microsoft 365) - not wired up yet
+    // Microsoft Graph (sends the form email through Microsoft 365). All four filled = on.
+    // Entra -> App registrations -> new app. API permissions (APPLICATION, admin consent):
+    //   Mail.Send       - sending
+    //   Mail.ReadWrite  - only for submissions with large photos (draft + upload)
+    // Restrict the app to the sending mailbox ONLY (Exchange application access policy or
+    // RBAC for Applications), so it cannot touch any other mailbox.
+    // Problems are logged to /home/cxvetl8k679h/survey-submissions/graph-errors.log and the
+    // form falls back to the old route, so no request is lost.
     'graph_tenant_id'     => '',
     'graph_client_id'     => '',
     'graph_client_secret' => '',
