@@ -353,7 +353,8 @@
 .sv-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .sv-h{color:var(--navy);font-size:20px;margin:0 0 16px}
 .sv-form .form-grid+.sv-h,.sv-form .form-grid+details{margin-top:30px}
-.sv-form select{width:100%;border:1px solid var(--fog);border-radius:3px;background:#fff;color:var(--ink);font:inherit;font-size:16px;padding:12px 14px}
+.sv-form select{width:100%;border:1px solid var(--fog);border-radius:3px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%230B2D5B' stroke-width='1.8'/%3E%3C/svg%3E") no-repeat right 16px center/12px 8px;color:var(--ink);font:inherit;font-size:16px;line-height:1.6;padding:12px 44px 12px 14px;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer}
+.sv-form select:invalid,.sv-form select option[value=""]{color:var(--graphite)}
 .sv-form textarea{min-height:140px}
 .sv-drop{position:relative;display:flex;flex-direction:column;gap:4px;border:2px dashed var(--haze);border-radius:4px;padding:22px;text-align:center;cursor:pointer;background:var(--mist)}
 .sv-drop:hover{border-color:var(--signal)}

@@ -2,6 +2,15 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.40 - Contact form: Industry dropdown matches the other fields in Safari
+
+Ron, 2026-10-30, screenshot from Safari after v1.39.
+
+- Before: in Safari the Industry dropdown was drawn in Safari's own small native
+  style, shorter than the text boxes beside it (Chrome already showed it full size).
+- After: the dropdown is drawn by the site in every browser: same height, border and
+  font as the other fields, with a navy chevron on the right.
+
 ## v1.39 - Browsers always get the current stylesheet and script
 
 Found 2026-10-30 while checking Turnstile on staging: the browser showed the new v1.38
