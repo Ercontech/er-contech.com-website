@@ -433,6 +433,20 @@ write('styles.css', css + '\n' + bg + '\n')
 print('built')
 exec(open('/home/claude/site/copypass.py').read())
 
+# ---------------------------------------------------------------- 6b. version in the footer (v1.38, Ron)
+# The newest "## vX.YY" heading in CHANGELOG.md is the live version. Every commit adds an
+# entry and rebuilds, so the footer always says which commit the server is showing.
+_ver = re.search(r'^## (v[0-9][^ ]*)', open('/home/claude/site/CHANGELOG.md', encoding='utf-8').read(), re.M).group(1)
+_n = 0
+for _f in glob.glob(os.path.join(D, '*.html')):
+    _s = open(_f, encoding='utf-8').read()
+    _s, _c = re.subn(r'<p>© 2026 Er-Con Technologies</p>',
+                     f'<p>© 2026 Er-Con Technologies<span class="site-version">{_ver}</span></p>', _s)
+    _n += _c
+    open(_f, 'w', encoding='utf-8').write(_s)
+assert _n == len(glob.glob(os.path.join(D, '*.html'))), ('footer version', _n)
+print('footer version:', _ver, 'on', _n, 'pages')
+
 # ---------------------------------------------------------------- 7. product pages retired (v1.31, Ron)
 # The old product pages are not published. They stay in dist-orig (palisade.html is
 # the page template above) and their photos stay in assets; only the pages go.

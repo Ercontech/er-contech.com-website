@@ -391,3 +391,5 @@
 
 /* Team heading (v1.32): no eyebrow, so the headline starts level with the copy beside it */
 .leadership-inner h2{margin-top:0}
+/* v1.38 version number in the footer */
+.site-version{margin-left:12px;padding-left:12px;border-left:1px solid var(--haze);color:var(--fog)}

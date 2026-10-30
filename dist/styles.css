@@ -645,6 +645,8 @@ h2.signature span:nth-child(3){color:var(--signal)}
 
 /* Team heading (v1.32): no eyebrow, so the headline starts level with the copy beside it */
 .leadership-inner h2{margin-top:0}
+/* v1.38 version number in the footer */
+.site-version{margin-left:12px;padding-left:12px;border-left:1px solid var(--haze);color:var(--fog)}
 
 .industry-hero-pipelines-energy{background-image:url('assets/field/pipelines-hero.jpg');background-position:75% top}
 .industry-hero-transportation{background-image:url('assets/home-critical-infrastructure.png');background-position:center 50%}

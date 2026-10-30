@@ -2,6 +2,17 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.38 - Version number in the footer
+
+Ron, 2026-10-30: "Some of these behind the scene code changes I can't tell if they are
+live or not."
+
+- Before: the footer said "© 2026 Er-Con Technologies".
+- After: "© 2026 Er-Con Technologies | v1.38", the version in small grey type after a
+  thin divider, on every page. The build reads it from the newest entry in this
+  changelog, so whatever the footer shows is the commit the server is running,
+  including changes you can't see on the page (like the contact form code).
+
 ## v1.37 - Contact form: Microsoft Graph sending (dormant until keys)
 
 Ron, 2026-10-30: build the Graph sending now, dormant like Turnstile. Agreed with Sam:
