@@ -71,7 +71,24 @@ document.querySelectorAll('.g-evidence, .evidence').forEach(function (sec) {
 // v0.96 site survey form: pipeline fields on demand, file list
 (function () {
   var f = document.querySelector('[data-survey-form]'); if (!f) return;
-  if (/[?&]error=/.test(location.search)) f.querySelector('.sv-error').hidden = false;
+  var err = f.querySelector('.sv-error'), m = location.search.match(/[?&]error=(\w+)/);
+  if (m) { err.textContent = err.getAttribute(m[1] === 'verify' ? 'data-verify' : 'data-missing'); err.hidden = false; }
+  // v1.36 Cloudflare Turnstile: dormant until the site key is set on the server (form-config.php)
+  var tsKey = window.ER_TURNSTILE_SITE_KEY, tsBox = f.querySelector('.sv-turnstile'), tsWaiting = false;
+  if (tsKey && tsBox) {
+    tsBox.hidden = false;
+    window.erTurnstileReady = function () {
+      turnstile.render(tsBox, { sitekey: tsKey, action: 'site-survey',
+        callback: function () { if (tsWaiting) { tsWaiting = false; f.requestSubmit ? f.requestSubmit() : f.submit(); } } });
+    };
+    var ts = document.createElement('script');
+    ts.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=erTurnstileReady';
+    ts.async = true; ts.defer = true; document.head.appendChild(ts);
+    f.addEventListener('submit', function (e) {
+      var tok = f.querySelector('[name="cf-turnstile-response"]');
+      if (window.turnstile && !(tok && tok.value)) { e.preventDefault(); tsWaiting = true; }
+    });
+  }
   var pipe = f.querySelector('.sv-pipe'), ind = f.querySelector('#industry');
   function syncPipe() {
     var yes = (f.querySelector('input[name="pipeline"]:checked') || {}).value === 'Yes';

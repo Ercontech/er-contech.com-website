@@ -381,6 +381,7 @@
 .sv-q{flex:0 0 300px;color:var(--ink);font-size:15px}
 .sv-follow{flex:1 1 200px;border:1px solid var(--fog);border-radius:3px;font:inherit;font-size:15px;padding:8px 10px}
 .sv-pipe .form-grid{margin:10px 0 6px}
+.sv-turnstile{margin:26px 0 0;min-height:65px}
 .sv-pdf{display:inline-block;margin-top:12px;color:var(--signal);font-weight:800}
 .sv-pdf::before{content:"\2193  "}
 @media (max-width:900px){.sv-grid3,.sv-pair{grid-template-columns:1fr}.sv-q{flex-basis:100%}}

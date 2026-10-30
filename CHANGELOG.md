@@ -2,6 +2,25 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.36 - Contact form: Cloudflare Turnstile human check (dormant until keys)
+
+Ron, 2026-10-30: add Turnstile now so it is in place before the form sends
+confirmation emails to visitors.
+
+- Before: the form's only bot protection was a hidden trap field.
+- After: a Cloudflare Turnstile check sits above the Send button and send.php
+  confirms it with Cloudflare before emailing. Until the keys exist it is OFF and
+  the page looks and behaves exactly as before.
+- Keys live in a private settings file one level above public_html
+  (`/home/cxvetl8k679h/er-con-config.php`), never in GitHub. The template, with
+  instructions, is `tools/server-config/er-con-config.sample.php`. `form-config.php`
+  hands the browser the public site key only. Once Sam fills in the file, the check
+  switches on with no further commit.
+- If Cloudflare can't be reached, the request still goes through, with
+  "[unverified]" at the start of the email subject; losing a real request costs
+  more than an occasional bot. A failed check sends the visitor back to the form
+  with a message saying so.
+
 ## v1.35 - Geohazards removed from the contact form's Industry list
 
 Ron, 2026-10-29: take Geohazards out of the Industry dropdown on the contact form.

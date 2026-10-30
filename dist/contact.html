@@ -33,7 +33,7 @@
 
     <section class="section contact-page">
       <form id="form" class="project-form sv-form" action="send.php" method="post" enctype="multipart/form-data" data-survey-form>
-        <p class="sv-error" hidden>Please fill in your name, email, site location and what you're seeing, then send again.</p>
+        <p class="sv-error" hidden data-missing="Please fill in your name, email, site location and what you're seeing, then send again." data-verify="We couldn't confirm the form was sent by a person. Please wait for the check above the Send button to finish, then send again.">Please fill in your name, email, site location and what you're seeing, then send again.</p>
         <input type="text" name="website" class="sv-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <h2 class="sv-h">About you</h2>
         <div class="form-grid">
@@ -99,8 +99,10 @@
           </div>
         </details>
 
+        <div class="sv-turnstile" hidden></div>
         <div class="form-actions"><button class="btn primary" type="submit">Send Site Details</button><p class="form-note">Your details go straight to our team.</p></div>
       </form>
+      <script src="form-config.php"></script>
 
       <aside class="contact-details">
         <h2>Talk with Er-Con.</h2>

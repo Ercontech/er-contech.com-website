@@ -26,7 +26,7 @@ INDUSTRIES = ['Pipelines &amp; Energy', 'Transportation', 'Utilities',
 def survey_form():
     ind = ''.join(f'<option>{i}</option>' for i in INDUSTRIES)
     return f'''<form id="form" class="project-form sv-form" action="send.php" method="post" enctype="multipart/form-data" data-survey-form>
-        <p class="sv-error" hidden>Please fill in your name, email, site location and what you're seeing, then send again.</p>
+        <p class="sv-error" hidden data-missing="Please fill in your name, email, site location and what you're seeing, then send again." data-verify="We couldn't confirm the form was sent by a person. Please wait for the check above the Send button to finish, then send again.">Please fill in your name, email, site location and what you're seeing, then send again.</p>
         <input type="text" name="website" class="sv-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <h2 class="sv-h">About you</h2>
         <div class="form-grid">
@@ -92,8 +92,10 @@ def survey_form():
           </div>
         </details>
 
+        <div class="sv-turnstile" hidden></div>
         <div class="form-actions"><button class="btn primary" type="submit">Send Site Details</button><p class="form-note">Your details go straight to our team.</p></div>
-      </form>'''
+      </form>
+      <script src="form-config.php"></script>'''
 
 ASIDE = '''<aside class="contact-details">
         <h2>Talk with Er-Con.</h2>
@@ -138,6 +140,7 @@ CSS = '''/* v0.96 site survey form */
 .sv-q{flex:0 0 300px;color:var(--ink);font-size:15px}
 .sv-follow{flex:1 1 200px;border:1px solid var(--fog);border-radius:3px;font:inherit;font-size:15px;padding:8px 10px}
 .sv-pipe .form-grid{margin:10px 0 6px}
+.sv-turnstile{margin:26px 0 0;min-height:65px}
 .sv-pdf{display:inline-block;margin-top:12px;color:var(--signal);font-weight:800}
 .sv-pdf::before{content:"\\2193  "}
 @media (max-width:900px){.sv-grid3,.sv-pair{grid-template-columns:1fr}.sv-q{flex-basis:100%}}
@@ -147,7 +150,24 @@ JS = '''
 // v0.96 site survey form: pipeline fields on demand, file list
 (function () {
   var f = document.querySelector('[data-survey-form]'); if (!f) return;
-  if (/[?&]error=/.test(location.search)) f.querySelector('.sv-error').hidden = false;
+  var err = f.querySelector('.sv-error'), m = location.search.match(/[?&]error=(\\w+)/);
+  if (m) { err.textContent = err.getAttribute(m[1] === 'verify' ? 'data-verify' : 'data-missing'); err.hidden = false; }
+  // v1.36 Cloudflare Turnstile: dormant until the site key is set on the server (form-config.php)
+  var tsKey = window.ER_TURNSTILE_SITE_KEY, tsBox = f.querySelector('.sv-turnstile'), tsWaiting = false;
+  if (tsKey && tsBox) {
+    tsBox.hidden = false;
+    window.erTurnstileReady = function () {
+      turnstile.render(tsBox, { sitekey: tsKey, action: 'site-survey',
+        callback: function () { if (tsWaiting) { tsWaiting = false; f.requestSubmit ? f.requestSubmit() : f.submit(); } } });
+    };
+    var ts = document.createElement('script');
+    ts.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=erTurnstileReady';
+    ts.async = true; ts.defer = true; document.head.appendChild(ts);
+    f.addEventListener('submit', function (e) {
+      var tok = f.querySelector('[name="cf-turnstile-response"]');
+      if (window.turnstile && !(tok && tok.value)) { e.preventDefault(); tsWaiting = true; }
+    });
+  }
   var pipe = f.querySelector('.sv-pipe'), ind = f.querySelector('#industry');
   function syncPipe() {
     var yes = (f.querySelector('input[name="pipeline"]:checked') || {}).value === 'Yes';

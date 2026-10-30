@@ -23,6 +23,27 @@ function clean($v) { return trim(str_replace(["\r", "\0"], '', is_array($v) ? im
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') done('contact.html');
 if (!empty($_POST['website'])) done('thank-you.html');            // spam trap: bots fill hidden fields
 
+// ---------------------------------------------------------------- Cloudflare Turnstile (v1.36)
+// Private settings live one level above public_html in er-con-config.php (never in GitHub).
+// No secret there = check skipped. Cloudflare unreachable = let it through, marked unverified,
+// because losing a real request costs more than an occasional bot.
+$CFG = @include dirname(__DIR__) . '/er-con-config.php';
+if (!is_array($CFG)) $CFG = [];
+$verified = 'off';
+if (!empty($CFG['turnstile_secret'])) {
+    $token = (string)($_POST['cf-turnstile-response'] ?? '');
+    if ($token === '') done('contact.html?error=verify#form');
+    $ctx = stream_context_create(['http' => ['method' => 'POST', 'timeout' => 8,
+        'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
+        'content' => http_build_query(['secret' => $CFG['turnstile_secret'], 'response' => $token,
+                                       'remoteip' => $_SERVER['REMOTE_ADDR'] ?? ''])]]);
+    $res = @file_get_contents('https://challenges.cloudflare.com/turnstile/v0/siteverify', false, $ctx);
+    $json = $res === false ? null : json_decode($res, true);
+    if (!is_array($json))         $verified = 'unreachable';
+    elseif (!empty($json['success'])) $verified = 'yes';
+    else                          done('contact.html?error=verify#form');
+}
+
 $name     = clean($_POST['name'] ?? '');
 $email    = clean($_POST['email'] ?? '');
 $location = clean($_POST['location'] ?? '');
@@ -51,7 +72,7 @@ $html = '<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color
       . '<p style="margin:0 0 4px;font-size:16px;font-weight:bold;color:#0B2D5B">New site survey from er-contech.com</p>'
       . '<p style="margin:0 0 18px;color:#4A4949">' . h($when) . '</p>'
       . '<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;font-size:14px">';
-$record = ['received' => date('c'), 'ip' => $_SERVER['REMOTE_ADDR'] ?? ''];
+$record = ['received' => date('c'), 'ip' => $_SERVER['REMOTE_ADDR'] ?? '', 'human_check' => $verified];
 foreach ($LABELS as $group => $fields) {
     $lines = ''; $rows = '';
     foreach ($fields as $key => $label) {
@@ -108,7 +129,7 @@ if (@is_dir($SAVE_DIR) || @mkdir($SAVE_DIR, 0700, true)) {
 }
 
 // ---------------------------------------------------------------- email
-$subject = 'Site survey: ' . ($record['company'] ?? $name) . ' — ' . $location;
+$subject = ($verified === 'unreachable' ? '[unverified] ' : '') . 'Site survey: ' . ($record['company'] ?? $name) . ' — ' . $location;
 $subject = '=?UTF-8?B?' . base64_encode(mb_substr($subject, 0, 150)) . '?=';
 $boundary = 'ercon_' . bin2hex(random_bytes(8));
 $replyName = str_replace(['"', "\n"], '', $name);
