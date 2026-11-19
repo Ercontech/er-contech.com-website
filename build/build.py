@@ -458,3 +458,61 @@ print('footer version:', _ver, 'on', _n, 'pages')
 for _f in PRODUCTS:
     os.remove(os.path.join(D, _f))
 print('product pages removed:', len(PRODUCTS))
+
+# ---------------------------------------------------------------- 8. search engines and link previews (v1.43)
+import datetime as _dt, json as _json, html as _html
+SITE = 'https://www.er-contech.com'
+# "page not found" page, from the thank-you shell (<base href="/"> so it works at any depth)
+_t = read('thank-you.html')
+_t = _t.replace('<title>Thank You | Er-Con Technologies</title>', '<title>Page Not Found | Er-Con Technologies</title>', 1)
+_t = _t.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n  <base href="/">', 1)
+_m0, _m1 = _t.index('<main>'), _t.index('</main>') + 7
+_t = _t[:_m0] + """<main>
+    <section class="contact-hero thanks-hero">
+      <div class="contact-hero-inner">
+        <h1>We couldn't find <span>that page.</span></h1>
+        <p>It may have moved when we rebuilt our website. Try one of these, or call us at <a href="tel:+17134604601">+1 (713) 460-4601</a>.</p>
+      </div>
+    </section>
+    <section class="section"><p><a class="btn primary" href="index.html">Home Page</a> &nbsp; <a class="btn primary" href="services.html">Our Services</a> &nbsp; <a class="btn primary" href="contact.html">Contact Us</a></p></section>
+  </main>""" + _t[_m1:]
+_t = _t.replace(' aria-current="page"', '')
+assert '<meta name="robots" content="noindex">' in _t
+write('404.html', _t)
+
+_org = {"@context": "https://schema.org", "@type": "Organization", "name": "Er-Con Technologies",
+        "url": SITE + "/", "logo": SITE + "/assets/er-con-logo.png", "image": SITE + "/assets/og-image.jpg",
+        "description": "Engineered erosion mitigation and bank stabilization for pipelines, transportation, utilities, public works and private property.",
+        "foundingDate": "1980", "telephone": "+1-713-460-4601", "email": "info@er-contech.com",
+        "address": {"@type": "PostalAddress", "streetAddress": "6715 Theall Road", "addressLocality": "Houston",
+                    "addressRegion": "TX", "postalCode": "77066", "addressCountry": "US"}}
+_pages = []
+for _f in sorted(glob.glob(os.path.join(D, '*.html'))):
+    _name = os.path.basename(_f)
+    if _name in ('thank-you.html', '404.html'): continue
+    _s = open(_f, encoding='utf-8').read()
+    _title = re.search(r'<title>(.*?)</title>', _s, re.S).group(1).strip()
+    _desc = re.search(r'<meta name="description" content="([^"]*)">', _s).group(1)
+    _url = SITE + '/' + ('' if _name == 'index.html' else _name)
+    _tags = (f'\n  <link rel="canonical" href="{_url}">'
+             f'\n  <meta property="og:type" content="website">'
+             f'\n  <meta property="og:site_name" content="Er-Con Technologies">'
+             f'\n  <meta property="og:title" content="{_title}">'
+             f'\n  <meta property="og:description" content="{_desc}">'
+             f'\n  <meta property="og:url" content="{_url}">'
+             f'\n  <meta property="og:image" content="{SITE}/assets/og-image.jpg">'
+             f'\n  <meta property="og:image:width" content="1200">'
+             f'\n  <meta property="og:image:height" content="630">'
+             f'\n  <meta name="twitter:card" content="summary_large_image">')
+    if _name == 'index.html':
+        _tags += '\n  <script type="application/ld+json">' + _json.dumps(_org, ensure_ascii=False) + '</script>'
+    _s, _c = re.subn(r'(<meta name="description" content="[^"]*">)', lambda m: m.group(1) + _tags, _s, count=1)
+    assert _c == 1, ('seo tags', _name)
+    open(_f, 'w', encoding='utf-8').write(_s)
+    _pages.append(_url)
+_today = _dt.date.today().isoformat()
+_sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+_sm += ''.join(f'  <url><loc>{u}</loc><lastmod>{_today}</lastmod></url>\n' for u in sorted(_pages, key=lambda u: (u != SITE + '/', u)))
+_sm += '</urlset>\n'
+open(os.path.join(D, 'sitemap.xml'), 'w', encoding='utf-8').write(_sm)
+print('seo: tags on', len(_pages), 'pages; sitemap.xml; 404.html')

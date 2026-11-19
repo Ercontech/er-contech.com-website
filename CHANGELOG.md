@@ -2,6 +2,26 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.43 - Search engines, link previews, old-address redirects, one site address
+
+Ron, 2026-11-19, after DNS moved er-contech.com to the new site. Every address from the
+old site (per the Internet Archive) was returning "not found".
+
+- Old addresses redirect permanently (301) to the matching new page: /solutions,
+  /technologies, the old product pages and PDFs -> Services; /pipelines and the pipeline
+  pages -> Pipelines & Energy; /about-us, /company-structure, /er-con-advantage -> About;
+  /contact, /registration-form -> Contact; /homepage, /index, /sitemap, GoDaddy's leftover
+  /home.html -> Home. Any page typed without ".html" (e.g. /careers) also works.
+- One address: er-contech.com and http:// redirect to https://www.er-contech.com.
+- Every page names its canonical address and carries link-preview tags (title,
+  description, a 1200x630 image with the logo) for LinkedIn, Teams and texts.
+- Home page carries Er-Con's business details for Google (name, address, phone, email,
+  logo, founded 1980).
+- New: sitemap.xml, robots.txt, and a branded "page not found" page.
+- Server: compression, browser caching (pages always re-checked; versioned stylesheet and
+  script kept a year), and the deploy tool's file list hidden from browsers (the FTP
+  deploy is unaffected).
+
 ## v1.42 - Contact form: confirmation email to the visitor
 
 Ron, 2026-11-19: "short, sweet, and simple". Possible now that the form sends through

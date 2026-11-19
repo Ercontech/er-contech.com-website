@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /send.php
+Disallow: /form-config.php
+
+Sitemap: https://www.er-contech.com/sitemap.xml

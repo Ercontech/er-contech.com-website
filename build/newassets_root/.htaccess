@@ -1,0 +1,68 @@
+# Er-Con website server rules (v1.43). Source: build/newassets_root/.htaccess in the repo.
+# Deployed to public_html with the rest of the site; edit it there, not in cPanel.
+
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+# The deploy tool's file list and other dotfiles are not for the public
+<FilesMatch "^\.(ftp-deploy-sync-state\.json|DS_Store)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Certificate renewals (cPanel AutoSSL) must reach .well-known untouched
+RewriteRule ^\.well-known/ - [L]
+
+# 1. One address for the site: https://www.er-contech.com
+RewriteCond %{HTTP_HOST} ^er-contech\.com$ [NC]
+RewriteRule ^(.*)$ https://www.er-contech.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.er-contech\.com$ [NC]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://www.er-contech.com/$1 [R=301,L]
+
+# 2. Old site addresses (from the Internet Archive) -> new pages
+RewriteRule ^(solutions|technologies|our-technologies|technology-pdfs|civil|ecoflex|ercoform|flexible-concrete-revetment|system-21|palisade-river-training-system|palisade-river-training-system-pdf)/?$ /services.html [R=301,L,NC]
+RewriteRule ^(eco-flex|ercoform|fcr|palisade|pipeline-supports|system-21)\.html$ /services.html [R=301,L,NC]
+RewriteRule ^(pipelines|pipeline-projects|pipeline-exposure-problems)/?$ /pipelines-energy.html [R=301,L,NC]
+RewriteRule ^transportation/?$ /transportation.html [R=301,L,NC]
+RewriteRule ^utilities/?$ /utilities.html [R=301,L,NC]
+RewriteRule ^(about-us|company-structure|er-con-advantage)/?$ /about.html [R=301,L,NC]
+RewriteRule ^(contact|contact-us|registration-form)/?$ /contact.html [R=301,L,NC]
+RewriteRule ^(homepage|index|sitemap|our-latest-projects|home\.html|index\.php)/?$ / [R=301,L,NC]
+
+# 3. Any page without ".html" (e.g. /careers) -> the .html page, if it exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([a-z0-9-]+)/?$ /$1.html [R=301,L]
+</IfModule>
+
+# Speed: compress text files
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/javascript text/javascript application/json image/svg+xml
+</IfModule>
+
+# Speed: let browsers keep files. Pages are always re-checked; the stylesheet and
+# script carry the version in their links (v1.39), so they can be kept for a year.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 day"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType application/pdf "access plus 30 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
