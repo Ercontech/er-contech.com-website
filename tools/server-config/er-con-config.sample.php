@@ -29,4 +29,8 @@ return [
     'graph_client_id'     => '',
     'graph_client_secret' => '',
     'graph_sender'        => '',  // the mailbox the app may send as, e.g. website@er-contech.com
+
+    // Confirmation email to the visitor (v1.42). On by default whenever Graph is set up;
+    // set to false to stop sending it.
+    'confirmation_email'  => true,
 ];

@@ -139,7 +139,16 @@ if (graph_ready($CFG)) {
     $gerr = '';
     $ok = graph_send($CFG, $TO, $subjectPlain, $htmlDoc, $email, $name, $files, $gerr);
     graph_log($SAVE_DIR, $gerr);                       // problems (even recovered ones) go to graph-errors.log
-    if ($ok) done('thank-you.html');                   // otherwise fall through to the old route; the copy is saved either way
+    if ($ok) {
+        // v1.42: short confirmation to the visitor (approved wording; repeats nothing they typed)
+        if (($CFG['confirmation_email'] ?? true) !== false && $verified !== 'unreachable'
+            && confirm_allowed($SAVE_DIR, $_SERVER['REMOTE_ADDR'] ?? '')) {
+            $cerr = '';
+            if (!graph_send_simple($CFG, $email, 'We received your site details', confirmation_html(), $TO, 'Er-Con Technologies', $cerr))
+                graph_log($SAVE_DIR, 'confirmation: ' . $cerr);
+        }
+        done('thank-you.html');
+    }                                                  // otherwise fall through to the old route; the copy is saved either way
 }
 
 // ---------------------------------------------------------------- 2. server mail() (the original route)
@@ -202,13 +211,15 @@ function graph_http($method, $url, $headers, $body, &$status) {
 }
 
 function graph_token($c, &$err) {
+    static $cached = '';
+    if ($cached !== '') return $cached;
     $login = rtrim($c['graph_login_base'] ?? 'https://login.microsoftonline.com', '/');
     $out = graph_http('POST', $login . '/' . rawurlencode($c['graph_tenant_id']) . '/oauth2/v2.0/token',
         ['Content-Type: application/x-www-form-urlencoded'],
         http_build_query(['client_id' => $c['graph_client_id'], 'client_secret' => $c['graph_client_secret'],
                           'scope' => 'https://graph.microsoft.com/.default', 'grant_type' => 'client_credentials']), $st);
     $j = json_decode($out, true);
-    if ($st === 200 && !empty($j['access_token'])) return $j['access_token'];
+    if ($st === 200 && !empty($j['access_token'])) return $cached = $j['access_token'];
     $err = "token: HTTP $st " . ($j['error'] ?? '') . ' ' . substr($j['error_description'] ?? $out, 0, 300);
     return '';
 }
@@ -284,4 +295,55 @@ function graph_send($c, $to, $subject, $htmlDoc, $replyEmail, $replyName, $files
 function graph_log($dir, $e) {
     if ($e === '' || !@is_dir($dir)) return;
     @file_put_contents($dir . '/graph-errors.log', date('c') . '  ' . $e . "\n", FILE_APPEND);
+}
+
+// ================================================================ visitor confirmation (v1.42)
+function graph_send_simple($c, $to, $subject, $htmlDoc, $replyTo, $fromName, &$err) {
+    $tok = graph_token($c, $err);
+    if ($tok === '') return false;
+    $api = rtrim($c['graph_api_base'] ?? 'https://graph.microsoft.com/v1.0', '/');
+    $msg = ['subject' => $subject,
+            'body' => ['contentType' => 'HTML', 'content' => $htmlDoc],
+            'from' => ['emailAddress' => ['address' => $c['graph_sender'], 'name' => $fromName]],
+            'toRecipients' => [['emailAddress' => ['address' => $to]]],
+            'replyTo' => [['emailAddress' => ['address' => $replyTo]]]];
+    $out = graph_http('POST', $api . '/users/' . rawurlencode($c['graph_sender']) . '/sendMail',
+        ['Authorization: Bearer ' . $tok, 'Content-Type: application/json'],
+        json_encode(['message' => $msg, 'saveToSentItems' => false], JSON_UNESCAPED_UNICODE), $st);
+    if ($st === 202) return true;
+    $err = "sendMail: HTTP $st " . substr($out, 0, 300);
+    return false;
+}
+
+// At most 3 confirmations per visitor IP per hour, so the form can't be used to flood an inbox.
+function confirm_allowed($dir, $ip) {
+    if (!@is_dir($dir)) return true;
+    $f = $dir . '/.confirm-throttle.json';
+    $now = time();
+    $log = @json_decode(@file_get_contents($f), true);
+    if (!is_array($log)) $log = [];
+    foreach ($log as $k => $times) {
+        $log[$k] = array_values(array_filter((array)$times, function ($t) use ($now) { return $t > $now - 3600; }));
+        if (!$log[$k]) unset($log[$k]);
+    }
+    $key = hash('sha256', $ip);                        // no raw IPs kept in the file
+    if (count($log[$key] ?? []) >= 3) { @file_put_contents($f, json_encode($log)); return false; }
+    $log[$key][] = $now;
+    @file_put_contents($f, json_encode($log));
+    return true;
+}
+
+function confirmation_html() {
+    $p = 'margin:0 0 14px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1D1D1B';
+    return '<!doctype html><html><body style="margin:0;padding:24px;background:#ffffff">'
+         . '<div style="max-width:560px">'
+         . '<p style="' . $p . '">Thank you for contacting Er-Con Technologies.</p>'
+         . '<p style="' . $p . '">We\'ve received the site details you sent through our website, and someone from our team will be in touch.</p>'
+         . '<p style="' . $p . '">If the situation is urgent, please call us at <a href="tel:+17134604601" style="color:#0067D0">+1 (713) 460-4601</a>.</p>'
+         . '<p style="margin:24px 0 2px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#0B2D5B">Er-Con Technologies</p>'
+         . '<p style="margin:0 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.5;color:#4A4949">6715 Theall Road, Houston, TX 77066<br>'
+         . '<a href="https://www.er-contech.com" style="color:#0067D0">er-contech.com</a></p>'
+         . '<p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-style:italic;color:#8C8B8A">This is an automatic confirmation. '
+         . 'If you didn\'t submit a request on er-contech.com, you can ignore this email.</p>'
+         . '</div></body></html>';
 }

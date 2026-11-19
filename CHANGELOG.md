@@ -2,6 +2,22 @@
 
 This log records meaningful design, content and experience checkpoints. Routine spacing corrections and minor cleanup remain available in source history but are not listed as separate versions.
 
+## v1.42 - Contact form: confirmation email to the visitor
+
+Ron, 2026-11-19: "short, sweet, and simple". Possible now that the form sends through
+Microsoft 365 (Graph confirmed working 2026-11-19: from website@er-contech.com, SPF/DMARC
+pass, delivered to the Inbox).
+
+- Before: the visitor saw the thank-you page and nothing else.
+- After: they also get an email from "Er-Con Technologies" <website@er-contech.com>,
+  subject "We received your site details", replies going to web.inquiry@. Wording as
+  approved: thanks, "someone from our team will be in touch", the phone number for
+  urgent cases, address, and a line saying to ignore it if they didn't send a request.
+- Safeguards: it repeats nothing the visitor typed; it only goes out when the email went
+  through Microsoft and the Turnstile check passed; at most 3 per visitor per hour.
+  Problems are logged to graph-errors.log; the visitor's request is unaffected.
+- Can be switched off with 'confirmation_email' => false in the server settings file.
+
 ## v1.41 - Company age corrected: since 1980, 40+ years
 
 Ron, 2026-10-30.
